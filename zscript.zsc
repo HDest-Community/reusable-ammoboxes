@@ -1,11 +1,13 @@
 version "4.10.0"
 
 // Loadout Codes
-const LEGACY_HDLD_9MMBOX = "9bx";
-const LEGACY_HDLD_SHELLBOX = "sbx";
-const LEGACY_HDLD_SLUGBOX  = "lbx";
-const LEGACY_HDLD_355BOX = "3bx";
-const LEGACY_HDLD_RKTBOX = "rbx";
+const LEGACY_HDLD_9MMBOX            = "9bx";
+const LEGACY_HDLD_SHELLBOX          = "sbx";
+const LEGACY_HDLD_SLUGBOX           = "lbx";
+const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
+const LEGACY_HDLD_7MMBOX            = "7bx";
+const LEGACY_HDLD_355BOX            = "3bx";
+const LEGACY_HDLD_RKTBOX            = "rbx";
 
 // Base Class
 #include "zscript/legacyAmmoBox.zs"
@@ -19,3 +21,4 @@ const LEGACY_HDLD_RKTBOX = "rbx";
 
 // HDBulletLib Ammoboxes
 #include "zscript/HDBulletLib/slugBox.zs"
+#include "zscript/HDBulletLib/explosiveShellBox.zs"

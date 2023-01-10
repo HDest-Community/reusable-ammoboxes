@@ -63,6 +63,16 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			e.thing.destroy();
 			return;
 		}
+		
+		//12g explosive shell boxes
+		if (e.Thing is "ExplosiveShellBoxPickup") {
+			HDExplosiveShellAmmo p = HDExplosiveShellAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(4,int.max,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
+			e.thing.destroy();
+			return;
+		}
 	}
 
 	override void CheckReplacement(ReplaceEvent e) {
@@ -75,6 +85,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		
 		// HDBulletLibReplacements
 		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
+		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
 	}
 	
 	override void WorldThingSpawned(WorldEvent e) {
