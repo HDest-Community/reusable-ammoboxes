@@ -1,0 +1,7 @@
+[enu default]
+
+TAG_9MM_BOX   = "Reusable 9mm ammo box";
+TAG_SHELL_BOX = "Reusable 12ga shell box";
+TAG_7MM_BOX   = "Reusable 7.76mm ammo box";
+TAG_355_BOX   = "Reusable .355 ammo box";
+TAG_RPG_BOX   = "Reusable rocket grenade box";
