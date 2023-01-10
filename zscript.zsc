@@ -3,7 +3,7 @@ version "4.10.0"
 // Loadout Codes
 const LEGACY_HDLD_9MMBOX = "9bx";
 const LEGACY_HDLD_SHELLBOX = "sbx";
-const LEGACY_HDLD_7MMBOX = "7bx";
+const LEGACY_HDLD_SLUGBOX  = "lbx";
 const LEGACY_HDLD_355BOX = "3bx";
 const LEGACY_HDLD_RKTBOX = "rbx";
 
@@ -17,4 +17,5 @@ const LEGACY_HDLD_RKTBOX = "rbx";
 #include "zscript/Vanilla/355Box.zs"
 #include "zscript/Vanilla/rocketBox.zs"
 
-// HDBulletlib Ammoboxes
+// HDBulletLib Ammoboxes
+#include "zscript/HDBulletLib/slugBox.zs"

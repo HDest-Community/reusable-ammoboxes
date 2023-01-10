@@ -11,7 +11,7 @@ class Legacy_AmmoBox : HDMagAmmo {
 
 class Legacy_Ammoboxes_Spawner : EventHandler {
 	
-	void AmmoBoxSpawns(worldevent e) {
+	void VanillaAmmoBoxSpawns(worldevent e) {
 		//9mm boxes
 		if (e.Thing is "HD9mBoxPickup") {
 			HDPistolAmmo p = HDPistolAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
@@ -52,19 +52,38 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			return;
 		}
 	}
+	
+	void HDBulletLibAmmoBoxSpawns(worldevent e) {
+		//12g slug boxes
+		if (e.Thing is "SlugBoxPickup") {
+			HDSlugAmmo p = HDSlugAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(4,int.max,"SlugBoxPickup","SHELA0","SHL1A0");
+			e.thing.destroy();
+			return;
+		}
+	}
 
 	override void CheckReplacement(ReplaceEvent e) {
+		// Vanilla Replacements
 		if (e.Replacee is "HD9mBoxPickup") { e.Replacement = "Legacy_9mmBox"; return; }
 		if (e.Replacee is "ShellBoxPickup") { e.Replacement = "Legacy_ShellBox"; return; }
 		if (e.Replacee is "HD7mBoxPickup") { e.Replacement = "Legacy_7mmBox"; return; }
 		if (e.Replacee is "HD355BoxPickup") { e.Replacement = "Legacy_355Box"; return; }
 		if (e.Replacee is "RocketBigPickup") { e.Replacement = "Legacy_RocketBox"; return; }
+		
+		// HDBulletLibReplacements
+		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
 	}
 	
 	override void WorldThingSpawned(WorldEvent e) {
 		if(!e.Thing) { return; }
 
-		AmmoBoxSpawns(e);
-
+		VanillaAmmoBoxSpawns(e);
+        
+		if (!e.Thing) { return; }
+        
+		HDBulletLibAmmoBoxSpawns(e);
 	}
 }
