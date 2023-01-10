@@ -1,0 +1,268 @@
+version "4.4"
+
+const LEGACY_HDLD_9MMBOX = "9bx";
+const LEGACY_HDLD_SHELLBOX = "sbx";
+const LEGACY_HDLD_7MMBOX = "7bx";
+const LEGACY_HDLD_355BOX = "3bx";
+const LEGACY_HDLD_RKTBOX = "rbx";
+
+// mostly copy-pasted from HD
+class Legacy_AmmoBox : HDMagAmmo {
+	default {
+		HDMagAmmo.extracttime 1;
+		HDMagAmmo.inserttime 2;
+		HDMagAmmo.MagBulk 2;
+	}
+
+	// Don't auto-consolidate these like mags
+	override void Consolidate() { SyncAmount(); return; }
+}
+
+//specific classes
+class Legacy_9mmBox : Legacy_AmmoBox {
+	default {
+		scale 0.4;
+		HDMagAmmo.MaxPerUnit 100;
+		HDMagAmmo.RoundType "HDPistolAmmo";
+		HDMagAmmo.RoundBulk ENC_9_LOADED;
+		tag "Reusable 9mm ammo box";
+		Inventory.PickupMessage "Picked up a box of 9mm rounds.";
+		HDPickup.refid LEGACY_HDLD_9MMBOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		string magsprite=(thismagamt>0)?"9BOXA0":"9BOXW0";
+		return magsprite,"PRNDA0","HDPistolAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("DERPUsable");
+		itemsthatusethis.push("DERPDEAD");
+		itemsthatusethis.push("HDPistol");
+		itemsthatusethis.push("HDRevolver");
+		itemsthatusethis.push("HDSMG");
+	}
+
+	States {
+		Spawn:
+			9BOX A -1;
+			stop;
+		spawnempty:
+			9BOX W -1{
+				brollsprite=true;brollcenter=true;
+				roll=180;
+			}stop;
+	}
+}
+
+class Legacy_ShellBox : Legacy_AmmoBox {
+	default {
+		scale 0.4;
+		HDMagAmmo.MaxPerUnit 20;
+		HDMagAmmo.RoundType "HDShellAmmo";
+		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
+		tag "Reusable 12ga shell box";
+		Inventory.PickupMessage "Picked up a box of 12ga shells.";
+		translation "160:167=80:105";
+		HDPickup.refid LEGACY_HDLD_SHELLBOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		string magsprite=(thismagamt>0)?"SBOXV0":"SBOXW0";
+		return magsprite,"SHL1A0","HDShellAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("Hunter");
+		itemsthatusethis.push("Slayer");
+	}
+
+	States {
+		Spawn:
+			SBOX V -1;
+			stop;
+		spawnempty:
+			SBOX W -1{
+				brollsprite=true;brollcenter=true;
+				roll=180;
+			}stop;
+	}
+}
+
+class Legacy_7mmBox : Legacy_AmmoBox {
+	default {
+		scale 0.4;
+		HDMagAmmo.MaxPerUnit 50;
+		HDMagAmmo.RoundType "SevenMilAmmo";
+		HDMagAmmo.RoundBulk ENC_776_LOADED;
+		tag "Reusable 7.76mm ammo box";
+		Inventory.PickupMessage "Picked up a box of 7.76mm rounds.";
+		HDPickup.refid LEGACY_HDLD_7MMBOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		string magsprite=(thismagamt>0)?"7BOXA0":"7BOXW0";
+		return magsprite,"7RNDA0","SevenMilAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis(){
+		itemsthatusethis.push("LiberatorRifle");
+		itemsthatusethis.push("BossRifle");
+		itemsthatusethis.push("AutoReloader");
+	}
+
+	States {
+		Spawn:
+			7BOX A -1;
+			stop;
+		spawnempty:
+			7BOX W -1{
+				brollsprite=true;brollcenter=true;
+				roll=180;
+			}stop;
+	}
+}
+
+class Legacy_355Box : Legacy_AmmoBox {
+	default {
+		scale 0.4;
+		HDMagAmmo.MaxPerUnit 72;
+		HDMagAmmo.RoundType "HDRevolverAmmo";
+		HDMagAmmo.RoundBulk ENC_355_LOADED;
+		tag "Reusable .355 ammo box";
+		Inventory.PickupMessage "Picked up a box of .355 rounds.";
+		HDPickup.refid LEGACY_HDLD_355BOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		string magsprite=(thismagamt>0)?"3BOXA0":"3BOXW0";
+		return magsprite,"3RNDA0","HDRevolverAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis(){
+		itemsthatusethis.push("HDRevolver");
+	}
+
+	States {
+		Spawn:
+			3BOX A -1;
+			stop;
+		spawnempty:
+			3BOX W -1{
+				brollsprite=true;brollcenter=true;
+				roll=180;
+			}stop;
+	}
+}
+
+class Legacy_RocketBox : Legacy_AmmoBox {
+	default {
+		HDMagAmmo.extracttime 5;
+		HDMagAmmo.inserttime 8;
+		HDMagAmmo.MagBulk 5;
+		scale 0.6;
+		HDMagAmmo.MaxPerUnit 5;
+		HDMagAmmo.RoundType "HDRocketAmmo";
+		HDMagAmmo.RoundBulk ENC_ROCKETLOADED*1.25;
+		tag "Reusable gyro-grenade box";
+		Inventory.PickupMessage "Picked up a box of gyro-grenades rounds.";
+		HDPickup.refid LEGACY_HDLD_RKTBOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		string magsprite=(thismagamt>0)?"LERBA0":"LERBW0";
+		return magsprite,"ROQPA0","HDRocketAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis(){
+		itemsthatusethis.push("HDRL");
+		itemsthatusethis.push("Blooper");
+		itemsthatusethis.push("HDIEDKit");
+	}
+
+	override bool IsUsed(){
+		if(!owner)return true;
+		for(int i=0;i<itemsthatusethis.size();i++){
+			if(owner.countinv(itemsthatusethis[i]))return true;
+		}
+		let zzz=HDWeapon(owner.findinventory("ZM66AssaultRifle"));
+		if(zzz&&!(zzz.weaponstatus[0]&ZM66F_NOLAUNCHER))return true;
+		let lll=HDWeapon(owner.findinventory("LiberatorRifle"));
+		if(lll&&!(lll.weaponstatus[0]&LIBF_NOLAUNCHER))return true;
+		return false;
+	}
+
+
+	States {
+		Spawn:
+			LERB A -1;
+			stop;
+		spawnempty:
+			LERB W -1{
+				brollsprite=true;brollcenter=true;
+				roll=180;
+			}stop;
+	}
+}
+
+
+class Legacy_Ammoboxes_Spawner : EventHandler {
+	
+	void AmmoBoxSpawns(worldevent e) {
+		//9mm boxes
+		if (e.Thing is "HD9mBoxPickup") {
+			HDPistolAmmo p = HDPistolAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(10,int.max,"HD9mBoxPickup","TEN9A0","PRNDA0");
+			e.thing.destroy();
+			return;
+		}
+
+		//12g shell boxes
+		if (e.Thing is "ShellBoxPickup") {
+			HDShellAmmo p = HDShellAmmo(actor.spawn("HDShellAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(4,int.max,"ShellBoxPickup","SHELA0","SHL1A0");
+			e.thing.destroy();
+			return;
+		}
+
+		//7mm boxes
+		if (e.Thing is "HD7mBoxPickup") {
+			SevenMilAmmo p = SevenMilAmmo(actor.spawn("SevenMilAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(10,int.max,"HD7mBoxPickup","TEN7A0","&RNDA0");
+			e.thing.destroy();
+			return;
+		}
+
+		//.355 boxes
+		if (e.Thing is "HD355BoxPickup") {
+			HDRevolverAmmo p = HDRevolverAmmo(actor.spawn("HDRevolverAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(10,int.max,"HD355BoxPickup","TEN9A0","3RNDA0");
+			e.thing.destroy();
+			return;
+		}
+	}
+
+	override void CheckReplacement(ReplaceEvent e) {
+		if (e.Replacee is "HD9mBoxPickup") { e.Replacement = "Legacy_9mmBox"; return; }
+		if (e.Replacee is "ShellBoxPickup") { e.Replacement = "Legacy_ShellBox"; return; }
+		if (e.Replacee is "HD7mBoxPickup") { e.Replacement = "Legacy_7mmBox"; return; }
+		if (e.Replacee is "HD355BoxPickup") { e.Replacement = "Legacy_355Box"; return; }
+		if (e.Replacee is "RocketBigPickup") { e.Replacement = "Legacy_RocketBox"; return; }
+	}
+	
+	override void WorldThingSpawned(WorldEvent e) {
+		if(!e.Thing) { return; }
+
+		AmmoBoxSpawns(e);
+
+	}
+}
+

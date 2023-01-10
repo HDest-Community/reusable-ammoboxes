@@ -1,0 +1,18 @@
+Sprite "LERBA0", 32, 12
+{
+	Offset 16, 12
+	Patch "patches/Leg_RocketBox.png", 0, 0
+}
+Sprite "LERBW0", 32, 12
+{
+	Offset 16, 12
+	Patch "patches/Leg_RocketBox_Empty.png", 0, 0
+}
+Sprite "SBOXV0", 32, 12
+{
+	Offset 16, 12
+	Patch "SBOXA0", 0, 0
+	{
+		Translation "160:167=80:105"
+	}
+}
