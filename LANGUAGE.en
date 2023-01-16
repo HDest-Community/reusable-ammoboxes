@@ -23,6 +23,7 @@ PICKUP_RPG_BOX             = "Picked up a box of rocket grenades.";
 TAG_4G_SLUG_BOX            = "Reusable 4ga slug box";
 TAG_5MM_BOX                = "Reusable 5mm ammo box";
 TAG_6MM_BOX                = "Reusable 6mm flechette ammo box";
+TAG_10MM_BOX               = "Reusable 10mm ammo box";
 TAG_SLUG_BOX               = "Reusable 12ga slug box";
 TAG_EXPLOSIVE_SHELL_BOX    = "Reusable 12ga explosive slug box";
 
@@ -32,3 +33,4 @@ PICKUP_5MM_BOX             = "Picked up a box of 5mm rounds.";
 PICKUP_SLUG_BOX            = "Picked up a box of 12ga slugs.";
 PICKUP_EXPLOSIVE_SHELL_BOX = "Picked up a box of 12ga explosive slugs.";
 PICKUP_6MM_BOX             = "Picked up a box of 6mm flechette rounds.";
+PICKUP_10MM_BOX            = "Picked up a box of 10mm rounds.";
