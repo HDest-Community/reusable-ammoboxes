@@ -4,10 +4,14 @@ class Legacy_SlugBox : Legacy_AmmoBox {
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDSlugAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
-		tag "$TAG_SHELL_BOX";
-		Inventory.PickupMessage "Picked up a box of 12ga slugs.";
-		HDPickup.refid LEGACY_HDLD_SHELLBOX;
+		tag "$TAG_SLUG_BOX";
+//		Inventory.PickupMessage "$PICKUP_SLUG_BOX";
+		HDPickup.refid LEGACY_HDLD_SLUGBOX;
 	}
+
+	override string pickupmessage() {
+	    return Stringtable.Localize("$PICKUP_SLUG_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"SLBXA0":"SLBXW0";
@@ -16,8 +20,6 @@ class Legacy_SlugBox : Legacy_AmmoBox {
 
 	// [UZ] HDBulletlib doesn't define this
 	// override void GetItemsThatUseThis() {
-		// itemsthatusethis.push("Hunter");
-		// itemsthatusethis.push("Slayer");
 	// }
 
 	States {

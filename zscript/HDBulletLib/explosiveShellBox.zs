@@ -5,9 +5,13 @@ class Legacy_ExplosiveShellBox : Legacy_AmmoBox {
 		HDMagAmmo.RoundType "HDExplosiveShellAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
-		Inventory.PickupMessage "Picked up a box of 12ga explosive shells.";
+//		Inventory.PickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
 		HDPickup.refid LEGACY_HDLD_EXPLOSIVESHELLBOX;
 	}
+
+	override string pickupmessage() {
+	    return Stringtable.Localize("$PICKUP_EXPLOSIVE_SHELL_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"XLBXA0":"XLBXW0";
@@ -16,8 +20,6 @@ class Legacy_ExplosiveShellBox : Legacy_AmmoBox {
 
 	// [UZ] HDBulletlib doesn't define this
 	// override void GetItemsThatUseThis() {
-		// itemsthatusethis.push("Hunter");
-		// itemsthatusethis.push("Slayer");
 	// }
 
 	States {
