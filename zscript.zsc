@@ -21,6 +21,8 @@ const LEGACY_HDLD_50AEBOX           = "ebx";
 const LEGACY_HDLD_50AMBOX           = "tbx";
 const LEGACY_HDLD_6MMFLECHETTEBOX   = "6bx";
 const LEGACY_HDLD_10MMBOX           = "0bx";
+const LEGACY_HDLD_FLAREBOX          = "fbx";
+const LEGACY_HDLD_LESSLETHALBOX     = "dbx";
 const LEGACY_HDLD_3006BOX           = "mbx";
 const LEGACY_HDLD_50OMGBOX          = "obx";
 const LEGACY_HDLD_SLUGBOX           = "ubx";
@@ -49,6 +51,8 @@ const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 #include "zscript/HDBulletLib/50AMBox.zs"
 #include "zscript/HDBulletLib/6mmBox.zs"
 #include "zscript/HDBulletLib/10mmBox.zs"
+#include "zscript/HDBulletLib/flareBox.zs"
+#include "zscript/HDBulletLib/lessLethalBox.zs"
 #include "zscript/HDBulletLib/3006Box.zs"
 #include "zscript/HDBulletLib/50OMGBox.zs"
 #include "zscript/HDBulletLib/slugBox.zs"

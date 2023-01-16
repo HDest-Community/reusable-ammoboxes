@@ -34,6 +34,8 @@ TAG_500_LIGHT_BOX          = "Reusable S&W .500 Light ammo box";
 TAG_3006_BOX               = "Reusable .30-06 ammo box";
 TAG_069_BOX                = "Reusable .069 bore shell box";
 TAG_420_BOX                = "Reusable .420 frei ammo box";
+TAG_FLARE_BOX              = "Reusable flare shell box";
+TAG_LESSLETHAL_BOX         = "Reusable less-lethal shell box";
 TAG_SLUG_BOX               = "Reusable 12ga slug box";
 TAG_EXPLOSIVE_SHELL_BOX    = "Reusable 12ga explosive slug box";
 
@@ -54,3 +56,5 @@ PICKUP_500_LIGHT_BOX       = "Picked up a box of S&W .500 Light rounds.";
 PICKUP_3006_BOX            = "Picked up a box of .30-06 rounds.";
 PICKUP_069_BOX             = "Picked up a box of .069 bore shells.";
 PICKUP_420_BOX             = "Picked up a box of .420 frei rounds.";
+PICKUP_FLARE_BOX           = "Picked up a box of flare shells.";
+PICKUP_LESSLETHAL_BOX      = "Picked up a box of less-lethal shells.";

@@ -203,6 +203,27 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			e.thing.destroy();
 			return;
 		}
+
+		//flare shell boxes
+		if (e.Thing is "FlareShellBoxPickup") {
+			HDFlareAmmo p = HDFlareAmmo(actor.spawn("HDFlareAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(4,int.max,"FlareShellBoxPickup","FLA4A0","FLARA0");
+			e.thing.destroy();
+			return;
+		}
+
+		//12g less-lethal shell boxes
+		if (e.Thing is "LLShellBoxPickup") {
+			HDLLShellAmmo p = HDLLShellAmmo(actor.spawn("HDLLShellAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(4,int.max,"LLShellBoxPickup","LLS4A0","LLS1A0");
+			e.thing.destroy();
+			return;
+		}
+
 		//12g slug boxes
 		if (e.Thing is "SlugBoxPickup") {
 			HDSlugAmmo p = HDSlugAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
@@ -238,6 +259,8 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		if (e.Replacee is "HD500SWLightBoxPickup") { e.Replacement = "Legacy_500LightBox"; return; }
 		if (e.Replacee is "HD3006BoxPickup") { e.Replacement = "Legacy_3006Box"; return; }
 		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
+		if (e.Replacee is "FlareShellBoxPickup") { e.Replacement = "Legacy_FlareBox"; return; }
+		if (e.Replacee is "LLShellBoxPickup") { e.Replacement = "Legacy_LessLethalBox"; return; }
 		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
 	}
 	
