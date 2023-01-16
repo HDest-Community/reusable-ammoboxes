@@ -9,6 +9,13 @@ TAG_7MM_BOX                = "Reusable 7.76mm ammo box";
 TAG_355_BOX                = "Reusable .355 ammo box";
 TAG_RPG_BOX                = "Reusable rocket grenade box";
 
+// Pickup Messages
+PICKUP_9MM_BOX             = "Picked up a box of 9mm rounds.";
+PICKUP_SHELL_BOX           = "Picked up a box of 12ga shells.";
+PICKUP_7MM_BOX             = "Picked up a box of 7.76mm rounds.";
+PICKUP_355_BOX             = "Picked up a box of .355 rounds.";
+PICKUP_RPG_BOX             = "Picked up a box of rocket grenades.";
+
 
 // HDBULLETLIB
 

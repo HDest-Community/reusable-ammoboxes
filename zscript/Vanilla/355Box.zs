@@ -5,9 +5,13 @@ class Legacy_355Box : Legacy_AmmoBox {
 		HDMagAmmo.RoundType "HDRevolverAmmo";
 		HDMagAmmo.RoundBulk ENC_355_LOADED;
 		tag "$TAG_355_BOX";
-		Inventory.PickupMessage "Picked up a box of .355 rounds.";
+//		Inventory.PickupMessage "$PICKUP_355_BOX";
 		HDPickup.refid LEGACY_HDLD_355BOX;
 	}
+
+	override string pickupmessage() {
+	    return Stringtable.Localize("$PICKUP_355_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"3BOXA0":"3BOXW0";

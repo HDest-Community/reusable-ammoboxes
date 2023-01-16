@@ -5,9 +5,13 @@ class Legacy_9mmBox : Legacy_AmmoBox {
 		HDMagAmmo.RoundType "HDPistolAmmo";
 		HDMagAmmo.RoundBulk ENC_9_LOADED;
 		tag "$TAG_9MM_BOX";
-		Inventory.PickupMessage "Picked up a box of 9mm rounds.";
+//		Inventory.PickupMessage "$PICKUP_9MM_BOX";
 		HDPickup.refid LEGACY_HDLD_9MMBOX;
 	}
+
+	override string pickupmessage() {
+	    return Stringtable.Localize("$PICKUP_9MM_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"9BOXA0":"9BOXW0";
