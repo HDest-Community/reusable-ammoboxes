@@ -134,6 +134,16 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			return;
 		}
 
+		//.50 OMG boxes
+		if (e.Thing is "HD50OMGBoxPickup") {
+			HD50OMGAmmo p = HD50OMGAmmo(actor.spawn("HD50OMGAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(10,int.max,"HD50OMGBoxPickup","OG10A0","OGBLA0");
+			e.thing.destroy();
+			return;
+		}
+
 		//12g explosive shell boxes
 		if (e.Thing is "ExplosiveShellBoxPickup") {
 			HDExplosiveShellAmmo p = HDExplosiveShellAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
@@ -171,6 +181,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		if (e.Replacee is "HD45LCBoxPickup") { e.Replacement = "Legacy_45LCBox"; return; }
 		if (e.Replacee is "HD50AEBoxPickup") { e.Replacement = "Legacy_50AEBox"; return; }
 		if (e.Replacee is "PB_50AMBoxPickup") { e.Replacement = "Legacy_50AMBox"; return; }
+		if (e.Replacee is "HD50OMGBoxPickup") { e.Replacement = "Legacy_50OMGBox"; return; }
 		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
 		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
 	}
