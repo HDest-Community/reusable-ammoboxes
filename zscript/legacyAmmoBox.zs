@@ -144,6 +144,26 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			return;
 		}
 
+		//.069 Bore shell boxes
+		if (e.Thing is "HD069BoreBox") {
+			HD069BoreAmmo p = HD069BoreAmmo(actor.spawn("HD069BoreAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(10,int.max,"HD069BoreBox","42BTA0","42BRA0");
+			e.thing.destroy();
+			return;
+		}
+
+		//.420 Frei boxes
+		if (e.Thing is "HD420BoxPickup") {
+			HDAurochsAmmo p = HDAurochsAmmo(actor.spawn("HDAurochsAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(10,int.max,"HD420BoxPickup","42TEA0","420BA0");
+			e.thing.destroy();
+			return;
+		}
+
 		//.500 S&W Heavy boxes
 		if (e.Thing is "HD500SWHeavyBoxPickup") {
 			HD500SWHeavyAmmo p = HD500SWHeavyAmmo(actor.spawn("HD500SWHeavyAmmo",e.thing.pos));
@@ -212,6 +232,8 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		if (e.Replacee is "HD50AEBoxPickup") { e.Replacement = "Legacy_50AEBox"; return; }
 		if (e.Replacee is "PB_50AMBoxPickup") { e.Replacement = "Legacy_50AMBox"; return; }
 		if (e.Replacee is "HD50OMGBoxPickup") { e.Replacement = "Legacy_50OMGBox"; return; }
+		if (e.Replacee is "HD069BoreBox") { e.Replacement = "Legacy_069Box"; return; }
+		if (e.Replacee is "HD420BoxPickup") { e.Replacement = "Legacy_420Box"; return; }
 		if (e.Replacee is "HD500SWHeavyBoxPickup") { e.Replacement = "Legacy_500HeavyBox"; return; }
 		if (e.Replacee is "HD500SWLightBoxPickup") { e.Replacement = "Legacy_500LightBox"; return; }
 		if (e.Replacee is "HD3006BoxPickup") { e.Replacement = "Legacy_3006Box"; return; }

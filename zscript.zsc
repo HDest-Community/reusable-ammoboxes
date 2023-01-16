@@ -13,6 +13,8 @@ const LEGACY_HDLD_4GSLUGBOX         = "gbx";
 const LEGACY_HDLD_500HBOX           = "hbx";
 const LEGACY_HDLD_500LBOX           = "lbx";
 const LEGACY_HDLD_5MMBOX            = "bbx";
+const LEGACY_HDLD_069BOX            = "ybx";
+const LEGACY_HDLD_420BOX            = "ibx";
 const LEGACY_HDLD_45ACPBOX          = "pbx";
 const LEGACY_HDLD_45LCBOX           = "cbx";
 const LEGACY_HDLD_50AEBOX           = "ebx";
@@ -39,6 +41,8 @@ const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 #include "zscript/HDBulletLib/500HeavyBox.zs"
 #include "zscript/HDBulletLib/500LightBox.zs"
 #include "zscript/HDBulletLib/5mmBox.zs"
+#include "zscript/HDBulletLib/069Box.zs"
+#include "zscript/HDBulletLib/420Box.zs"
 #include "zscript/HDBulletLib/45ACPBox.zs"
 #include "zscript/HDBulletLib/45LCBox.zs"
 #include "zscript/HDBulletLib/50AEBox.zs"
