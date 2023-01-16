@@ -9,6 +9,7 @@ const LEGACY_HDLD_RKTBOX            = "rbx";
 const LEGACY_HDLD_SHELLBOX          = "sbx";
 
 // HDBulletLib Loadout Codes
+const LEGACY_HDLD_4GSLUGBOX         = "gbx";
 const LEGACY_HDLD_SLUGBOX           = "ubx";
 const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 
@@ -23,5 +24,6 @@ const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 #include "zscript/Vanilla/rocketBox.zs"
 
 // HDBulletLib Ammoboxes
+#include "zscript/HDBulletLib/4GaSlugBox.zs"
 #include "zscript/HDBulletLib/slugBox.zs"
 #include "zscript/HDBulletLib/explosiveShellBox.zs"

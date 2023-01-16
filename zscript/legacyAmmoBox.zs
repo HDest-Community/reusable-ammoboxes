@@ -54,22 +54,31 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 	}
 	
 	void HDBulletLibAmmoBoxSpawns(worldevent e) {
-		//12g slug boxes
-		if (e.Thing is "SlugBoxPickup") {
-			HDSlugAmmo p = HDSlugAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
+		//4g shell boxes
+		if (e.Thing is "HD4GBBox") {
+			HD4GSAmmo p = HD4GSAmmo(actor.spawn("HD4GSAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,int.max,"SlugBoxPickup","SHELA0","SHL1A0");
+			p.SplitPickupBoxableRound(4,int.max,"HD4GBAmmo","4GPAA0","4GSIA0");
 			e.thing.destroy();
 			return;
 		}
-		
+
 		//12g explosive shell boxes
 		if (e.Thing is "ExplosiveShellBoxPickup") {
 			HDExplosiveShellAmmo p = HDExplosiveShellAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(4,int.max,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
+			e.thing.destroy();
+			return;
+		}
+		//12g slug boxes
+		if (e.Thing is "SlugBoxPickup") {
+			HDSlugAmmo p = HDSlugAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+			p.SplitPickupBoxableRound(4,int.max,"SlugBoxPickup","SHELA0","SHL1A0");
 			e.thing.destroy();
 			return;
 		}
@@ -84,8 +93,9 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		if (e.Replacee is "RocketBigPickup") { e.Replacement = "Legacy_RocketBox"; return; }
 		
 		// HDBulletLibReplacements
-		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
+		if (e.Replacee is "HD4GBBox") { e.Replacement = "Legacy_4GaSlugBox"; return; }
 		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
+		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
 	}
 	
 	override void WorldThingSpawned(WorldEvent e) {
