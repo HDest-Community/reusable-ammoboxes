@@ -10,7 +10,8 @@ class Legacy_LessLethalBox : Legacy_AmmoBox {
 	}
 
 	override string pickupmessage() {
-$PICKUP_LESSLETHAL_BOX    }
+	    return Stringtable.Localize("$PICKUP_LESSLETHAL_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"lLBXA0":"LLBXW0";

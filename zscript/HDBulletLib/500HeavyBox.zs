@@ -10,7 +10,8 @@ class Legacy_500HeavyBox : Legacy_AmmoBox {
 	}
 
 	override string pickupmessage() {
-$PICKUP_500_HEAVY_BOX    }
+	    return Stringtable.Localize("$PICKUP_500_HEAVY_BOX");
+    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"5HBXA0":"5HBXW0";

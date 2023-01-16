@@ -10,7 +10,7 @@ class Legacy_500LightBox : Legacy_AmmoBox {
 	}
 
 	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_4G_SL$PICKUP_500_LIGHT_BOXUG_BOX");
+	    return Stringtable.Localize("$PICKUP_500_LIGHT_BOX");
     }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
