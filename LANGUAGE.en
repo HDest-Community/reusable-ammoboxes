@@ -31,6 +31,7 @@ TAG_50AM_BOX               = "Reusable .50 AM ammo box";
 TAG_50OMG_BOX              = "Reusable .50 OMG ammo box";
 TAG_500_HEAVY_BOX          = "Reusable S&W .500 Heavy ammo box";
 TAG_500_LIGHT_BOX          = "Reusable S&W .500 Light ammo box";
+TAG_3006_BOX               = "Reusable .30-06 ammo box";
 TAG_SLUG_BOX               = "Reusable 12ga slug box";
 TAG_EXPLOSIVE_SHELL_BOX    = "Reusable 12ga explosive slug box";
 
@@ -48,3 +49,4 @@ PICKUP_50AM_BOX            = "Picked up a box of .50 AM rounds.";
 PICKUP_50OMG_BOX           = "Picked up a box of .50 OMG rounds.";
 PICKUP_500_HEAVY_BOX       = "Picked up a box of S&W .500 Heavy rounds.";
 PICKUP_500_LIGHT_BOX       = "Picked up a box of S&W .500 Light rounds.";
+PICKUP_3006_BOX            = "Picked up a box of .30-06 rounds.";
