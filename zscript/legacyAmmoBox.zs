@@ -64,6 +64,16 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 			return;
 		}
 
+		//5mm boxes
+		if (e.Thing is "PB_5mmBoxPickup") {
+			HD5mm_Ammo p = HD5mm_Ammo(actor.spawn("HD5mm_Ammo",e.thing.pos));
+			p.amount = HDUPK(e.Thing).amount;
+			p.vel = e.thing.vel;
+		    p.SplitPickupBoxableRound(16,int.max,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
+			e.thing.destroy();
+			return;
+		}
+
 		//12g explosive shell boxes
 		if (e.Thing is "ExplosiveShellBoxPickup") {
 			HDExplosiveShellAmmo p = HDExplosiveShellAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
@@ -94,6 +104,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 		
 		// HDBulletLibReplacements
 		if (e.Replacee is "HD4GBBox") { e.Replacement = "Legacy_4GaSlugBox"; return; }
+		if (e.Replacee is "PB_5mmBoxPickup") { e.Replacement = "Legacy_5mmBox"; return; }
 		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
 		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
 	}
