@@ -18,10 +18,6 @@ class Legacy_ExplosiveShellBox : Legacy_AmmoBox {
 		return magsprite,"XLS1A0","HDExplosiveShellAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			XLBX A -1;

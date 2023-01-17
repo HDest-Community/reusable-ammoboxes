@@ -18,10 +18,6 @@ class Legacy_FlareBox : Legacy_AmmoBox {
 		return magsprite,"FLARA0","HDFlareAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			FLBX A -1;

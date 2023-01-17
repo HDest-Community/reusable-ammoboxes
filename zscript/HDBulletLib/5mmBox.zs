@@ -18,10 +18,6 @@ class Legacy_5mmBox : Legacy_AmmoBox {
 		return magsprite,"5MMZA0","HD5mm_Ammo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			5MBX A -1;

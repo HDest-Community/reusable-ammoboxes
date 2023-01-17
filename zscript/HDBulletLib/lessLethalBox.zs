@@ -18,10 +18,6 @@ class Legacy_LessLethalBox : Legacy_AmmoBox {
 		return magsprite,"LLS1A0","HDLLShellAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			LLBX A -1;

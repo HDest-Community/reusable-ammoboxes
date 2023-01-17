@@ -18,10 +18,6 @@ class Legacy_420Box : Legacy_AmmoBox {
 		return magsprite,"420BA0","HDAurochsAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			420A A -1;

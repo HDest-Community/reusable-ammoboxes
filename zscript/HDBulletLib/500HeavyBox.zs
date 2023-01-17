@@ -18,10 +18,6 @@ class Legacy_500HeavyBox : Legacy_AmmoBox {
 		return magsprite,"SWRNB0","HD500SWHeavyAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			5HBX A -1;

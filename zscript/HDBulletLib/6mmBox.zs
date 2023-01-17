@@ -18,10 +18,6 @@ class Legacy_6mmBox : Legacy_AmmoBox {
 		return magsprite,"ACRPI0","HD6mmFlechetteAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			ACRP K -1;

@@ -18,10 +18,6 @@ class Legacy_4gaSlugBox : Legacy_AmmoBox {
 		return magsprite,"4GSIA0","HD4GSAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			4GBX A -1;

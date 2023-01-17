@@ -18,10 +18,6 @@ class Legacy_45LCBox : Legacy_AmmoBox {
 		return magsprite,"PR10A0","HD45LCAmmo",0.6;
 	}
 
-	// [UZ] HDBulletlib doesn't define this
-	// override void GetItemsThatUseThis() {
-	// }
-
 	States {
 		Spawn:
 			45LB A -1;
