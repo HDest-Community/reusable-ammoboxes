@@ -14,7 +14,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 	void VanillaAmmoBoxSpawns(worldevent e) {
 		//9mm boxes
 		if (e.Thing is "HD9mBoxPickup") {
-			HDPistolAmmo p = HDPistolAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(10,int.max,"HD9mBoxPickup","TEN9A0","PRNDA0");
@@ -24,7 +24,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//12g shell boxes
 		if (e.Thing is "ShellBoxPickup") {
-			HDShellAmmo p = HDShellAmmo(actor.spawn("HDShellAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(4,int.max,"ShellBoxPickup","SHELA0","SHL1A0");
@@ -34,7 +34,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//7mm boxes
 		if (e.Thing is "HD7mBoxPickup") {
-			SevenMilAmmo p = SevenMilAmmo(actor.spawn("SevenMilAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("SevenMilAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(10,int.max,"HD7mBoxPickup","TEN7A0","&RNDA0");
@@ -44,7 +44,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.355 boxes
 		if (e.Thing is "HD355BoxPickup") {
-			HDRevolverAmmo p = HDRevolverAmmo(actor.spawn("HDRevolverAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDRevolverAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(10,int.max,"HD355BoxPickup","TEN9A0","3RNDA0");
@@ -56,7 +56,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 	void HDBulletLibAmmoBoxSpawns(worldevent e) {
 		//4g shell boxes
 		if (e.Thing is "HD4GBBox") {
-			HD4GSAmmo p = HD4GSAmmo(actor.spawn("HD4GSAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD4GSAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(4,int.max,"HD4GBAmmo","4GPAA0","4GSIA0");
@@ -66,7 +66,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//5mm boxes
 		if (e.Thing is "PB_5mmBoxPickup") {
-			HD5mm_Ammo p = HD5mm_Ammo(actor.spawn("HD5mm_Ammo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD5mm_Ammo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(16,int.max,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
@@ -76,7 +76,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//6mm boxes
 		if (e.Thing is "HD6mmFlechetteBoxPickup") {
-			HD6mmFlechetteAmmo p = HD6mmFlechetteAmmo(actor.spawn("HD6mmFlechetteAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD6mmFlechetteAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(12,int.max,"HD6mmFlechetteBoxPickup","ACR9I0","ACRPI0");
@@ -86,7 +86,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//10mm boxes
 		if (e.Thing is "HD10mBoxPickup") {
-			HD10mAmmo p = HD10mAmmo(actor.spawn("HD10mAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD10mAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD10mBoxPickup","T10MA0","PR10A0");
@@ -96,7 +96,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.45 ACP boxes
 		if (e.Thing is "HD45ACPBoxPickup") {
-			HD45ACPAmmo p = HD45ACPAmmo(actor.spawn("HD45ACPAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45ACPAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD45ACPBoxPickup","45TN","45RN");
@@ -106,7 +106,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.45 LC boxes
 		if (e.Thing is "HD45LCBoxPickup") {
-			HD45LCAmmo p = HD45LCAmmo(actor.spawn("HD45LCAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45LCAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD45LCBoxPickup","T10MA0","PR10A0");
@@ -116,7 +116,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.50 AE boxes
 		if (e.Thing is "HD50AEBoxPickup") {
-			HD50AEAmmo p = HD50AEAmmo(actor.spawn("HD50AEAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AEAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD50AEBoxPickup","TEN9A0","PRNDA0");
@@ -126,7 +126,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.50 AM boxes
 		if (e.Thing is "PB_50AMBoxPickup") {
-			HD50AM_Ammo p = HD50AM_Ammo(actor.spawn("HD50AM_Ammo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AM_Ammo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"PB_50AMBoxPickup","G50YA0","G50ZA0");
@@ -136,7 +136,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.50 OMG boxes
 		if (e.Thing is "HD50OMGBoxPickup") {
-			HD50OMGAmmo p = HD50OMGAmmo(actor.spawn("HD50OMGAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50OMGAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD50OMGBoxPickup","OG10A0","OGBLA0");
@@ -146,7 +146,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.069 Bore shell boxes
 		if (e.Thing is "HD069BoreBox") {
-			HD069BoreAmmo p = HD069BoreAmmo(actor.spawn("HD069BoreAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD069BoreAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD069BoreBox","42BTA0","42BRA0");
@@ -156,7 +156,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.420 Frei boxes
 		if (e.Thing is "HD420BoxPickup") {
-			HDAurochsAmmo p = HDAurochsAmmo(actor.spawn("HDAurochsAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDAurochsAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD420BoxPickup","42TEA0","420BA0");
@@ -166,7 +166,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.500 S&W Heavy boxes
 		if (e.Thing is "HD500SWHeavyBoxPickup") {
-			HD500SWHeavyAmmo p = HD500SWHeavyAmmo(actor.spawn("HD500SWHeavyAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWHeavyAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD500SWHeavyBoxPickup", "TNSWB0", "SWRNB0");
@@ -176,7 +176,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.500 S&W Light boxes
 		if (e.Thing is "HD500SWLightBoxPickup") {
-			HD500SWLightAmmo p = HD500SWLightAmmo(actor.spawn("HD500SWLightAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWLightAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD500SWLightBoxPickup", "TNSWA0", "SWRNA0");
@@ -186,7 +186,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//.30-06 boxes
 		if (e.Thing is "HD3006BoxPickup") {
-			ThirtyAughtSixAmmo p = ThirtyAughtSixAmmo(actor.spawn("ThirtyAughtSixAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("ThirtyAughtSixAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(10,int.max,"HD3006BoxPickup","TEN7A0","7RNDA0");
@@ -196,7 +196,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//12g explosive shell boxes
 		if (e.Thing is "ExplosiveShellBoxPickup") {
-			HDExplosiveShellAmmo p = HDExplosiveShellAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(4,int.max,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
@@ -206,7 +206,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//flare shell boxes
 		if (e.Thing is "FlareShellBoxPickup") {
-			HDFlareAmmo p = HDFlareAmmo(actor.spawn("HDFlareAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDFlareAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(4,int.max,"FlareShellBoxPickup","FLA4A0","FLARA0");
@@ -216,7 +216,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//12g less-lethal shell boxes
 		if (e.Thing is "LLShellBoxPickup") {
-			HDLLShellAmmo p = HDLLShellAmmo(actor.spawn("HDLLShellAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDLLShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 		    p.SplitPickupBoxableRound(4,int.max,"LLShellBoxPickup","LLS4A0","LLS1A0");
@@ -226,7 +226,7 @@ class Legacy_Ammoboxes_Spawner : EventHandler {
 
 		//12g slug boxes
 		if (e.Thing is "SlugBoxPickup") {
-			HDSlugAmmo p = HDSlugAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
+			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
 			p.SplitPickupBoxableRound(4,int.max,"SlugBoxPickup","SHELA0","SHL1A0");
