@@ -1,6 +1,6 @@
 class Legacy_4gaSlugBox : Legacy_AmmoBox {
 	default {
-		scale 0.1;
+		scale 0.4;
 		HDMagAmmo.MaxPerUnit 25;
 		HDMagAmmo.RoundType "HD4GSAmmo";
 		HDMagAmmo.RoundBulk ENC_4GSLOADED;
