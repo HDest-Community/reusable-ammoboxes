@@ -7,6 +7,9 @@ class Legacy_LessLethalBox : Legacy_AmmoBox {
 		tag "$TAG_LESSLETHAL_BOX";
 //		Inventory.PickupMessage "$PICKUP_LESSLETHAL_BOX";
 		HDPickup.refid LEGACY_HDLD_LESSLETHALBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 4;
 	}
 
 	override string pickupmessage() {

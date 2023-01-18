@@ -7,6 +7,9 @@ class Legacy_ExplosiveShellBox : Legacy_AmmoBox {
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
 //		Inventory.PickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
 		HDPickup.refid LEGACY_HDLD_EXPLOSIVESHELLBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 4;
 	}
 
 	override string pickupmessage() {

@@ -7,6 +7,9 @@ class Legacy_SlugBox : Legacy_AmmoBox {
 		tag "$TAG_SLUG_BOX";
 //		Inventory.PickupMessage "$PICKUP_SLUG_BOX";
 		HDPickup.refid LEGACY_HDLD_SLUGBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 4;
 	}
 
 	override string pickupmessage() {

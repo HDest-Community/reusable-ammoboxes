@@ -8,6 +8,9 @@ class Legacy_ShellBox : Legacy_AmmoBox {
 //		Inventory.PickupMessage "$PICKUP_SHELL_BOX";
 		translation "160:167=80:105";
 		HDPickup.refid LEGACY_HDLD_SHELLBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 4;
 	}
 
 	override string pickupmessage() {

@@ -7,6 +7,9 @@ class Legacy_6mmBox : Legacy_AmmoBox {
 		tag "$TAG_6MM_BOX";
 //		Inventory.PickupMessage "$PICKUP_6MM_BOX";
 		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 12;
 	}
 
 	override string pickupmessage() {

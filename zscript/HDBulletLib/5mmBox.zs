@@ -7,6 +7,9 @@ class Legacy_5mmBox : Legacy_AmmoBox {
 		tag "$TAG_5MM_BOX";
 //		Inventory.PickupMessage "$PICKUP_5MM_BOX";
 		HDPickup.refid LEGACY_HDLD_5MMBOX;
+
+		Legacy_AmmoBox.extractMin 1;
+		Legacy_AmmoBox.extractMax 16;
 	}
 
 	override string pickupmessage() {
