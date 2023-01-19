@@ -1,4 +1,4 @@
-class Legacy_50AMBox : Legacy_AmmoBox {
+class Legacy_50AMBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 		HDMagAmmo.MaxPerUnit 65;

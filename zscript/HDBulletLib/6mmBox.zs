@@ -1,4 +1,4 @@
-class Legacy_6mmBox : Legacy_AmmoBox {
+class Legacy_6mmBox : ReusableAmmobox {
 	default {
 		scale 0.3;
 		HDMagAmmo.MaxPerUnit 100;
@@ -8,8 +8,8 @@ class Legacy_6mmBox : Legacy_AmmoBox {
 //		Inventory.PickupMessage "$PICKUP_6MM_BOX";
 		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
 
-		Legacy_AmmoBox.extractMin 1;
-		Legacy_AmmoBox.extractMax 12;
+		ReusableAmmobox.extractMax 12;
+
 	}
 
 	override string pickupmessage() {

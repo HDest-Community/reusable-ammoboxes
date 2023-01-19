@@ -29,7 +29,7 @@ const LEGACY_HDLD_SLUGBOX           = "ubx";
 const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 
 // Base Class
-#include "zscript/legacyAmmoBox.zs"
+#include "zscript/reusableAmmoBox.zs"
 
 // Vanilla Ammoboxes
 #include "zscript/Vanilla/9mmBox.zs"

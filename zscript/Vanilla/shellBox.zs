@@ -1,4 +1,4 @@
-class Legacy_ShellBox : Legacy_AmmoBox {
+class Legacy_ShellBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 		HDMagAmmo.MaxPerUnit 20;
@@ -9,8 +9,8 @@ class Legacy_ShellBox : Legacy_AmmoBox {
 		translation "160:167=80:105";
 		HDPickup.refid LEGACY_HDLD_SHELLBOX;
 
-		Legacy_AmmoBox.extractMin 1;
-		Legacy_AmmoBox.extractMax 4;
+		ReusableAmmobox.extractMax 4;
+
 	}
 
 	override string pickupmessage() {

@@ -1,4 +1,4 @@
-class Legacy_069Box : Legacy_AmmoBox {
+class Legacy_069Box : ReusableAmmobox {
 	default {
 		scale 0.5;
 		HDMagAmmo.MaxPerUnit 30;

@@ -1,4 +1,4 @@
-class Legacy_RocketBox : Legacy_AmmoBox {
+class Legacy_RocketBox : ReusableAmmobox {
 	default {
 		HDMagAmmo.extracttime 5;
 		HDMagAmmo.inserttime 8;

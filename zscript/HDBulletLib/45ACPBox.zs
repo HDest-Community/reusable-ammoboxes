@@ -1,4 +1,4 @@
-class Legacy_45ACPBox : Legacy_AmmoBox {
+class Legacy_45ACPBox : ReusableAmmobox {
 	default {
 		XScale 0.30;
 		YScale 0.40;

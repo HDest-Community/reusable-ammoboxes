@@ -1,4 +1,4 @@
 gameinfo
 {
-	AddEventHandlers = "Legacy_Ammoboxes_Spawner"
+	AddEventHandlers = "ReusableAmmoboxesSpawner"
 }

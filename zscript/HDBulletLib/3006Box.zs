@@ -1,4 +1,4 @@
-class Legacy_3006Box : Legacy_AmmoBox {
+class Legacy_3006Box : ReusableAmmobox {
 	default {
 		xscale 0.5;
 		yscale 0.4;
