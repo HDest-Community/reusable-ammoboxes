@@ -2,8 +2,8 @@ class Legacy_RocketBox : ReusableAmmobox {
 	default {
 		scale 0.6;
 
-		HDMagAmmo.extracttime 5;
 		HDMagAmmo.inserttime 8;
+		HDMagAmmo.extracttime 16;
 
 		HDMagAmmo.MagBulk 5;
 		HDMagAmmo.MaxPerUnit 5;
@@ -13,6 +13,8 @@ class Legacy_RocketBox : ReusableAmmobox {
 		tag "$TAG_RPG_BOX";
 //		Inventory.PickupMessage "$PICKUP_RPG_BOX";
 		HDPickup.refid LEGACY_HDLD_RKTBOX;
+
+		ReusableAmmobox.extractMax 1;
 	}
 
 	override string pickupmessage() {

@@ -2,6 +2,9 @@ class Legacy_FlareBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
+		HDMagAmmo.inserttime 6;
+		HDMagAmmo.extracttime 10;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDFlareAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED * .9;

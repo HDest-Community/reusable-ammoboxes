@@ -2,6 +2,9 @@ class Legacy_SlugBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
+		HDMagAmmo.inserttime 6;
+		HDMagAmmo.extracttime 10;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDSlugAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;

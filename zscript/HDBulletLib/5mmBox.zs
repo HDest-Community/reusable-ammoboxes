@@ -2,6 +2,9 @@ class Legacy_5mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
+		HDMagAmmo.inserttime 2;
+		HDMagAmmo.extracttime 6;
+
 		HDMagAmmo.MaxPerUnit 160;
 		HDMagAmmo.RoundType "HD5mm_Ammo";
 		HDMagAmmo.RoundBulk ENC_5MM_LOADED;
