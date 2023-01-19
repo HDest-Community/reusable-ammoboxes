@@ -2,9 +2,11 @@ class Legacy_45ACPBox : ReusableAmmobox {
 	default {
 		XScale 0.30;
 		YScale 0.40;
+
 		HDMagAmmo.MaxPerUnit 50;
 		HDMagAmmo.RoundType "HD45ACPAmmo";
 		HDMagAmmo.RoundBulk 0.55;
+
 		tag "$TAG_45ACP_BOX";
 //		Inventory.PickupMessage "$PICKUP_45ACP_BOX";
 		HDPickup.refid LEGACY_HDLD_45ACPBOX;

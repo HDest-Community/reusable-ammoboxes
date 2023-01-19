@@ -1,15 +1,16 @@
 class Legacy_FlareBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDFlareAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED * .9;
+
 		tag "$TAG_FLARE_BOX";
 //		Inventory.PickupMessage "$PICKUP_FLARE_BOX";
 		HDPickup.refid LEGACY_HDLD_FLAREBOX;
 
 		ReusableAmmobox.extractMax 4;
-
 	}
 
 	override string pickupmessage() {

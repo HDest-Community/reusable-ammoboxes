@@ -1,9 +1,11 @@
 class Legacy_50AMBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 65;
 		HDMagAmmo.RoundType "HD50AM_Ammo";
 		HDMagAmmo.RoundBulk ENC_50AM_LOADED;
+
 		tag "$TAG_50AM_BOX";
 //		Inventory.PickupMessage "$PICKUP_50AM_BOX";
 		HDPickup.refid LEGACY_HDLD_50AMBOX;

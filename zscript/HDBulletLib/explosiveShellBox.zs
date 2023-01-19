@@ -1,15 +1,16 @@
 class Legacy_ExplosiveShellBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDExplosiveShellAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
+
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
 //		Inventory.PickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
 		HDPickup.refid LEGACY_HDLD_EXPLOSIVESHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
-
 	}
 
 	override string pickupmessage() {

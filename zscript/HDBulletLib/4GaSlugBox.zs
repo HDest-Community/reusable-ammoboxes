@@ -1,15 +1,16 @@
 class Legacy_4gaSlugBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 25;
 		HDMagAmmo.RoundType "HD4GSAmmo";
 		HDMagAmmo.RoundBulk ENC_4GSLOADED;
+
 		tag "$TAG_4G_SLUG_BOX";
 //		Inventory.PickupMessage "$PICKUP_4G_SLUG_BOX";
 		HDPickup.refid LEGACY_HDLD_4GSLUGBOX;
 
 		ReusableAmmobox.extractMax 4;
-
 	}
 
 	override string pickupmessage() {

@@ -1,15 +1,16 @@
 class Legacy_5mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 160;
 		HDMagAmmo.RoundType "HD5mm_Ammo";
 		HDMagAmmo.RoundBulk ENC_5MM_LOADED;
+
 		tag "$TAG_5MM_BOX";
 //		Inventory.PickupMessage "$PICKUP_5MM_BOX";
 		HDPickup.refid LEGACY_HDLD_5MMBOX;
 
 		ReusableAmmobox.extractMax 16;
-
 	}
 
 	override string pickupmessage() {

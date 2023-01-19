@@ -1,12 +1,15 @@
 class Legacy_RocketBox : ReusableAmmobox {
 	default {
+		scale 0.6;
+
 		HDMagAmmo.extracttime 5;
 		HDMagAmmo.inserttime 8;
+
 		HDMagAmmo.MagBulk 5;
-		scale 0.6;
 		HDMagAmmo.MaxPerUnit 5;
 		HDMagAmmo.RoundType "HDRocketAmmo";
 		HDMagAmmo.RoundBulk ENC_ROCKETLOADED*1.25;
+
 		tag "$TAG_RPG_BOX";
 //		Inventory.PickupMessage "$PICKUP_RPG_BOX";
 		HDPickup.refid LEGACY_HDLD_RKTBOX;
