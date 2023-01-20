@@ -6,7 +6,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,int.max,"HD9mBoxPickup","TEN9A0","PRNDA0");
+			p.SplitPickupBoxableRound(10,-1,"HD9mBoxPickup","TEN9A0","PRNDA0");
 			e.thing.destroy();
 			return;
 		}
@@ -16,7 +16,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,int.max,"ShellBoxPickup","SHELA0","SHL1A0");
+			p.SplitPickupBoxableRound(4,-1,"ShellBoxPickup","SHELA0","SHL1A0");
 			e.thing.destroy();
 			return;
 		}
@@ -26,7 +26,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("SevenMilAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,int.max,"HD7mBoxPickup","TEN7A0","&RNDA0");
+			p.SplitPickupBoxableRound(10,-1,"HD7mBoxPickup","TEN7A0","&RNDA0");
 			e.thing.destroy();
 			return;
 		}
@@ -36,7 +36,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDRevolverAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,int.max,"HD355BoxPickup","TEN9A0","3RNDA0");
+			p.SplitPickupBoxableRound(10,-1,"HD355BoxPickup","TEN9A0","3RNDA0");
 			e.thing.destroy();
 			return;
 		}
@@ -48,7 +48,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD4GSAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,int.max,"HD4GBAmmo","4GPAA0","4GSIA0");
+			p.SplitPickupBoxableRound(4,-1,"HD4GBAmmo","4GPAA0","4GSIA0");
 			e.thing.destroy();
 			return;
 		}
@@ -58,7 +58,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD5mm_Ammo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(16,int.max,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
+		    p.SplitPickupBoxableRound(16,-1,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
 			e.thing.destroy();
 			return;
 		}
@@ -68,7 +68,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD6mmFlechetteAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(12,int.max,"HD6mmFlechetteBoxPickup","ACR9I0","ACRPI0");
+		    p.SplitPickupBoxableRound(12,-1,"HD6mmFlechetteBoxPickup","ACR9I0","ACRPI0");
 			e.thing.destroy();
 			return;
 		}
@@ -78,7 +78,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD10mAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD10mBoxPickup","T10MA0","PR10A0");
+		    p.SplitPickupBoxableRound(10,-1,"HD10mBoxPickup","T10MA0","PR10A0");
 			e.thing.destroy();
 			return;
 		}
@@ -88,7 +88,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45ACPAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD45ACPBoxPickup","45TN","45RN");
+		    p.SplitPickupBoxableRound(10,-1,"HD45ACPBoxPickup","45TN","45RN");
 			e.thing.destroy();
 			return;
 		}
@@ -98,7 +98,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45LCAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD45LCBoxPickup","T10MA0","PR10A0");
+		    p.SplitPickupBoxableRound(10,-1,"HD45LCBoxPickup","T10MA0","PR10A0");
 			e.thing.destroy();
 			return;
 		}
@@ -108,7 +108,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AEAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD50AEBoxPickup","TEN9A0","PRNDA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD50AEBoxPickup","TEN9A0","PRNDA0");
 			e.thing.destroy();
 			return;
 		}
@@ -118,7 +118,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AM_Ammo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"PB_50AMBoxPickup","G50YA0","G50ZA0");
+		    p.SplitPickupBoxableRound(10,-1,"PB_50AMBoxPickup","G50YA0","G50ZA0");
 			e.thing.destroy();
 			return;
 		}
@@ -128,7 +128,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50OMGAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD50OMGBoxPickup","OG10A0","OGBLA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD50OMGBoxPickup","OG10A0","OGBLA0");
 			e.thing.destroy();
 			return;
 		}
@@ -138,7 +138,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD069BoreAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD069BoreBox","42BTA0","42BRA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD069BoreBox","42BTA0","42BRA0");
 			e.thing.destroy();
 			return;
 		}
@@ -148,7 +148,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDAurochsAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD420BoxPickup","42TEA0","420BA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD420BoxPickup","42TEA0","420BA0");
 			e.thing.destroy();
 			return;
 		}
@@ -158,7 +158,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWHeavyAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD500SWHeavyBoxPickup", "TNSWB0", "SWRNB0");
+		    p.SplitPickupBoxableRound(10,-1,"HD500SWHeavyBoxPickup", "TNSWB0", "SWRNB0");
 			e.thing.destroy();
 			return;
 		}
@@ -168,7 +168,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWLightAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD500SWLightBoxPickup", "TNSWA0", "SWRNA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD500SWLightBoxPickup", "TNSWA0", "SWRNA0");
 			e.thing.destroy();
 			return;
 		}
@@ -178,7 +178,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("ThirtyAughtSixAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,int.max,"HD3006BoxPickup","TEN7A0","7RNDA0");
+		    p.SplitPickupBoxableRound(10,-1,"HD3006BoxPickup","TEN7A0","7RNDA0");
 			e.thing.destroy();
 			return;
 		}
@@ -188,7 +188,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,int.max,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
+			p.SplitPickupBoxableRound(4,-1,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
 			e.thing.destroy();
 			return;
 		}
@@ -198,7 +198,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDFlareAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(4,int.max,"FlareShellBoxPickup","FLA4A0","FLARA0");
+		    p.SplitPickupBoxableRound(4,-1,"FlareShellBoxPickup","FLA4A0","FLARA0");
 			e.thing.destroy();
 			return;
 		}
@@ -208,7 +208,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDLLShellAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(4,int.max,"LLShellBoxPickup","LLS4A0","LLS1A0");
+		    p.SplitPickupBoxableRound(4,-1,"LLShellBoxPickup","LLS4A0","LLS1A0");
 			e.thing.destroy();
 			return;
 		}
@@ -218,7 +218,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
 			p.amount = HDUPK(e.Thing).amount;
 			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,int.max,"SlugBoxPickup","SHELA0","SHL1A0");
+			p.SplitPickupBoxableRound(4,-1,"SlugBoxPickup","SHELA0","SHL1A0");
 			e.thing.destroy();
 			return;
 		}
