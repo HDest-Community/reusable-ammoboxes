@@ -7,13 +7,9 @@ class Legacy_50AMBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_50AM_LOADED;
 
 		tag "$TAG_50AM_BOX";
-//		Inventory.PickupMessage "$PICKUP_50AM_BOX";
+		Inventory.PickupMessage "$PICKUP_50AM_BOX";
 		HDPickup.refid LEGACY_HDLD_50AMBOX;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_50AM_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"50AMX0":"50AMV0";

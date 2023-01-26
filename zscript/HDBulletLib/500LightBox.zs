@@ -7,13 +7,9 @@ class Legacy_500LightBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_50SW_LOADED;
 
 		tag "$TAG_500_LIGHT_BOX";
-//		Inventory.PickupMessage "$PICKUP_500_LIGHT_BOX";
+		Inventory.PickupMessage "$PICKUP_500_LIGHT_BOX";
 		HDPickup.refid LEGACY_HDLD_500LBOX;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_500_LIGHT_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"5LBXA0":"5LBXW0";

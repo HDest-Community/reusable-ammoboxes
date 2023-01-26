@@ -10,15 +10,11 @@ class Legacy_5mmBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_5MM_LOADED;
 
 		tag "$TAG_5MM_BOX";
-//		Inventory.PickupMessage "$PICKUP_5MM_BOX";
+		Inventory.PickupMessage "$PICKUP_5MM_BOX";
 		HDPickup.refid LEGACY_HDLD_5MMBOX;
 
 		ReusableAmmobox.extractMax 16;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_5MM_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"5MBXA0":"5MBXW0";

@@ -10,15 +10,11 @@ class Legacy_4gaSlugBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_4GSLOADED;
 
 		tag "$TAG_4G_SLUG_BOX";
-//		Inventory.PickupMessage "$PICKUP_4G_SLUG_BOX";
+		Inventory.PickupMessage "$PICKUP_4G_SLUG_BOX";
 		HDPickup.refid LEGACY_HDLD_4GSLUGBOX;
 
 		ReusableAmmobox.extractMax 2;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_4G_SLUG_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"4GBXA0":"4GBXW0";

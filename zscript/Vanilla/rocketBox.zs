@@ -11,15 +11,11 @@ class Legacy_RocketBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_ROCKETLOADED*1.25;
 
 		tag "$TAG_RPG_BOX";
-//		Inventory.PickupMessage "$PICKUP_RPG_BOX";
+		Inventory.PickupMessage "$PICKUP_RPG_BOX";
 		HDPickup.refid LEGACY_HDLD_RKTBOX;
 
 		ReusableAmmobox.extractMax 1;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_RPG_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"RBOXA0":"RBOXW0";

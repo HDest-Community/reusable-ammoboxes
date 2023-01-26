@@ -10,15 +10,11 @@ class Legacy_ExplosiveShellBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
-//		Inventory.PickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
+		Inventory.PickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
 		HDPickup.refid LEGACY_HDLD_EXPLOSIVESHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_EXPLOSIVE_SHELL_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"XLBXA0":"XLBXW0";

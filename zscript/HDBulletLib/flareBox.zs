@@ -10,15 +10,11 @@ class Legacy_FlareBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED * .9;
 
 		tag "$TAG_FLARE_BOX";
-//		Inventory.PickupMessage "$PICKUP_FLARE_BOX";
+		Inventory.PickupMessage "$PICKUP_FLARE_BOX";
 		HDPickup.refid LEGACY_HDLD_FLAREBOX;
 
 		ReusableAmmobox.extractMax 4;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_FLARE_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"FLBXA0":"FLBXW0";

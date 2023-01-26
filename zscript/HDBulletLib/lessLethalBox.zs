@@ -10,15 +10,11 @@ class Legacy_LessLethalBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_LESSLETHAL_BOX";
-//		Inventory.PickupMessage "$PICKUP_LESSLETHAL_BOX";
+		Inventory.PickupMessage "$PICKUP_LESSLETHAL_BOX";
 		HDPickup.refid LEGACY_HDLD_LESSLETHALBOX;
 
 		ReusableAmmobox.extractMax 4;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_LESSLETHAL_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"lLBXA0":"LLBXW0";

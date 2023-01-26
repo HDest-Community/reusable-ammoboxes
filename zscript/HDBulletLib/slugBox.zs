@@ -10,15 +10,11 @@ class Legacy_SlugBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_SLUG_BOX";
-//		Inventory.PickupMessage "$PICKUP_SLUG_BOX";
+		Inventory.PickupMessage "$PICKUP_SLUG_BOX";
 		HDPickup.refid LEGACY_HDLD_SLUGBOX;
 
 		ReusableAmmobox.extractMax 4;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_SLUG_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"SLBXA0":"SLBXW0";

@@ -10,15 +10,11 @@ class Legacy_6mmBox : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_6MMFLECHETTE_LOADED;
 
 		tag "$TAG_6MM_BOX";
-//		Inventory.PickupMessage "$PICKUP_6MM_BOX";
+		Inventory.PickupMessage "$PICKUP_6MM_BOX";
 		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
 
 		ReusableAmmobox.extractMax 12;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_6MM_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"ACRPK0":"ACRPW0";

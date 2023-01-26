@@ -7,13 +7,9 @@ class Legacy_420Box : ReusableAmmobox {
 		HDMagAmmo.RoundBulk ENC_420_LOADED;
 
 		tag "$TAG_420_BOX";
-//		Inventory.PickupMessage "$PICKUP_420_BOX";
+		Inventory.PickupMessage "$PICKUP_420_BOX";
 		HDPickup.refid LEGACY_HDLD_420BOX;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_420_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"420AA0":"420AW0";
