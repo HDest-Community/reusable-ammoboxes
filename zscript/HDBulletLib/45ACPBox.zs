@@ -1,6 +1,6 @@
 class Legacy_45ACPBox : ReusableAmmobox {
 	default {
-		XScale 0.30;
+		XScale 0.40;
 		YScale 0.40;
 
 		HDMagAmmo.MaxPerUnit 50;
