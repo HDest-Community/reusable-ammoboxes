@@ -11,7 +11,6 @@ class Legacy_ShellBox : ReusableAmmobox {
 
 		tag "$TAG_SHELL_BOX";
 		Inventory.pickupMessage "$PICKUP_SHELL_BOX";
-		translation "160:167=80:105";
 		HDPickup.refId LEGACY_HDLD_SHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
