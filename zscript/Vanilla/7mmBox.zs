@@ -1,17 +1,15 @@
-class Legacy_7mmBox : Legacy_AmmoBox {
+class Legacy_7mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 50;
 		HDMagAmmo.RoundType "SevenMilAmmo";
 		HDMagAmmo.RoundBulk ENC_776_LOADED;
+
 		tag "$TAG_7MM_BOX";
-//		Inventory.PickupMessage "$PICKUP_7MM_BOX";
+		Inventory.PickupMessage "$PICKUP_7MM_BOX";
 		HDPickup.refid LEGACY_HDLD_7MMBOX;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_7MM_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"7BOXA0":"7BOXW0";

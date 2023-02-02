@@ -1,17 +1,20 @@
-class Legacy_6mmBox : Legacy_AmmoBox {
+class Legacy_6mmBox : ReusableAmmobox {
 	default {
 		scale 0.3;
+
+		HDMagAmmo.inserttime 3;
+		HDMagAmmo.extracttime 6;
+
 		HDMagAmmo.MaxPerUnit 100;
 		HDMagAmmo.RoundType "HD6mmFlechetteAmmo";
 		HDMagAmmo.RoundBulk ENC_6MMFLECHETTE_LOADED;
-		tag "$TAG_6MM_BOX";
-//		Inventory.PickupMessage "$PICKUP_6MM_BOX";
-		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
-	}
 
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_6MM_BOX");
-    }
+		tag "$TAG_6MM_BOX";
+		Inventory.PickupMessage "$PICKUP_6MM_BOX";
+		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
+
+		ReusableAmmobox.extractMax 12;
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"ACRPK0":"ACRPW0";

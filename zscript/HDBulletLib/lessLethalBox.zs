@@ -1,17 +1,20 @@
-class Legacy_LessLethalBox : Legacy_AmmoBox {
+class Legacy_LessLethalBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
+		HDMagAmmo.inserttime 6;
+		HDMagAmmo.extracttime 10;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDLLShellAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
-		tag "$TAG_LESSLETHAL_BOX";
-//		Inventory.PickupMessage "$PICKUP_LESSLETHAL_BOX";
-		HDPickup.refid LEGACY_HDLD_LESSLETHALBOX;
-	}
 
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_LESSLETHAL_BOX");
-    }
+		tag "$TAG_LESSLETHAL_BOX";
+		Inventory.PickupMessage "$PICKUP_LESSLETHAL_BOX";
+		HDPickup.refid LEGACY_HDLD_LESSLETHALBOX;
+
+		ReusableAmmobox.extractMax 4;
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"lLBXA0":"LLBXW0";

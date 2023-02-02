@@ -1,17 +1,20 @@
-class Legacy_FlareBox : Legacy_AmmoBox {
+class Legacy_FlareBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
+		HDMagAmmo.inserttime 6;
+		HDMagAmmo.extracttime 10;
+
 		HDMagAmmo.MaxPerUnit 20;
 		HDMagAmmo.RoundType "HDFlareAmmo";
 		HDMagAmmo.RoundBulk ENC_SHELLLOADED * .9;
-		tag "$TAG_FLARE_BOX";
-//		Inventory.PickupMessage "$PICKUP_FLARE_BOX";
-		HDPickup.refid LEGACY_HDLD_FLAREBOX;
-	}
 
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_FLARE_BOX");
-    }
+		tag "$TAG_FLARE_BOX";
+		Inventory.PickupMessage "$PICKUP_FLARE_BOX";
+		HDPickup.refid LEGACY_HDLD_FLAREBOX;
+
+		ReusableAmmobox.extractMax 4;
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"FLBXA0":"FLBXW0";

@@ -1,17 +1,20 @@
-class Legacy_4gaSlugBox : Legacy_AmmoBox {
+class Legacy_4gaSlugBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
+		HDMagAmmo.inserttime 8;
+		HDMagAmmo.extracttime 16;
+
 		HDMagAmmo.MaxPerUnit 25;
 		HDMagAmmo.RoundType "HD4GSAmmo";
 		HDMagAmmo.RoundBulk ENC_4GSLOADED;
-		tag "$TAG_4G_SLUG_BOX";
-//		Inventory.PickupMessage "$PICKUP_4G_SLUG_BOX";
-		HDPickup.refid LEGACY_HDLD_4GSLUGBOX;
-	}
 
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_4G_SLUG_BOX");
-    }
+		tag "$TAG_4G_SLUG_BOX";
+		Inventory.PickupMessage "$PICKUP_4G_SLUG_BOX";
+		HDPickup.refid LEGACY_HDLD_4GSLUGBOX;
+
+		ReusableAmmobox.extractMax 2;
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"4GBXA0":"4GBXW0";

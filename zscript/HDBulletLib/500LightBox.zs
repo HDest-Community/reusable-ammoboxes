@@ -1,17 +1,15 @@
-class Legacy_500LightBox : Legacy_AmmoBox {
+class Legacy_500LightBox : ReusableAmmobox {
 	default {
 		scale 0.4;
+
 		HDMagAmmo.MaxPerUnit 40;
 		HDMagAmmo.RoundType "HD500SWLightAmmo";
 		HDMagAmmo.RoundBulk ENC_50SW_LOADED;
+
 		tag "$TAG_500_LIGHT_BOX";
-//		Inventory.PickupMessage "$PICKUP_500_LIGHT_BOX";
+		Inventory.PickupMessage "$PICKUP_500_LIGHT_BOX";
 		HDPickup.refid LEGACY_HDLD_500LBOX;
 	}
-
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_500_LIGHT_BOX");
-    }
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"5LBXA0":"5LBXW0";

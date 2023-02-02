@@ -1,20 +1,21 @@
-class Legacy_RocketBox : Legacy_AmmoBox {
+class Legacy_RocketBox : ReusableAmmobox {
 	default {
-		HDMagAmmo.extracttime 5;
-		HDMagAmmo.inserttime 8;
-		HDMagAmmo.MagBulk 5;
 		scale 0.6;
+
+		HDMagAmmo.inserttime 8;
+		HDMagAmmo.extracttime 16;
+
+		HDMagAmmo.MagBulk 5;
 		HDMagAmmo.MaxPerUnit 5;
 		HDMagAmmo.RoundType "HDRocketAmmo";
 		HDMagAmmo.RoundBulk ENC_ROCKETLOADED*1.25;
-		tag "$TAG_RPG_BOX";
-//		Inventory.PickupMessage "$PICKUP_RPG_BOX";
-		HDPickup.refid LEGACY_HDLD_RKTBOX;
-	}
 
-	override string pickupmessage() {
-	    return Stringtable.Localize("$PICKUP_RPG_BOX");
-    }
+		tag "$TAG_RPG_BOX";
+		Inventory.PickupMessage "$PICKUP_RPG_BOX";
+		HDPickup.refid LEGACY_HDLD_RKTBOX;
+
+		ReusableAmmobox.extractMax 1;
+	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
 		string magsprite=(thismagamt>0)?"RBOXA0":"RBOXW0";
