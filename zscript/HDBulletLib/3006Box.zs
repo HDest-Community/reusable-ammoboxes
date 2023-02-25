@@ -3,18 +3,20 @@ class Legacy_3006Box : ReusableAmmobox {
 		xscale 0.5;
 		yscale 0.4;
 
-		HDMagAmmo.MaxPerUnit 40;
-		HDMagAmmo.RoundType "ThirtyAughtSixAmmo";
-		HDMagAmmo.RoundBulk ENC_776_LOADED * 1.25;
+		HDMagAmmo.maxPerUnit 40;
+		HDMagAmmo.roundType "ThirtyAughtSixAmmo";
+		HDMagAmmo.roundBulk ENC_776_LOADED * 1.25;
 
 		tag "$TAG_3006_BOX";
-		Inventory.PickupMessage "$PICKUP_3006_BOX";
-		HDPickup.refid LEGACY_HDLD_3006BOX;
-	}
+		Inventory.pickupMessage "$PICKUP_3006_BOX";
+		HDPickup.refId LEGACY_HDLD_3006BOX;
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"M1A1Y0":"M1A1W0";
-		return magsprite,"7RNDA0","ThirtyAughtSixAmmo",0.6;
+		ReusableAmmobox.fullSprite "M1A1Y0";
+		ReusableAmmobox.emptySprite "M1A1W0";
+		ReusableAmmobox.roundSprite "7RNDA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/3006";
+        ReusableAmmobox.insertSound "boxes/insert/3006";
 	}
 
 	States {
@@ -22,9 +24,7 @@ class Legacy_3006Box : ReusableAmmobox {
 			M1A1 Y -1;
 			stop;
 		spawnempty:
-			M1A1 W -1{
-				brollsprite=true;brollcenter=true;
-				roll=180;
-			}stop;
+			M1A1 W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			stop;
 	}
 }

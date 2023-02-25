@@ -2,18 +2,20 @@ class Legacy_500HeavyBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
-		HDMagAmmo.MaxPerUnit 20;
-		HDMagAmmo.RoundType "HD500SWHeavyAmmo";
-		HDMagAmmo.RoundBulk ENC_50SW_LOADED;
+		HDMagAmmo.maxPerUnit 20;
+		HDMagAmmo.roundType "HD500SWHeavyAmmo";
+		HDMagAmmo.roundBulk ENC_50SW_LOADED;
 
 		tag "$TAG_500_HEAVY_BOX";
-		Inventory.PickupMessage "$PICKUP_500_HEAVY_BOX";
-		HDPickup.refid LEGACY_HDLD_500HBOX;
-	}
+		Inventory.pickupMessage "$PICKUP_500_HEAVY_BOX";
+		HDPickup.refId LEGACY_HDLD_500HBOX;
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"5HBXA0":"5HBXW0";
-		return magsprite,"SWRNB0","HD500SWHeavyAmmo",0.6;
+		ReusableAmmobox.fullSprite "5HBXA0";
+		ReusableAmmobox.emptySprite "5HBXW0";
+		ReusableAmmobox.roundSprite "SWRNB0";
+
+        ReusableAmmobox.extractSound "boxes/extract/500Heavy";
+        ReusableAmmobox.insertSound "boxes/insert/500Heavy";
 	}
 
 	States {
@@ -21,9 +23,7 @@ class Legacy_500HeavyBox : ReusableAmmobox {
 			5HBX A -1;
 			stop;
 		spawnempty:
-			5HBX W -1{
-				brollsprite=true;brollcenter=true;
-				roll=180;
-			}stop;
+			5HBX W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			stop;
 	}
 }

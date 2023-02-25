@@ -2,18 +2,20 @@ class Legacy_9mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
-		HDMagAmmo.MaxPerUnit 100;
-		HDMagAmmo.RoundType "HDPistolAmmo";
-		HDMagAmmo.RoundBulk ENC_9_LOADED;
+		HDMagAmmo.maxPerUnit 100;
+		HDMagAmmo.roundType "HDPistolAmmo";
+		HDMagAmmo.roundBulk ENC_9_LOADED;
 
 		tag "$TAG_9MM_BOX";
-		Inventory.PickupMessage "$PICKUP_9MM_BOX";
-		HDPickup.refid LEGACY_HDLD_9MMBOX;
-	}
+		Inventory.pickupMessage "$PICKUP_9MM_BOX";
+		HDPickup.refId LEGACY_HDLD_9MMBOX;
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"9BOXA0":"9BOXW0";
-		return magsprite,"PRNDA0","HDPistolAmmo",0.6;
+		ReusableAmmobox.fullSprite "9BOXA0";
+		ReusableAmmobox.emptySprite "9BOXW0";
+		ReusableAmmobox.roundSprite "PRNDA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/9mm";
+        ReusableAmmobox.insertSound "boxes/insert/9mm";
 	}
 
 	override void GetItemsThatUseThis() {
@@ -29,9 +31,7 @@ class Legacy_9mmBox : ReusableAmmobox {
 			9BOX A -1;
 			stop;
 		spawnempty:
-			9BOX W -1{
-				brollsprite=true;brollcenter=true;
-				roll=180;
-			}stop;
+			9BOX W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			stop;
 	}
 }
