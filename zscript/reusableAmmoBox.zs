@@ -33,6 +33,17 @@ class ReusableAmmobox : HDMagAmmo {
             spriteScale;
 	}
 
+    void PlayExtractSound() {
+        // TODO: register new sounds, default to these
+        owner.A_StartSound("weapons/rifleclick2", CHAN_WEAPON);
+        owner.A_StartSound("weapons/rockreload", CHAN_WEAPON, CHANF_OVERLAP, 0.4);
+    }
+
+    void PlayInsertSound() {
+        // TODO: register new sounds, default to these
+		owner.A_StartSound("weapons/rifleclick2", CHAN_WEAPON, CHANF_OVERLAP);
+    }
+
 	// extract a "handful" of rounds at a time
 	override bool Extract() {
         SyncAmount();
@@ -40,28 +51,44 @@ class ReusableAmmobox : HDMagAmmo {
         // Grab the current box
         int mindex = mags.size() - 1;
 
-        // If there's no mags left or we have an empty mag, back out early
-        if(mags.size() < 1 || mags[mindex] < 1 || owner.A_JumpIfInventory(roundType, 0, "null")) {
-            return false;
-        }
+        // If there's no boxes left or we have an empty box, back out early
+        if(mags.size() < 1 || mags[mindex] < 1 || owner.A_JumpIfInventory(roundType, 0, "null")) return false;
 
         // Calculate the number of rounds to extract
         int totake = min(random(extractMin, extractMax), mags[mindex]);
 
         // Give or drop the extracted rounds
-        if(totake<HDPickup.MaxGive(owner, roundType, roundbulk)) {
+        if(totake < HDPickup.MaxGive(owner, roundType, roundbulk)) {
             HDF.Give(owner, roundType, totake);
         } else {
             HDPickup.DropItem(owner,roundType,totake);
         }
 
-        // Play the proper sounds
-        // TODO: register new sounds, default to these
-        owner.A_StartSound("weapons/rifleclick2",CHAN_WEAPON);
-        owner.A_StartSound("weapons/rockreload",CHAN_WEAPON,CHANF_OVERLAP,0.4);
+        // Play the configured sounds
+        PlayExtractSound();
 
-        // Reduce the magazine by the amount taken and return
+        // Reduce the box by the amount taken and return
         mags[mindex] -= totake;
         return true;
     }
+
+	override bool Insert() {
+		SyncAmount();
+
+        // Grab the current box
+        int mindex = mags.size() - 1;
+
+        // If there's no boxes left or we have a full box, back out early
+		if(mags.size() < 1 || mags[mindex] >= maxperunit || !owner.countinv(roundtype)) return false;
+
+        // Take the inserted rounds
+		owner.A_TakeInventory(roundtype, 1, TIF_NOTAKEINFINITE);
+
+        // Play the configured sounds
+        PlayInsertSound();
+
+        // Increase the box by the amount taken and return
+		mags[mindex]++;
+		return true;
+	}
 }
