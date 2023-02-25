@@ -13,6 +13,9 @@ class Legacy_9mmBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "9BOXA0";
 		ReusableAmmobox.emptySprite "9BOXW0";
 		ReusableAmmobox.roundSprite "PRNDA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/9mm";
+        ReusableAmmobox.insertSound "boxes/insert/9mm";
 	}
 
 	override void GetItemsThatUseThis() {

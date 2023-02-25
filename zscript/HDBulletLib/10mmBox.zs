@@ -13,6 +13,9 @@ class Legacy_10mmBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "BX10A0";
 		ReusableAmmobox.emptySprite "BX10W0";
 		ReusableAmmobox.roundSprite "PR10A0";
+
+        ReusableAmmobox.extractSound "boxes/extract/10mm";
+        ReusableAmmobox.insertSound "boxes/insert/10mm";
 	}
 
 	States {

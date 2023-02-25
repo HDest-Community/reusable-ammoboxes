@@ -13,6 +13,9 @@ class Legacy_50AMBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "50AMX0";
 		ReusableAmmobox.emptySprite "50AMV0";
 		ReusableAmmobox.roundSprite "G50ZA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/50AM";
+        ReusableAmmobox.insertSound "boxes/insert/50AM";
 	}
 
 	States {

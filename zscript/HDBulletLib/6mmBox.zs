@@ -17,6 +17,9 @@ class Legacy_6mmBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "ACRPK0";
 		ReusableAmmobox.emptySprite "ACRPW0";
 		ReusableAmmobox.roundSprite "ACRPI0";
+
+        ReusableAmmobox.extractSound "boxes/extract/6mm";
+        ReusableAmmobox.insertSound "boxes/insert/6mm";
 	}
 
 	States {

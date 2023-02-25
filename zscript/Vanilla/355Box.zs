@@ -13,6 +13,9 @@ class Legacy_355Box : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "3BOXA0";
 		ReusableAmmobox.emptySprite "3BOXW0";
 		ReusableAmmobox.roundSprite "3RNDA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/355";
+        ReusableAmmobox.insertSound "boxes/insert/355";
 	}
 
 	override void GetItemsThatUseThis(){

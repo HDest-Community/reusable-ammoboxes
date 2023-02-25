@@ -13,6 +13,9 @@ class Legacy_500LightBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "5LBXA0";
 		ReusableAmmobox.emptySprite "5LBXW0";
 		ReusableAmmobox.roundSprite "SWRNA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/500Light";
+        ReusableAmmobox.insertSound "boxes/insert/500Light";
 	}
 
 	States {

@@ -13,6 +13,9 @@ class Legacy_069Box : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "42BXA0";
 		ReusableAmmobox.emptySprite "42BXW0";
 		ReusableAmmobox.roundSprite "42BRA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/069Bore";
+        ReusableAmmobox.insertSound "boxes/insert/069Bore";
 	}
 
 	States {

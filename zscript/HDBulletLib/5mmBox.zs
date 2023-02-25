@@ -17,6 +17,9 @@ class Legacy_5mmBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "5MBXA0";
 		ReusableAmmobox.emptySprite "5MBXW0";
 		ReusableAmmobox.roundSprite "5MMZA0";
+		
+        ReusableAmmobox.extractSound "boxes/extract/5mm";
+        ReusableAmmobox.insertSound "boxes/insert/5mm";
 	}
 
 	States {

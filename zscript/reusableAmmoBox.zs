@@ -7,6 +7,9 @@ class ReusableAmmobox : HDMagAmmo {
     string roundSprite;property roundSprite:roundSprite;
     double spriteScale;property spriteScale:spriteScale;
 
+    sound insertSound;property insertSound:insertSound;
+    sound extractSound;property extractSound:extractSound;
+
 	default {
 		HDMagAmmo.insertTime 4;
 		HDMagAmmo.extractTime 8;
@@ -18,6 +21,9 @@ class ReusableAmmobox : HDMagAmmo {
 		ReusableAmmobox.emptySprite "";
 		ReusableAmmobox.roundSprite "";
 		ReusableAmmobox.spriteScale 0.6;
+
+        ReusableAmmobox.insertSound "boxes/insert";
+        ReusableAmmobox.extractSound "boxes/extract";
 	}
 
 	// Don't auto-consolidate these like mags
@@ -34,14 +40,11 @@ class ReusableAmmobox : HDMagAmmo {
 	}
 
     void PlayExtractSound() {
-        // TODO: register new sounds, default to these
-        owner.A_StartSound("weapons/rifleclick2", CHAN_WEAPON);
-        owner.A_StartSound("weapons/rockreload", CHAN_WEAPON, CHANF_OVERLAP, 0.4);
+        owner.A_StartSound(extractSound, CHAN_WEAPON, CHANF_OVERLAP);
     }
 
     void PlayInsertSound() {
-        // TODO: register new sounds, default to these
-		owner.A_StartSound("weapons/rifleclick2", CHAN_WEAPON, CHANF_OVERLAP);
+        owner.A_StartSound(insertSound, CHAN_WEAPON, CHANF_OVERLAP);
     }
 
 	// extract a "handful" of rounds at a time

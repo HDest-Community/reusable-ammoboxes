@@ -18,6 +18,9 @@ class Legacy_ShellBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "SBOXA0";
 		ReusableAmmobox.emptySprite "SBOXW0";
 		ReusableAmmobox.roundSprite "SHL1A0";
+
+        ReusableAmmobox.extractSound "boxes/extract/12gShells";
+        ReusableAmmobox.insertSound "boxes/insert/12gShells";
 	}
 
 	override void GetItemsThatUseThis() {

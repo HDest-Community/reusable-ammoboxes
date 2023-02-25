@@ -13,6 +13,9 @@ class Legacy_420Box : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "420AA0";
 		ReusableAmmobox.emptySprite "420AW0";
 		ReusableAmmobox.roundSprite "420BA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/aurochs";
+        ReusableAmmobox.insertSound "boxes/insert/aurochs";
 	}
 
 	States {

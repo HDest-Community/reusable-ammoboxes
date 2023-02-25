@@ -17,6 +17,9 @@ class Legacy_ExplosiveShellBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "XLBXA0";
 		ReusableAmmobox.emptySprite "XLBXW0";
 		ReusableAmmobox.roundSprite "XLS1A0";
+
+        ReusableAmmobox.extractSound "boxes/extract/exShells";
+        ReusableAmmobox.insertSound "boxes/insert/exShells";
 	}
 
 	States {

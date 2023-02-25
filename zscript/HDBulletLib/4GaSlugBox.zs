@@ -17,6 +17,9 @@ class Legacy_4gaSlugBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "4GBXA0";
 		ReusableAmmobox.emptySprite "4GBXW0";
 		ReusableAmmobox.roundSprite "4GSIA0";
+		
+        ReusableAmmobox.extractSound "boxes/extract/4gaSlugs";
+        ReusableAmmobox.insertSound "boxes/insert/4gaSlugs";
 	}
 
 	States {

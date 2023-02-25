@@ -13,6 +13,9 @@ class Legacy_7mmBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "7BOXA0";
 		ReusableAmmobox.emptySprite "7BOXW0";
 		ReusableAmmobox.roundSprite "7RNDA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/7mm";
+        ReusableAmmobox.insertSound "boxes/insert/7mm";
 	}
 
 	override void GetItemsThatUseThis(){

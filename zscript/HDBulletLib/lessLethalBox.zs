@@ -17,6 +17,9 @@ class Legacy_LessLethalBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "LLBXA0";
 		ReusableAmmobox.emptySprite "LLBXW0";
 		ReusableAmmobox.roundSprite "LLS1A0";
+
+        ReusableAmmobox.extractSound "boxes/extract/llShells";
+        ReusableAmmobox.insertSound "boxes/insert/llShells";
 	}
 
 	States {

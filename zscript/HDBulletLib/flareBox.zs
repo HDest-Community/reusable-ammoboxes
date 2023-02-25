@@ -17,6 +17,9 @@ class Legacy_FlareBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "FLBXA0";
 		ReusableAmmobox.emptySprite "FLBXW0";
 		ReusableAmmobox.roundSprite "FLARA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/flareShells";
+        ReusableAmmobox.insertSound "boxes/insert/flareShells";
 	}
 
 	States {

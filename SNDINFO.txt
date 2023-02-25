@@ -1,0 +1,65 @@
+// Global Insert/Extract Sounds
+$alias boxes/extract weapons/pocket
+$alias boxes/insert weapons/pocket
+
+// Generic Extract Sounds
+$alias boxes/extract/pistolAmmo boxes/extract
+$alias boxes/extract/shellAmmo boxes/extract
+$alias boxes/extract/rockAmmo boxes/extract
+$alias boxes/extract/rifleAmmo boxes/extract
+
+// Ammo-specific Extract Sounds
+$alias boxes/extract/4gaSlugs boxes/extract/shellAmmo
+$alias boxes/extract/5mm boxes/extract/pistolAmmo
+$alias boxes/extract/6mm boxes/extract/pistolAmmo
+$alias boxes/extract/10mm boxes/extract/pistolAmmo
+$alias boxes/extract/45ACP boxes/extract/pistolAmmo
+$alias boxes/extract/45LC boxes/extract/pistolAmmo
+$alias boxes/extract/50AE boxes/extract/pistolAmmo
+$alias boxes/extract/50AM boxes/extract/pistolAmmo
+$alias boxes/extract/50OMG boxes/extract/rifleAmmo
+$alias boxes/extract/069Bore boxes/extract/shellAmmo
+$alias boxes/extract/aurochs boxes/extract/pistolAmmo
+$alias boxes/extract/500Heavy boxes/extract/pistolAmmo
+$alias boxes/extract/500Light boxes/extract/pistolAmmo
+$alias boxes/extract/3006 boxes/extract/rifleAmmo
+$alias boxes/extract/exShells boxes/extract/shellAmmo
+$alias boxes/extract/flareShells boxes/extract/shellAmmo
+$alias boxes/extract/llShells boxes/extract/shellAmmo
+$alias boxes/extract/12gSlugs boxes/extract/shellAmmo
+$alias boxes/extract/7mm boxes/extract/rifleAmmo
+$alias boxes/extract/9mm boxes/extract/pistolAmmo
+$alias boxes/extract/355 boxes/extract/pistolAmmo
+$alias boxes/extract/rockets boxes/extract/rockAmmo
+$alias boxes/extract/12gShells boxes/extract/shellAmmo
+
+// Generic Insert Sounds
+$alias boxes/insert/pistolAmmo boxes/insert
+$alias boxes/insert/shellAmmo boxes/insert
+$alias boxes/insert/rockAmmo boxes/insert
+$alias boxes/insert/rifleAmmo boxes/insert
+
+// Ammo-specific Insert Sounds
+$alias boxes/insert/4gaSlugs boxes/insert/shellAmmo
+$alias boxes/insert/5mm boxes/insert/pistolAmmo
+$alias boxes/insert/6mm boxes/insert/pistolAmmo
+$alias boxes/insert/10mm boxes/insert/pistolAmmo
+$alias boxes/insert/45ACP boxes/insert/pistolAmmo
+$alias boxes/insert/45LC boxes/insert/pistolAmmo
+$alias boxes/insert/50AE boxes/insert/pistolAmmo
+$alias boxes/insert/50AM boxes/insert/pistolAmmo
+$alias boxes/insert/50OMG boxes/insert/rifleAmmo
+$alias boxes/insert/069Bore boxes/insert/shellAmmo
+$alias boxes/insert/aurochs boxes/insert/pistolAmmo
+$alias boxes/insert/500Heavy boxes/insert/pistolAmmo
+$alias boxes/insert/500Light boxes/insert/pistolAmmo
+$alias boxes/insert/3006 boxes/insert/rifleAmmo
+$alias boxes/insert/exShells boxes/insert/shellAmmo
+$alias boxes/insert/flareShells boxes/insert/shellAmmo
+$alias boxes/insert/llShells boxes/insert/shellAmmo
+$alias boxes/insert/12gSlugs boxes/insert/shellAmmo
+$alias boxes/insert/7mm boxes/insert/rifleAmmo
+$alias boxes/insert/9mm boxes/insert/pistolAmmo
+$alias boxes/insert/355 boxes/insert/pistolAmmo
+$alias boxes/insert/rockets boxes/insert/rockAmmo
+$alias boxes/insert/12gShells boxes/insert/shellAmmo

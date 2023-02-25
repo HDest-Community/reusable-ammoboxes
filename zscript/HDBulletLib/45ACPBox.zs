@@ -14,6 +14,9 @@ class Legacy_45ACPBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "45BXA0";
 		ReusableAmmobox.emptySprite "45BXW0";
 		ReusableAmmobox.roundSprite "45RNA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/45ACP";
+        ReusableAmmobox.insertSound "boxes/insert/45ACP";
 	}
 
 	States {

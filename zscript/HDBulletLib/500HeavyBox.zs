@@ -13,6 +13,9 @@ class Legacy_500HeavyBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "5HBXA0";
 		ReusableAmmobox.emptySprite "5HBXW0";
 		ReusableAmmobox.roundSprite "SWRNB0";
+
+        ReusableAmmobox.extractSound "boxes/extract/500Heavy";
+        ReusableAmmobox.insertSound "boxes/insert/500Heavy";
 	}
 
 	States {

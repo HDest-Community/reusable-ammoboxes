@@ -18,6 +18,9 @@ class Legacy_RocketBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "RBOXA0";
 		ReusableAmmobox.emptySprite "RBOXW0";
 		ReusableAmmobox.roundSprite "ROQPA0";
+
+        ReusableAmmobox.extractSound "boxes/extract/rockets";
+        ReusableAmmobox.insertSound "boxes/insert/rockets";
 	}
 
 	override void GetItemsThatUseThis(){

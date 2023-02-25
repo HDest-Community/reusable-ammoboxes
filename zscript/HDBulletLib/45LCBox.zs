@@ -13,6 +13,9 @@ class Legacy_45LCBox : ReusableAmmobox {
 		ReusableAmmobox.fullSprite "45LBA0";
 		ReusableAmmobox.emptySprite "45LBW0";
 		ReusableAmmobox.roundSprite "PR10A0";
+
+        ReusableAmmobox.extractSound "boxes/extract/45LC";
+        ReusableAmmobox.insertSound "boxes/insert/45LC";
 	}
 
 	States {
