@@ -9,11 +9,10 @@ class Legacy_10mmBox : ReusableAmmobox {
 		tag "$TAG_10MM_BOX";
 		Inventory.PickupMessage "$PICKUP_10MM_BOX";
 		HDPickup.refid LEGACY_HDLD_10MMBOX;
-	}
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"BX10A0":"BX10W0";
-		return magsprite,"PR10A0","HD10mAmmo",0.6;
+		ReusableAmmobox.fullSprite "BX10A0";
+		ReusableAmmobox.emptySprite "BX10W0";
+		ReusableAmmobox.roundSprite "PR10A0";
 	}
 
 	States {

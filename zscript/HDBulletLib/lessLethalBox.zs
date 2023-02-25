@@ -14,11 +14,9 @@ class Legacy_LessLethalBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_LESSLETHALBOX;
 
 		ReusableAmmobox.extractMax 4;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"lLBXA0":"LLBXW0";
-		return magsprite,"LLS1A0","HDLLShellAmmo",0.6;
+		ReusableAmmobox.fullSprite "LLBXA0";
+		ReusableAmmobox.emptySprite "LLBXW0";
+		ReusableAmmobox.roundSprite "LLS1A0";
 	}
 
 	States {

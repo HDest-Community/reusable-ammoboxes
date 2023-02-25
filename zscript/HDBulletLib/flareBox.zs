@@ -14,11 +14,9 @@ class Legacy_FlareBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_FLAREBOX;
 
 		ReusableAmmobox.extractMax 4;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"FLBXA0":"FLBXW0";
-		return magsprite,"FLARA0","HDFlareAmmo",0.6;
+		ReusableAmmobox.fullSprite "FLBXA0";
+		ReusableAmmobox.emptySprite "FLBXW0";
+		ReusableAmmobox.roundSprite "FLARA0";
 	}
 
 	States {

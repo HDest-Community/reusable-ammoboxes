@@ -14,11 +14,9 @@ class Legacy_5mmBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_5MMBOX;
 
 		ReusableAmmobox.extractMax 16;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"5MBXA0":"5MBXW0";
-		return magsprite,"5MMZA0","HD5mm_Ammo",0.6;
+		ReusableAmmobox.fullSprite "5MBXA0";
+		ReusableAmmobox.emptySprite "5MBXW0";
+		ReusableAmmobox.roundSprite "5MMZA0";
 	}
 
 	States {

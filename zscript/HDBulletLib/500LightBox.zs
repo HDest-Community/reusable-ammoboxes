@@ -9,11 +9,10 @@ class Legacy_500LightBox : ReusableAmmobox {
 		tag "$TAG_500_LIGHT_BOX";
 		Inventory.PickupMessage "$PICKUP_500_LIGHT_BOX";
 		HDPickup.refid LEGACY_HDLD_500LBOX;
-	}
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"5LBXA0":"5LBXW0";
-		return magsprite,"SWRNA0","HD500SWLightAmmo",0.6;
+		ReusableAmmobox.fullSprite "5LBXA0";
+		ReusableAmmobox.emptySprite "5LBXW0";
+		ReusableAmmobox.roundSprite "SWRNA0";
 	}
 
 	States {

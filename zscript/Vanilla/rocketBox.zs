@@ -15,11 +15,9 @@ class Legacy_RocketBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_RKTBOX;
 
 		ReusableAmmobox.extractMax 1;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"RBOXA0":"RBOXW0";
-		return magsprite,"ROQPA0","HDRocketAmmo",0.6;
+		ReusableAmmobox.fullSprite "RBOXA0";
+		ReusableAmmobox.emptySprite "RBOXW0";
+		ReusableAmmobox.roundSprite "ROQPA0";
 	}
 
 	override void GetItemsThatUseThis(){

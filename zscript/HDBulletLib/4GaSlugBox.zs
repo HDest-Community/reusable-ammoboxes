@@ -14,11 +14,9 @@ class Legacy_4gaSlugBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_4GSLUGBOX;
 
 		ReusableAmmobox.extractMax 2;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"4GBXA0":"4GBXW0";
-		return magsprite,"4GSIA0","HD4GSAmmo",0.6;
+		ReusableAmmobox.fullSprite "4GBXA0";
+		ReusableAmmobox.emptySprite "4GBXW0";
+		ReusableAmmobox.roundSprite "4GSIA0";
 	}
 
 	States {

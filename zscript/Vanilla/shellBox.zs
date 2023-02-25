@@ -15,11 +15,9 @@ class Legacy_ShellBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_SHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"SBOXA0":"SBOXW0";
-		return magsprite,"SHL1A0","HDShellAmmo",0.6;
+		ReusableAmmobox.fullSprite "SBOXA0";
+		ReusableAmmobox.emptySprite "SBOXW0";
+		ReusableAmmobox.roundSprite "SHL1A0";
 	}
 
 	override void GetItemsThatUseThis() {

@@ -9,11 +9,10 @@ class Legacy_7mmBox : ReusableAmmobox {
 		tag "$TAG_7MM_BOX";
 		Inventory.PickupMessage "$PICKUP_7MM_BOX";
 		HDPickup.refid LEGACY_HDLD_7MMBOX;
-	}
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"7BOXA0":"7BOXW0";
-		return magsprite,"7RNDA0","SevenMilAmmo",0.6;
+		ReusableAmmobox.fullSprite "7BOXA0";
+		ReusableAmmobox.emptySprite "7BOXW0";
+		ReusableAmmobox.roundSprite "7RNDA0";
 	}
 
 	override void GetItemsThatUseThis(){

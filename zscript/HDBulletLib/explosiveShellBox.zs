@@ -14,11 +14,9 @@ class Legacy_ExplosiveShellBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_EXPLOSIVESHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"XLBXA0":"XLBXW0";
-		return magsprite,"XLS1A0","HDExplosiveShellAmmo",0.6;
+		ReusableAmmobox.fullSprite "XLBXA0";
+		ReusableAmmobox.emptySprite "XLBXW0";
+		ReusableAmmobox.roundSprite "XLS1A0";
 	}
 
 	States {

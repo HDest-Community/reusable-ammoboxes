@@ -14,11 +14,9 @@ class Legacy_6mmBox : ReusableAmmobox {
 		HDPickup.refid LEGACY_HDLD_6MMFLECHETTEBOX;
 
 		ReusableAmmobox.extractMax 12;
-	}
-
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"ACRPK0":"ACRPW0";
-		return magsprite,"ACRPI0","HD6mmFlechetteAmmo",0.6;
+		ReusableAmmobox.fullSprite "ACRPK0";
+		ReusableAmmobox.emptySprite "ACRPW0";
+		ReusableAmmobox.roundSprite "ACRPI0";
 	}
 
 	States {

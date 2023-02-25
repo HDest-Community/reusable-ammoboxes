@@ -9,11 +9,10 @@ class Legacy_420Box : ReusableAmmobox {
 		tag "$TAG_420_BOX";
 		Inventory.PickupMessage "$PICKUP_420_BOX";
 		HDPickup.refid LEGACY_HDLD_420BOX;
-	}
 
-	override string,string,name,double getmagsprite(int thismagamt) {
-		string magsprite=(thismagamt>0)?"420AA0":"420AW0";
-		return magsprite,"420BA0","HDAurochsAmmo",0.6;
+		ReusableAmmobox.fullSprite "420AA0";
+		ReusableAmmobox.emptySprite "420AW0";
+		ReusableAmmobox.roundSprite "420BA0";
 	}
 
 	States {

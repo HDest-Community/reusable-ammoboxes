@@ -2,6 +2,11 @@ class ReusableAmmobox : HDMagAmmo {
 	int extractMin;property extractMin:extractMin;
 	int extractMax;property extractMax:extractMax;
 
+    string fullSprite;property fullSprite:fullSprite;
+    string emptySprite;property emptySprite:emptySprite;
+    string roundSprite;property roundSprite:roundSprite;
+    double spriteScale;property spriteScale:spriteScale;
+
 	default {
 		HDMagAmmo.inserttime 4;
 		HDMagAmmo.extracttime 8;
@@ -9,10 +14,24 @@ class ReusableAmmobox : HDMagAmmo {
 
 		ReusableAmmobox.extractMin 1;
 		ReusableAmmobox.extractMax 10;
+		ReusableAmmobox.fullSprite "";
+		ReusableAmmobox.emptySprite "";
+		ReusableAmmobox.roundSprite "";
+		ReusableAmmobox.spriteScale 0.6;
 	}
 
 	// Don't auto-consolidate these like mags
 	override void Consolidate() { SyncAmount(); return; }
+
+    // Return the configured box sprite, individual round sprite, and the scale at which to render them
+	override string,string,name,double getmagsprite(int thismagamt) {
+		return thismagamt > 0
+                ? fullSprite
+                : emptySprite,
+            roundSprite,
+            roundType.GetClassName(),
+            spriteScale;
+	}
 
 	// extract a "handful" of rounds at a time
 	override bool Extract() {
