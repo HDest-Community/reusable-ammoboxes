@@ -2,13 +2,13 @@ class Legacy_9mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
-		HDMagAmmo.MaxPerUnit 100;
-		HDMagAmmo.RoundType "HDPistolAmmo";
-		HDMagAmmo.RoundBulk ENC_9_LOADED;
+		HDMagAmmo.maxPerUnit 100;
+		HDMagAmmo.roundType "HDPistolAmmo";
+		HDMagAmmo.roundBulk ENC_9_LOADED;
 
 		tag "$TAG_9MM_BOX";
-		Inventory.PickupMessage "$PICKUP_9MM_BOX";
-		HDPickup.refid LEGACY_HDLD_9MMBOX;
+		Inventory.pickupMessage "$PICKUP_9MM_BOX";
+		HDPickup.refId LEGACY_HDLD_9MMBOX;
 
 		ReusableAmmobox.fullSprite "9BOXA0";
 		ReusableAmmobox.emptySprite "9BOXW0";
@@ -28,9 +28,7 @@ class Legacy_9mmBox : ReusableAmmobox {
 			9BOX A -1;
 			stop;
 		spawnempty:
-			9BOX W -1{
-				brollsprite=true;brollcenter=true;
-				roll=180;
-			}stop;
+			9BOX W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			stop;
 	}
 }

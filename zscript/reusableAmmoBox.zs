@@ -8,8 +8,8 @@ class ReusableAmmobox : HDMagAmmo {
     double spriteScale;property spriteScale:spriteScale;
 
 	default {
-		HDMagAmmo.inserttime 4;
-		HDMagAmmo.extracttime 8;
+		HDMagAmmo.insertTime 4;
+		HDMagAmmo.extractTime 8;
 		HDMagAmmo.MagBulk 2;
 
 		ReusableAmmobox.extractMin 1;
@@ -38,21 +38,21 @@ class ReusableAmmobox : HDMagAmmo {
         SyncAmount();
 
         // Grab the current box
-        int mindex=mags.size()-1;
+        int mindex = mags.size() - 1;
 
         // If there's no mags left or we have an empty mag, back out early
-        if(mags.size() < 1 || mags[mindex] < 1 || owner.A_JumpIfInventory(roundtype,0,"null")) {
+        if(mags.size() < 1 || mags[mindex] < 1 || owner.A_JumpIfInventory(roundType, 0, "null")) {
             return false;
         }
 
         // Calculate the number of rounds to extract
-        int totake=min(random(extractMin,extractMax),mags[mindex]);
+        int totake = min(random(extractMin, extractMax), mags[mindex]);
 
         // Give or drop the extracted rounds
-        if(totake<HDPickup.MaxGive(owner,roundtype,roundbulk)) {
-            HDF.Give(owner,roundtype,totake);
+        if(totake<HDPickup.MaxGive(owner, roundType, roundbulk)) {
+            HDF.Give(owner, roundType, totake);
         } else {
-            HDPickup.DropItem(owner,roundtype,totake);
+            HDPickup.DropItem(owner,roundType,totake);
         }
 
         // Play the proper sounds
@@ -61,7 +61,7 @@ class ReusableAmmobox : HDMagAmmo {
         owner.A_StartSound("weapons/rockreload",CHAN_WEAPON,CHANF_OVERLAP,0.4);
 
         // Reduce the magazine by the amount taken and return
-        mags[mindex]-=totake;
+        mags[mindex] -= totake;
         return true;
     }
 }

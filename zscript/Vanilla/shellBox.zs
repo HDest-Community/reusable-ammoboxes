@@ -2,17 +2,17 @@ class Legacy_ShellBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
-		HDMagAmmo.inserttime 6;
-		HDMagAmmo.extracttime 10;
+		HDMagAmmo.insertTime 6;
+		HDMagAmmo.extractTime 10;
 
-		HDMagAmmo.MaxPerUnit 20;
-		HDMagAmmo.RoundType "HDShellAmmo";
-		HDMagAmmo.RoundBulk ENC_SHELLLOADED;
+		HDMagAmmo.maxPerUnit 20;
+		HDMagAmmo.roundType "HDShellAmmo";
+		HDMagAmmo.roundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_SHELL_BOX";
-		Inventory.PickupMessage "$PICKUP_SHELL_BOX";
+		Inventory.pickupMessage "$PICKUP_SHELL_BOX";
 		translation "160:167=80:105";
-		HDPickup.refid LEGACY_HDLD_SHELLBOX;
+		HDPickup.refId LEGACY_HDLD_SHELLBOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "SBOXA0";
@@ -30,9 +30,7 @@ class Legacy_ShellBox : ReusableAmmobox {
 			SBOX A -1;
 			stop;
 		spawnempty:
-			SBOX W -1{
-				brollsprite=true;brollcenter=true;
-				roll=180;
-			}stop;
+			SBOX W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			stop;
 	}
 }
