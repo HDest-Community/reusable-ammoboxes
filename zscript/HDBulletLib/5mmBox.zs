@@ -1,4 +1,4 @@
-class Legacy_5mmBox : ReusableAmmobox {
+class Reusable5mmBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_5mmBox : ReusableAmmobox {
 
 		tag "$TAG_5MM_BOX";
 		Inventory.pickupMessage "$PICKUP_5MM_BOX";
-		HDPickup.refId LEGACY_HDLD_5MMBOX;
+		HDPickup.refId HDLD_REUSABLE_5MM_BOX;
 
 		ReusableAmmobox.extractMax 16;
 		ReusableAmmobox.fullSprite "5MBXA0";

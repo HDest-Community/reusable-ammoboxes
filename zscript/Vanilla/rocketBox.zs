@@ -1,4 +1,4 @@
-class Legacy_RocketBox : ReusableAmmobox {
+class ReusableRocketBox : ReusableAmmobox {
 	default {
 		scale 0.6;
 
@@ -12,7 +12,7 @@ class Legacy_RocketBox : ReusableAmmobox {
 
 		tag "$TAG_RPG_BOX";
 		Inventory.pickupMessage "$PICKUP_RPG_BOX";
-		HDPickup.refId LEGACY_HDLD_RKTBOX;
+		HDPickup.refId HDLD_REUSABLE_RKT_BOX;
 
 		ReusableAmmobox.extractMax 1;
 		ReusableAmmobox.fullSprite "RBOXA0";

@@ -1,4 +1,4 @@
-class Legacy_SlugBox : ReusableAmmobox {
+class ReusableSlugBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_SlugBox : ReusableAmmobox {
 
 		tag "$TAG_SLUG_BOX";
 		Inventory.pickupMessage "$PICKUP_SLUG_BOX";
-		HDPickup.refId LEGACY_HDLD_SLUGBOX;
+		HDPickup.refId HDLD_REUSABLE_SLUG_BOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "SLBXA0";

@@ -1,4 +1,4 @@
-class Legacy_355Box : ReusableAmmobox {
+class Reusable355Box : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -8,7 +8,7 @@ class Legacy_355Box : ReusableAmmobox {
 
 		tag "$TAG_355_BOX";
 		Inventory.pickupMessage "$PICKUP_355_BOX";
-		HDPickup.refId LEGACY_HDLD_355BOX;
+		HDPickup.refId HDLD_REUSABLE_355_BOX;
 
 		ReusableAmmobox.fullSprite "3BOXA0";
 		ReusableAmmobox.emptySprite "3BOXW0";

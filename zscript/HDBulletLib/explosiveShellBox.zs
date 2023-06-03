@@ -1,4 +1,4 @@
-class Legacy_ExplosiveShellBox : ReusableAmmobox {
+class ReusableExplosiveShellBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_ExplosiveShellBox : ReusableAmmobox {
 
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
 		Inventory.pickupMessage "$PICKUP_EXPLOSIVE_SHELL_BOX";
-		HDPickup.refId LEGACY_HDLD_EXPLOSIVESHELLBOX;
+		HDPickup.refId HDLD_REUSABLE_EXPLOSIVESHELL_BOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "XLBXA0";

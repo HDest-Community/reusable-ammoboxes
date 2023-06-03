@@ -1,4 +1,4 @@
-class Legacy_4gaShellBox : ReusableAmmobox {
+class Reusable4gaShellBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_4gaShellBox : ReusableAmmobox {
 
 		tag "$TAG_4G_SHELL_BOX";
 		Inventory.pickupMessage "$PICKUP_4G_SHELL_BOX";
-		HDPickup.refId LEGACY_HDLD_4GSHELLBOX;
+		HDPickup.refId HDLD_REUSABLE_4GSHELL_BOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "4GBXA0";

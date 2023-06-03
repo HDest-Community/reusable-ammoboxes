@@ -1,33 +1,33 @@
 version "4.10.0"
 
 // Vanilla Loadout Codes
-const LEGACY_HDLD_355BOX            = "3bx";
-const LEGACY_HDLD_4MMBOX            = "zbx";
-const LEGACY_HDLD_7MMBOX            = "abx";
-const LEGACY_HDLD_9MMBOX            = "9bx";
-const LEGACY_HDLD_RKTBOX            = "rbx";
-const LEGACY_HDLD_SHELLBOX          = "sbx";
+const HDLD_REUSABLE_355_BOX            = "3bx";
+const HDLD_REUSABLE_4MM_BOX            = "zbx";
+const HDLD_REUSABLE_7MM_BOX            = "abx";
+const HDLD_REUSABLE_9MM_BOX            = "9bx";
+const HDLD_REUSABLE_RKT_BOX            = "rbx";
+const HDLD_REUSABLE_SHELL_BOX          = "sbx";
 
 // HDBulletLib Loadout Codes
-const LEGACY_HDLD_4GSHELLBOX        = "4bx";
-const LEGACY_HDLD_4GSLUGBOX         = "gbx";
-const LEGACY_HDLD_500HBOX           = "hbx";
-const LEGACY_HDLD_500LBOX           = "lbx";
-const LEGACY_HDLD_5MMBOX            = "bbx";
-const LEGACY_HDLD_069BOX            = "ybx";
-const LEGACY_HDLD_420BOX            = "ibx";
-const LEGACY_HDLD_45ACPBOX          = "pbx";
-const LEGACY_HDLD_45LCBOX           = "cbx";
-const LEGACY_HDLD_50AEBOX           = "ebx";
-const LEGACY_HDLD_50AMBOX           = "tbx";
-const LEGACY_HDLD_6MMFLECHETTEBOX   = "6bx";
-const LEGACY_HDLD_10MMBOX           = "0bx";
-const LEGACY_HDLD_FLAREBOX          = "fbx";
-const LEGACY_HDLD_LESSLETHALBOX     = "dbx";
-const LEGACY_HDLD_3006BOX           = "mbx";
-const LEGACY_HDLD_50OMGBOX          = "obx";
-const LEGACY_HDLD_SLUGBOX           = "ubx";
-const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
+const HDLD_REUSABLE_4GSHELL_BOX        = "4bx";
+const HDLD_REUSABLE_4GSLUG_BOX         = "gbx";
+const HDLD_REUSABLE_500H_BOX           = "hbx";
+const HDLD_REUSABLE_500L_BOX           = "lbx";
+const HDLD_REUSABLE_5MM_BOX            = "bbx";
+const HDLD_REUSABLE_069_BOX            = "ybx";
+const HDLD_REUSABLE_420_BOX            = "ibx";
+const HDLD_REUSABLE_45ACP_BOX          = "pbx";
+const HDLD_REUSABLE_45LC_BOX           = "cbx";
+const HDLD_REUSABLE_50AE_BOX           = "ebx";
+const HDLD_REUSABLE_50AM_BOX           = "tbx";
+const HDLD_REUSABLE_6MMFLECHETTE_BOX   = "6bx";
+const HDLD_REUSABLE_10MM_BOX           = "0bx";
+const HDLD_REUSABLE_FLARE_BOX          = "fbx";
+const HDLD_REUSABLE_LESSLETHAL_BOX     = "dbx";
+const HDLD_REUSABLE_3006_BOX           = "mbx";
+const HDLD_REUSABLE_50OMG_BOX          = "obx";
+const HDLD_REUSABLE_SLUG_BOX           = "ubx";
+const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 
 // Base Classes
 #include "zscript/reusableAmmoBox.zs"

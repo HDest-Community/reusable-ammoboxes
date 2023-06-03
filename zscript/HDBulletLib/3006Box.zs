@@ -1,4 +1,4 @@
-class Legacy_3006Box : ReusableAmmobox {
+class Reusable3006Box : ReusableAmmobox {
 	default {
 		xscale 0.5;
 		yscale 0.4;
@@ -9,7 +9,7 @@ class Legacy_3006Box : ReusableAmmobox {
 
 		tag "$TAG_3006_BOX";
 		Inventory.pickupMessage "$PICKUP_3006_BOX";
-		HDPickup.refId LEGACY_HDLD_3006BOX;
+		HDPickup.refId HDLD_REUSABLE_3006_BOX;
 
 		ReusableAmmobox.fullSprite "M1A1Y0";
 		ReusableAmmobox.emptySprite "M1A1W0";
