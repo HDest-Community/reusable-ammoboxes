@@ -1,265 +1,374 @@
+// Struct for itemspawn information.
+class AmmoboxSpawnItem play {
+	// Name of ammobox to be replaced
+	string spawnName;
+
+	// Name of reusable ammobox to replace with
+	string replaceName;
+
+	// Name of individual ammunition inside box
+	string ammoName;
+
+	// Amount of rounds that get bundled
+	int bundleSize;
+
+	// Name of sprite used for "bundled" rounds
+	string bundleSprite;
+
+	// Name of sprite used for individual rounds
+	string roundSprite;
+}
+
+// Struct for passing useinformation to ammunition.
+class AmmoboxSpawnAmmo play
+{
+	// Name of ammo.
+	string ammoName;
+	
+	// List of weapons using that ammo.
+	Array<string> weaponNames;
+}
+
 class ReusableAmmoboxesSpawner : EventHandler {
 
-	void VanillaAmmoBoxSpawns(worldevent e) {
-		//9mm boxes
-		if (e.Thing is "HD9mBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDPistolAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,-1,"HD9mBoxPickup","TEN9A0","PRNDA0");
-			e.thing.destroy();
-			return;
-		}
+	// List of persistent classes to completely ignore.
+	// This -should- mean this mod has no performance impact.
+	static const class<actor> blacklist[] = {
+		"HDSmoke",
+		"BloodTrail",
+		"CheckPuff",
+		"WallChunk",
+		"HDBulletPuff",
+		"HDFireballTail",
+		"ReverseImpBallTail",
+		"HDSmokeChunk",
+		"ShieldSpark",
+		"HDFlameRed",
+		"HDMasterBlood",
+		"PlantBit",
+		"HDBulletActor",
+		"HDLadderSection"
+	};
 
-		//12g shell boxes
-		if (e.Thing is "ShellBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDShellAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,-1,"ShellBoxPickup","SHELA0","SHL1A0");
-			e.thing.destroy();
-			return;
-		}
+	// List of weapon-ammo associations.
+	// Used for ammo-use association on ammo spawn (happens very often).
+	array<AmmoboxSpawnAmmo> ammoSpawnList;
 
-		//7mm boxes
-		if (e.Thing is "HD7mBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("SevenMilAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,-1,"HD7mBoxPickup","TEN7A0","7RNDA0");
-			e.thing.destroy();
-			return;
-		}
-
-		//.355 boxes
-		if (e.Thing is "HD355BoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDRevolverAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(10,-1,"HD355BoxPickup","TEN9A0","3RNDA0");
-			e.thing.destroy();
-			return;
-		}
+	// List of item-spawn associations.
+	// used for item-replacement on mapload.
+	array<AmmoboxSpawnItem> itemSpawnList;
+	
+	override void OnRegister() {
+		// Initialize Replacement information.
+		init();
 	}
 
-	void HDBulletLibAmmoBoxSpawns(worldevent e) {
-		//4g shell boxes
-		if (e.Thing is "HD4GBBox") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD4GSAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,-1,"HD4GBAmmo","4GPAA0","4GSIA0");
-			e.thing.destroy();
-			return;
-		}
+	void init() {
 
-		//5mm boxes
-		if (e.Thing is "PB_5mmBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD5mm_Ammo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(16,-1,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
-			e.thing.destroy();
-			return;
-		}
+		// --------------------
+		// Ammunition
+		// --------------------
 
-		//6mm boxes
-		if (e.Thing is "HD6mmFlechetteBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD6mmFlechetteAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(12,-1,"HD6mmFlechetteBoxPickup","ACR9I0","ACRPI0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_9mm;
+		wep_9mm.push("BossRifleButIts9mm");
+		wep_9mm.push("DERPDEAD");
+		wep_9mm.push("DERPUsable");
+		wep_9mm.push("HDBoxCannon");
+		wep_9mm.push("HDBPX");
+		wep_9mm.push("HDBreakerP90");
+		wep_9mm.push("HDHLAR");
+		wep_9mm.push("HDHorseshoePistol");
+		wep_9mm.push("HDPistol");
+		wep_9mm.push("HDRevolver");
+		wep_9mm.push("HDSMG");
+		wep_9mm.push("HDSnubNoseRevolver");
+		wep_9mm.push("HDStenMk2");
+		wep_9mm.push("HushPuppyPistol");
+		wep_9mm.push("MinervaChaingun");
+		wep_9mm.push("TenMilAutoReloadingThingy");
+		addAmmo("Legacy_9mmBox", wep_9mm);
 
-		//10mm boxes
-		if (e.Thing is "HD10mBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD10mAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD10mBoxPickup","T10MA0","PR10A0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_355;
+		wep_355.push("HDColt355");
+		wep_355.push("HDHelzing");
+		wep_355.push("HDNyx");
+		wep_355.push("HDRevolver");
+		wep_355.push("HDScopedRevolver");
+		wep_355.push("HDSnubNoseReolver");
+		addAmmo("Legacy_355Box", wep_355);
 
-		//.45 ACP boxes
-		if (e.Thing is "HD45ACPBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45ACPAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD45ACPBoxPickup","45TN","45RN");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_shell;
+		wep_shell.push("Bossmerg");
+		wep_shell.push("DoomHunter");
+		wep_shell.push("FireBlooper");
+		wep_shell.push("HDAltis");
+		wep_shell.push("HDBarracuda");
+		wep_shell.push("HDCombatShotgun");
+		wep_shell.push("HDGreely");
+		wep_shell.push("HDSix12");
+		wep_shell.push("HDStreetSweeper");
+		wep_shell.push("HDTerminatorSG");
+		wep_shell.push("HDUragan5");
+		wep_shell.push("Hunter");
+		wep_shell.push("MetalFireBlooper");
+		wep_shell.push("SawedSlayer");
+		wep_shell.push("ScopedSlayer");
+		wep_shell.push("Slayer");
+		addAmmo("Legacy_ShellBox", wep_shell);
 
-		//.45 LC boxes
-		if (e.Thing is "HD45LCBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD45LCAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD45LCBoxPickup","T10MA0","PR10A0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_7mm;
+		wep_7mm.push("AutoReloader");
+		wep_7mm.push("BossRifle");
+		wep_7mm.push("BossRifleButItsTheWorst");
+		wep_7mm.push("HDFrontier");
+		wep_7mm.push("HDLotus");
+		wep_7mm.push("HD_FNFAL");
+		wep_7mm.push("HD_PSG1");
+		wep_7mm.push("HDMicrogun");
+		wep_7mm.push("IronsLiberatorRifle");
+		wep_7mm.push("LiberatorRifle");
+		wep_7mm.push("NoScopeBoss");
+		wep_7mm.push("ObrozzPistol");
+		addAmmo("Legacy_7mmBox", wep_7mm);
 
-		//.50 AE boxes
-		if (e.Thing is "HD50AEBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AEAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD50AEBoxPickup","TEN9A0","PRNDA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_rocket;
+		wep_rocket.push("Blooper");
+		wep_rocket.push("HackedZM66AssaultRifle");
+		wep_rocket.push("HDBitch");
+		wep_rocket.push("HDHLAR");
+		wep_rocket.push("HDIEDKit");
+		wep_rocket.push("HDRL");
+		wep_rocket.push("HDTROGRifle");
+		wep_rocket.push("IronsLiberatorRifle");
+		wep_rocket.push("HDChinaLake");
+		addAmmo("Legacy_RocketBox", wep_rocket);
 
-		//.50 AM boxes
-		if (e.Thing is "PB_50AMBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50AM_Ammo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"PB_50AMBoxPickup","G50YA0","G50ZA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_4GaShell;
+		wep_4GaShell.push("");
+		addAmmo("Legacy_4GaShellBox", wep_4GaShell);
 
-		//.50 OMG boxes
-		if (e.Thing is "HD50OMGBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD50OMGAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD50OMGBoxPickup","OG10A0","OGBLA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_5mm;
+		wep_5mm.push("BossRifleButItsFuckingPink");
+		wep_5mm.push("HD_M5165");
+		wep_5mm.push("HD_Ruger1022");
+		addAmmo("Legacy_5mmBox", wep_5mm);
 
-		//.069 Bore shell boxes
-		if (e.Thing is "HD069BoreBox") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD069BoreAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD069BoreBox","42BTA0","42BRA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_6mm;
+		wep_6mm.push("HD_SteyrACR");
+		addAmmo("Legacy_6mmBox", wep_6mm);
 
-		//.420 Frei boxes
-		if (e.Thing is "HD420BoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDAurochsAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD420BoxPickup","42TEA0","420BA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_10mm;
+		wep_10mm.push("HD10mmPistol");
+		wep_10mm.push("HDSigCow");
+		wep_10mm.push("TenMilAutoReloadingThingy");
+		addAmmo("Legacy_10mmBox", wep_10mm);
 
-		//.500 S&W Heavy boxes
-		if (e.Thing is "HD500SWHeavyBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWHeavyAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD500SWHeavyBoxPickup", "TNSWB0", "SWRNB0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_45ACP;
+		wep_45ACP.push("HDMAC10");
+		wep_45ACP.push("HDMK23SOCOM");
+		wep_45ACP.push("HDUMP");
+		wep_45ACP.push("HDUSP");
+		wep_45ACP.push("HDColt1911");
+		addAmmo("Legacy_45ACPBox", wep_45ACP);
 
-		//.500 S&W Light boxes
-		if (e.Thing is "HD500SWLightBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HD500SWLightAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD500SWLightBoxPickup", "TNSWA0", "SWRNA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_45LC;
+		wep_45LC.push("HDSingleActionRevolver");
+		addAmmo("Legacy_45LCBox", wep_45LC);
 
-		//.30-06 boxes
-		if (e.Thing is "HD3006BoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("ThirtyAughtSixAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(10,-1,"HD3006BoxPickup","TEN7A0","7RNDA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_50AE;
+		wep_50AE.push("HDViper");
+		addAmmo("Legacy_50AEBox", wep_50AE);
 
-		//12g explosive shell boxes
-		if (e.Thing is "ExplosiveShellBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDExplosiveShellAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,-1,"ExplosiveShellBoxPickup","XLS4A0","XLS1A0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_50AM;
+		wep_50AM.push("HDLeverGun");
+		wep_50AM.push("HD_AutoMag");
+		addAmmo("Legacy_50AMBox", wep_50AM);
 
-		//flare shell boxes
-		if (e.Thing is "FlareShellBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDFlareAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(4,-1,"FlareShellBoxPickup","FLA4A0","FLARA0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_50OMG;
+		wep_50OMG.push("BogRifle");
+		wep_50OMG.push("HDM2HB");
+		wep_50OMG.push("HDWyvern");
+		wep_50OMG.push("ZM94Rifle");
+		addAmmo("Legacy_50OMGBox", wep_50OMG);
 
-		//12g less-lethal shell boxes
-		if (e.Thing is "LLShellBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDLLShellAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-		    p.SplitPickupBoxableRound(4,-1,"LLShellBoxPickup","LLS4A0","LLS1A0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_069;
+		wep_069.push("HDAurochs");
+		addAmmo("Legacy_069Box", wep_069);
 
-		//12g slug boxes
-		if (e.Thing is "SlugBoxPickup") {
-			HDRoundAmmo p = HDRoundAmmo(actor.spawn("HDSlugAmmo",e.thing.pos));
-			p.amount = HDUPK(e.Thing).amount;
-			p.vel = e.thing.vel;
-			p.SplitPickupBoxableRound(4,-1,"SlugBoxPickup","SLUGA0","SLG1A0");
-			e.thing.destroy();
-			return;
-		}
+		Array<string> wep_420;
+		wep_420.push("HDAurochs");
+		addAmmo("Legacy_420Box", wep_420);
+
+		Array<string> wep_500Heavy;
+		wep_500Heavy.push("HDOtisGun");
+		addAmmo("Legacy_500HeavyBox", wep_500Heavy);
+
+		Array<string> wep_500Light;
+		wep_500Light.push("HDOtisGun");
+		addAmmo("Legacy_500LightBox", wep_500Light);
+
+		Array<string> wep_3006;
+		wep_3006.push("M1Garand");
+		addAmmo("Legacy_3006Box", wep_3006);
+
+		Array<string> wep_explosiveShell;
+		wep_explosiveShell.push("ExplosiveHunter");
+		wep_explosiveShell.push("MetalFireBlooper");
+		addAmmo("Legacy_ExplosiveShellBox", wep_explosiveShell);
+
+		Array<string> wep_flare;
+		wep_flare.push("FireBlooper");
+		wep_flare.push("MetalFireBlooper");
+		addAmmo("Legacy_FlareBox", wep_flare);
+
+		Array<string> wep_lessLethal;
+		wep_lessLethal.push("LLHunter");
+		addAmmo("Legacy_LessLethalBox", wep_lessLethal);
+
+		Array<string> wep_slug;
+		wep_slug.push("HDAltis");
+		wep_slug.push("HDAuto5");
+		wep_slug.push("HDBarracuda");
+		wep_slug.push("HDGreely");
+		wep_slug.push("HDPDFour");
+		wep_slug.push("HDSix12");
+		addAmmo("Legacy_SlugBox", wep_slug);
+
+		// --------------------
+		// Vanilla Ammoboxes
+		// --------------------
+
+		addItem("HD9mBoxPickup",   "Legacy_9mmBox",    "HDPistolAmmo",   10, "TEN9A0", "PRNDA0");
+		addItem("ShellBoxPickup",  "Legacy_ShellBox",  "HDShellAmmo",    4,  "SHELA0", "SHL1A0");
+		addItem("HD7mBoxPickup",   "Legacy_7mmBox",    "HDSevenMilAmmo", 10, "TEN7A0", "7RNDA0");
+		addItem("HD355BoxPickup",  "Legacy_355Box",    "HDRevolverAmmo", 10, "TEN9A0", "PRNDA0");
+		addItem("RocketBigPickup", "Legacy_RocketBox", "HDRocketAmmo",   1,  "ROQPA0", "ROQPA0");
+
+		// --------------------
+		// HDBulletLib Ammoboxes
+		// --------------------
+
+		addItem("HD4GBBox",                "Legacy_4gaSlugBox",        "HD4GBAmmo",            4,  "4GPAA0", "4GS1A0");
+		addItem("PB_5mmBoxPickup",         "Legacy_5mmBox",            "HD5mm_Ammo",           16, "5MMYA0", "5MMZA0");
+		addItem("HD6mmFlechetteBoxPickup", "Legacy_6mmBox",            "HD6mmFlechetteAmmo",   12, "ACR9I0", "ACRPI0");
+		addItem("HD10mBoxPickup",          "Legacy_10mmBox",           "HD10mAmmo",            10, "T10MA0", "PR10A0");
+		addItem("HD45ACPBoxPickup",        "Legacy_45ACPBox",          "HD45ACPAmmo",          10, "45TN",   "45RN");
+		addItem("HD45LCBoxPickup",         "Legacy_45LCBox",           "HD45LCAmmo",           10, "TN45A0", "RN45A0");
+		addItem("HD50AEBoxPickup",         "Legacy_50AEBox",           "HD50AEAmmo",           10, "TEN9A0", "PRNDA0");
+		addItem("PB_50AMBoxPickup",        "Legacy_50AMBox",           "HD50AM_Ammo",          10, "G50YA0", "G50ZA0");
+		addItem("HD50OMGBoxPickup",        "Legacy_50OMGBox",          "HD50OMGAmmo",          10, "OG10A0", "OGBLA0");
+		addItem("HD069BoreBox",            "Legacy_069Box",            "HD069BoreAmmo",        10, "42BTA0", "42BRA0");
+		addItem("HD420BoxPickup",          "Legacy_420Box",            "HDAurochsAmmo",        10, "42TEA0", "420BA0");
+		addItem("HD500SWHeavyBoxPickup",   "Legacy_500HeavyBox",       "HD500SWHeavyAmmo",     10, "TNSWB0", "SWRNB0");
+		addItem("HD500SWLightBoxPickup",   "Legacy_500LightBox",       "HD500SWLightAmmo",     10, "TNSWA0", "SWRNA0");
+		addItem("HD3006BoxPickup",         "Legacy_3006Box",           "ThirtyAughtSixAmmo",   10, "TEN7A0", "7RNDA0");
+		addItem("ExplosiveShellBoxPickup", "Legacy_ExplosiveShellBox", "HDExplosiveShellAmmo", 4,  "XLS4A0", "XLS1A0");
+		addItem("FlareShellBoxPickup",     "Legacy_FlareBox",          "HDFlareAmmo",          4,  "FLA4A0", "FLARA0");
+		addItem("LLShellBoxPickup",        "Legacy_LessLethalBox",     "HDLLShellAmmo",        4,  "LLS4A0", "LLS1A0");
+		addItem("SlugBoxPickup",           "Legacy_SlugBox",           "HDSlugAmmo",           4,  "SLUGA0", "SLG1A0");
 	}
 
-	override void CheckReplacement(ReplaceEvent e) {
-		// Vanilla Replacements
-		if (e.Replacee is "HD9mBoxPickup") { e.Replacement = "Legacy_9mmBox"; return; }
-		if (e.Replacee is "ShellBoxPickup") { e.Replacement = "Legacy_ShellBox"; return; }
-		if (e.Replacee is "HD7mBoxPickup") { e.Replacement = "Legacy_7mmBox"; return; }
-		if (e.Replacee is "HD355BoxPickup") { e.Replacement = "Legacy_355Box"; return; }
-		if (e.Replacee is "RocketBigPickup") { e.Replacement = "Legacy_RocketBox"; return; }
+	void addAmmo(string name, Array<string> weapons) {
+		// Creates a new struct;
+		AmmoboxSpawnAmmo spawnee = AmmoboxSpawnAmmo(new('AmmoboxSpawnAmmo'));
+		spawnee.ammoName = name.makelower();
 
-		// HDBulletLibReplacements
-		if (e.Replacee is "HD4GBBox") { e.Replacement = "Legacy_4GaSlugBox"; return; }
-		if (e.Replacee is "PB_5mmBoxPickup") { e.Replacement = "Legacy_5mmBox"; return; }
-		if (e.Replacee is "HD6mmFlechetteBoxPickup") { e.Replacement = "Legacy_6mmBox"; return; }
-		if (e.Replacee is "HD10mBoxPickup") { e.Replacement = "Legacy_10mmBox"; return; }
-		if (e.Replacee is "HD45ACPBoxPickup") { e.Replacement = "Legacy_45ACPBox"; return; }
-		if (e.Replacee is "HD45LCBoxPickup") { e.Replacement = "Legacy_45LCBox"; return; }
-		if (e.Replacee is "HD50AEBoxPickup") { e.Replacement = "Legacy_50AEBox"; return; }
-		if (e.Replacee is "PB_50AMBoxPickup") { e.Replacement = "Legacy_50AMBox"; return; }
-		if (e.Replacee is "HD50OMGBoxPickup") { e.Replacement = "Legacy_50OMGBox"; return; }
-		if (e.Replacee is "HD069BoreBox") { e.Replacement = "Legacy_069Box"; return; }
-		if (e.Replacee is "HD420BoxPickup") { e.Replacement = "Legacy_420Box"; return; }
-		if (e.Replacee is "HD500SWHeavyBoxPickup") { e.Replacement = "Legacy_500HeavyBox"; return; }
-		if (e.Replacee is "HD500SWLightBoxPickup") { e.Replacement = "Legacy_500LightBox"; return; }
-		if (e.Replacee is "HD3006BoxPickup") { e.Replacement = "Legacy_3006Box"; return; }
-		if (e.Replacee is "ExplosiveShellBoxPickup") { e.Replacement = "Legacy_ExplosiveShellBox"; return; }
-		if (e.Replacee is "FlareShellBoxPickup") { e.Replacement = "Legacy_FlareBox"; return; }
-		if (e.Replacee is "LLShellBoxPickup") { e.Replacement = "Legacy_LessLethalBox"; return; }
-		if (e.Replacee is "SlugBoxPickup") { e.Replacement = "Legacy_SlugBox"; return; }
+		// Populates the struct with relevant information,
+		for(let i = 0; i < weapons.size(); i++) {
+			spawnee.weaponNames.push(weapons[i].makelower());
+		}
+
+		// Pushes the finished struct to the array.
+		ammoSpawnList.push(spawnee);
+	}
+
+	void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
+		// Creates a new struct;
+		AmmoboxSpawnItem spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
+
+		// Populates the struct with relevant information,
+		spawnee.spawnName = name.makeLower();
+		spawnee.replaceName = boxName.makeLower();
+		spawnee.ammoName = ammoName.makeLower();
+		spawnee.bundleSize = bundleSize;
+		spawnee.bundleSprite = bundleSprite;
+		spawnee.roundSprite = roundSprite;
+
+		// Pushes the finished struct to the array.
+		itemSpawnList.push(spawnee);
 	}
 
 	override void WorldThingSpawned(WorldEvent e) {
-		if(!e.Thing) { return; }
 
-		VanillaAmmoBoxSpawns(e);
+		// If thing doesn't exist, quit
+		if(!e.thing) return;
 
-		if (!e.Thing) { return; }
+		// If thing spawned is blacklisted, quit
+		for(let i = 0; i < blacklist.size(); i++) if (e.thing is blacklist[i]) return;
 
-		HDBulletLibAmmoBoxSpawns(e);
+		// Grab the name of the thing spawned
+		string candidateName = (e.thing.getClassName().."").makeLower();
+		
+		// If the thing spawned is an ammobox, add any and all items that can use this.
+		let ammobox = ReusableAmmobox(e.thing);
+		if (ammobox) handleAmmoUses(ammobox, candidateName);
+		
+		// If thing spawned is not an instance of HDUPK, quit
+		let item = HDUPK(e.thing);
+		if (!item) return;
+
+		// If the map just initialized, replace with reusable boxes.
+		// Otherwise handle dropping split pickups.
+		if (level.mapTime <= 1) {
+			handleMapSpawns(item, candidateName);
+		} else {
+			handleDroppedAmmoboxes(item, candidateName);
+		}
+	}
+
+	private void handleAmmoUses(ReusableAmmobox ammobox, string candidateName) {
+		// Goes through the entire ammospawn array.
+		for (let i = 0; i < ammoSpawnList.size(); i++) {
+			if (ammoSpawnList[i].ammoName == candidateName) {
+				ammobox.itemsThatUseThis.copy(ammoSpawnList[i].weaponNames);
+			}
+		}
+	}
+
+	private void handleMapSpawns(HDUPK item, string candidateName) {
+		// Iterate through the list of ammo candidates for spawned item.
+		for (let i = 0; i < itemSpawnList.size(); i++) {
+			if (itemSpawnList[i].spawnName == candidateName) {
+
+				let newItem = Actor.spawn(itemSpawnList[i].replaceName, item.pos);
+				if(newItem) {
+				
+					if (hd_debug) console.printf(item.getClassName().." -> "..itemSpawnList[i].replaceName);
+
+					item.destroy();
+
+					return;
+				}
+			}
+		}
+	}
+
+	private void handleDroppedAmmoboxes(HDUPK item, string candidateName) {
+
+		// Iterate through the list of ammo candidates for spawned item.
+		for (let i = 0; i < itemSpawnList.size(); i++) {
+			if (itemSpawnList[i].spawnName == candidateName) {
+				let p = HDRoundAmmo(Actor.spawn(itemSpawnList[i].ammoName, item.pos));
+
+				p.amount = item.amount;
+				p.vel = item.vel;
+
+				p.splitPickupBoxableRound(itemSpawnList[i].bundleSize, -1, candidateName, itemSpawnList[i].bundleSprite, itemSpawnList[i].roundSprite);
+
+				item.destroy();
+
+				return;
+			}
+		}
 	}
 }
