@@ -18,10 +18,6 @@ class Legacy_355Box : ReusableAmmobox {
         ReusableAmmobox.insertSound "boxes/insert/355";
 	}
 
-	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("HDRevolver");
-	}
-
 	States {
 		Spawn:
 			3BOX A -1;

@@ -18,12 +18,6 @@ class Legacy_7mmBox : ReusableAmmobox {
         ReusableAmmobox.insertSound "boxes/insert/7mm";
 	}
 
-	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("LiberatorRifle");
-		itemsthatusethis.push("BossRifle");
-		itemsthatusethis.push("AutoReloader");
-	}
-
 	States {
 		Spawn:
 			7BOX A -1;

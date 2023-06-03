@@ -23,11 +23,6 @@ class Legacy_ShellBox : ReusableAmmobox {
         ReusableAmmobox.insertSound "boxes/insert/12gShells";
 	}
 
-	override void GetItemsThatUseThis() {
-		itemsthatusethis.push("Hunter");
-		itemsthatusethis.push("Slayer");
-	}
-
 	States {
 		Spawn:
 			SBOX A -1;
