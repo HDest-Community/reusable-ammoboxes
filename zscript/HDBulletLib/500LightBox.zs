@@ -1,4 +1,4 @@
-class Legacy_500LightBox : ReusableAmmobox {
+class Reusable500LightBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -8,7 +8,7 @@ class Legacy_500LightBox : ReusableAmmobox {
 
 		tag "$TAG_500_LIGHT_BOX";
 		Inventory.pickupMessage "$PICKUP_500_LIGHT_BOX";
-		HDPickup.refId LEGACY_HDLD_500LBOX;
+		HDPickup.refId HDLD_REUSABLE_500L_BOX;
 
 		ReusableAmmobox.fullSprite "5LBXA0";
 		ReusableAmmobox.emptySprite "5LBXW0";

@@ -1,4 +1,4 @@
-class Legacy_FlareBox : ReusableAmmobox {
+class ReusableFlareBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_FlareBox : ReusableAmmobox {
 
 		tag "$TAG_FLARE_BOX";
 		Inventory.pickupMessage "$PICKUP_FLARE_BOX";
-		HDPickup.refId LEGACY_HDLD_FLAREBOX;
+		HDPickup.refId HDLD_REUSABLE_FLARE_BOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "FLBXA0";

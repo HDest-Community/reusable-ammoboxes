@@ -1,4 +1,4 @@
-class Legacy_LessLethalBox : ReusableAmmobox {
+class ReusableLessLethalBox : ReusableAmmobox {
 	default {
 		scale 0.4;
 
@@ -11,7 +11,7 @@ class Legacy_LessLethalBox : ReusableAmmobox {
 
 		tag "$TAG_LESSLETHAL_BOX";
 		Inventory.pickupMessage "$PICKUP_LESSLETHAL_BOX";
-		HDPickup.refId LEGACY_HDLD_LESSLETHALBOX;
+		HDPickup.refId HDLD_REUSABLE_LESSLETHAL_BOX;
 
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "LLBXA0";
