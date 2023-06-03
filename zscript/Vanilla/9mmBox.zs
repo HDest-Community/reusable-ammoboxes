@@ -18,14 +18,6 @@ class Legacy_9mmBox : ReusableAmmobox {
         ReusableAmmobox.insertSound "boxes/insert/9mm";
 	}
 
-	override void GetItemsThatUseThis() {
-		itemsthatusethis.push("DERPUsable");
-		itemsthatusethis.push("DERPDEAD");
-		itemsthatusethis.push("HDPistol");
-		itemsthatusethis.push("HDRevolver");
-		itemsthatusethis.push("HDSMG");
-	}
-
 	States {
 		Spawn:
 			9BOX A -1;

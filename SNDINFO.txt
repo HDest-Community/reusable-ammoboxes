@@ -9,6 +9,7 @@ $alias boxes/extract/rockAmmo boxes/extract
 $alias boxes/extract/rifleAmmo boxes/extract
 
 // Ammo-specific Extract Sounds
+$alias boxes/extract/4gaShells boxes/extract/shellAmmo
 $alias boxes/extract/4gaSlugs boxes/extract/shellAmmo
 $alias boxes/extract/5mm boxes/extract/pistolAmmo
 $alias boxes/extract/6mm boxes/extract/pistolAmmo
@@ -40,6 +41,7 @@ $alias boxes/insert/rockAmmo boxes/insert
 $alias boxes/insert/rifleAmmo boxes/insert
 
 // Ammo-specific Insert Sounds
+$alias boxes/insert/4gaShells boxes/insert/shellAmmo
 $alias boxes/insert/4gaSlugs boxes/insert/shellAmmo
 $alias boxes/insert/5mm boxes/insert/pistolAmmo
 $alias boxes/insert/6mm boxes/insert/pistolAmmo

@@ -23,12 +23,6 @@ class Legacy_RocketBox : ReusableAmmobox {
         ReusableAmmobox.insertSound "boxes/insert/rockets";
 	}
 
-	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("HDRL");
-		itemsthatusethis.push("Blooper");
-		itemsthatusethis.push("HDIEDKit");
-	}
-
 	override bool IsUsed(){
 		if(!owner) return true;
 

@@ -2,13 +2,14 @@ version "4.10.0"
 
 // Vanilla Loadout Codes
 const LEGACY_HDLD_355BOX            = "3bx";
-const LEGACY_HDLD_4MMBOX            = "4bx";
+const LEGACY_HDLD_4MMBOX            = "zbx";
 const LEGACY_HDLD_7MMBOX            = "abx";
 const LEGACY_HDLD_9MMBOX            = "9bx";
 const LEGACY_HDLD_RKTBOX            = "rbx";
 const LEGACY_HDLD_SHELLBOX          = "sbx";
 
 // HDBulletLib Loadout Codes
+const LEGACY_HDLD_4GSHELLBOX        = "4bx";
 const LEGACY_HDLD_4GSLUGBOX         = "gbx";
 const LEGACY_HDLD_500HBOX           = "hbx";
 const LEGACY_HDLD_500LBOX           = "lbx";
@@ -40,7 +41,9 @@ const LEGACY_HDLD_EXPLOSIVESHELLBOX = "xbx";
 #include "zscript/Vanilla/rocketBox.zs"
 
 // HDBulletLib Ammoboxes
-#include "zscript/HDBulletLib/4GaSlugBox.zs"
+#include "zscript/HDBulletLib/4GaShellBox.zs"
+// [UZ] 4ga Slugs don't currently have boxes, only the 4ga 00 Buckshot does
+//#include "zscript/HDBulletLib/4GaSlugBox.zs"
 #include "zscript/HDBulletLib/500HeavyBox.zs"
 #include "zscript/HDBulletLib/500LightBox.zs"
 #include "zscript/HDBulletLib/5mmBox.zs"
