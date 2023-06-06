@@ -144,7 +144,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		addAmmo("ReusableRocketBox", wep_rocket);
 
 		Array<string> wep_4GaShell;
-		wep_4GaShell.push("");
+		wep_4GaShell.push("HD4GBBlaster");
 		addAmmo("Reusable4GaShellBox", wep_4GaShell);
 
 		Array<string> wep_5mm;
