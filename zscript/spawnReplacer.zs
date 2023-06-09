@@ -199,6 +199,10 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_420.push("HDAurochs");
 		addAmmo("Reusable420Box", wep_420);
 
+		Array<string> wep_300Savage;
+		wep_300Savage.push("");
+		addAmmo("Reusable300SavageBox", wep_300Savage);
+
 		Array<string> wep_500Heavy;
 		wep_500Heavy.push("HDOtisGun");
 		addAmmo("Reusable500HeavyBox", wep_500Heavy);
@@ -207,9 +211,17 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_500Light.push("HDOtisGun");
 		addAmmo("Reusable500LightBox", wep_500Light);
 
+		Array<string> wep_762Tokarev;
+		wep_762Tokarev.push("");
+		addAmmo("Reusable762TokarevBox", wep_762Tokarev);
+
 		Array<string> wep_3006;
 		wep_3006.push("M1Garand");
 		addAmmo("Reusable3006Box", wep_3006);
+
+		Array<string> wep_birdshotShell;
+		wep_birdshotShell.push("");
+		addAmmo("ReusableBirdshotShellBox", wep_birdshotShell);
 
 		Array<string> wep_explosiveShell;
 		wep_explosiveShell.push("ExplosiveHunter");
@@ -258,10 +270,13 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		addItem("PB_50AMBoxPickup",        "Reusable50AMBox",           "HD50AM_Ammo",          10, "G50YA0", "G50ZA0");
 		addItem("HD50OMGBoxPickup",        "Reusable50OMGBox",          "HD50OMGAmmo",          10, "OG10A0", "OGBLA0");
 		addItem("HD069BoreBox",            "Reusable069Box",            "HD069BoreAmmo",        10, "42BTA0", "42BRA0");
+		addItem("HDSavage300BoxPickup",    "Reusable300SavageBox",      "Savage300Ammo",        6,  "SVG6A0", "7RNDA0");
 		addItem("HD420BoxPickup",          "Reusable420Box",            "HDAurochsAmmo",        10, "42TEA0", "420BA0");
 		addItem("HD500SWHeavyBoxPickup",   "Reusable500HeavyBox",       "HD500SWHeavyAmmo",     10, "TNSWB0", "SWRNB0");
 		addItem("HD500SWLightBoxPickup",   "Reusable500LightBox",       "HD500SWLightAmmo",     10, "TNSWA0", "SWRNA0");
+		addItem("HD762TokarevBoxPickup",   "Reusable762TokarevBox",     "HD762TokarevAmmo",     10, "T710A0", "T762A0");
 		addItem("HD3006BoxPickup",         "Reusable3006Box",           "ThirtyAughtSixAmmo",   10, "TEN7A0", "7RNDA0");
+		addItem("BirdshotShellBoxPickup",  "ReusableBirdshotShellBox",  "HDBirdshotShellAmmo",  4,  "BSH4A0", "BSHLA0");
 		addItem("ExplosiveShellBoxPickup", "ReusableExplosiveShellBox", "HDExplosiveShellAmmo", 4,  "XLS4A0", "XLS1A0");
 		addItem("FlareShellBoxPickup",     "ReusableFlareBox",          "HDFlareAmmo",          4,  "FLA4A0", "FLARA0");
 		addItem("LLShellBoxPickup",        "ReusableLessLethalBox",     "HDLLShellAmmo",        4,  "LLS4A0", "LLS1A0");
