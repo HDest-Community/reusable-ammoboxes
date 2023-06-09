@@ -20,6 +20,7 @@ $alias boxes/extract/50AE boxes/extract/pistolAmmo
 $alias boxes/extract/50AM boxes/extract/pistolAmmo
 $alias boxes/extract/50OMG boxes/extract/rifleAmmo
 $alias boxes/extract/069Bore boxes/extract/shellAmmo
+$alias boxes/extract/300Savage boxes/extract/rifleAmmo
 $alias boxes/extract/aurochs boxes/extract/pistolAmmo
 $alias boxes/extract/500Heavy boxes/extract/pistolAmmo
 $alias boxes/extract/500Light boxes/extract/pistolAmmo
@@ -52,6 +53,7 @@ $alias boxes/insert/50AE boxes/insert/pistolAmmo
 $alias boxes/insert/50AM boxes/insert/pistolAmmo
 $alias boxes/insert/50OMG boxes/insert/rifleAmmo
 $alias boxes/insert/069Bore boxes/insert/shellAmmo
+$alias boxes/insert/300Savage boxes/insert/rifleAmmo
 $alias boxes/insert/aurochs boxes/insert/pistolAmmo
 $alias boxes/insert/500Heavy boxes/insert/pistolAmmo
 $alias boxes/insert/500Light boxes/insert/pistolAmmo

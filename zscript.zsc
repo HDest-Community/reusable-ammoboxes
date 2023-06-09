@@ -15,6 +15,7 @@ const HDLD_REUSABLE_500H_BOX           = "hbx";
 const HDLD_REUSABLE_500L_BOX           = "lbx";
 const HDLD_REUSABLE_5MM_BOX            = "bbx";
 const HDLD_REUSABLE_069_BOX            = "ybx";
+const HDLD_REUSABLE_300SAVAGE_BOX      = "vbx";
 const HDLD_REUSABLE_420_BOX            = "ibx";
 const HDLD_REUSABLE_45ACP_BOX          = "pbx";
 const HDLD_REUSABLE_45LC_BOX           = "cbx";
@@ -48,6 +49,7 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 #include "zscript/HDBulletLib/500LightBox.zs"
 #include "zscript/HDBulletLib/5mmBox.zs"
 #include "zscript/HDBulletLib/069Box.zs"
+#include "zscript/HDBulletLib/300SavageBox.zs"
 #include "zscript/HDBulletLib/420Box.zs"
 #include "zscript/HDBulletLib/45ACPBox.zs"
 #include "zscript/HDBulletLib/45LCBox.zs"
