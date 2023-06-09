@@ -211,6 +211,10 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_500Light.push("HDOtisGun");
 		addAmmo("Reusable500LightBox", wep_500Light);
 
+		Array<string> wep_762Tokarev;
+		wep_762Tokarev.push("");
+		addAmmo("Reusable762TokarevBox", wep_762Tokarev);
+
 		Array<string> wep_3006;
 		wep_3006.push("M1Garand");
 		addAmmo("Reusable3006Box", wep_3006);
@@ -266,6 +270,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		addItem("HD420BoxPickup",          "Reusable420Box",            "HDAurochsAmmo",        10, "42TEA0", "420BA0");
 		addItem("HD500SWHeavyBoxPickup",   "Reusable500HeavyBox",       "HD500SWHeavyAmmo",     10, "TNSWB0", "SWRNB0");
 		addItem("HD500SWLightBoxPickup",   "Reusable500LightBox",       "HD500SWLightAmmo",     10, "TNSWA0", "SWRNA0");
+		addItem("HD762TokarevBoxPickup",   "Reusable762TokarevBox",     "HD762TokarevAmmo",     10, "T710A0", "T762A0");
 		addItem("HD3006BoxPickup",         "Reusable3006Box",           "ThirtyAughtSixAmmo",   10, "TEN7A0", "7RNDA0");
 		addItem("ExplosiveShellBoxPickup", "ReusableExplosiveShellBox", "HDExplosiveShellAmmo", 4,  "XLS4A0", "XLS1A0");
 		addItem("FlareShellBoxPickup",     "ReusableFlareBox",          "HDFlareAmmo",          4,  "FLA4A0", "FLARA0");

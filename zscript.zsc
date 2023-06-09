@@ -20,12 +20,13 @@ const HDLD_REUSABLE_420_BOX            = "ibx";
 const HDLD_REUSABLE_45ACP_BOX          = "pbx";
 const HDLD_REUSABLE_45LC_BOX           = "cbx";
 const HDLD_REUSABLE_50AE_BOX           = "ebx";
-const HDLD_REUSABLE_50AM_BOX           = "tbx";
+const HDLD_REUSABLE_50AM_BOX           = "mbx";
 const HDLD_REUSABLE_6MMFLECHETTE_BOX   = "6bx";
 const HDLD_REUSABLE_10MM_BOX           = "0bx";
 const HDLD_REUSABLE_FLARE_BOX          = "fbx";
 const HDLD_REUSABLE_LESSLETHAL_BOX     = "dbx";
-const HDLD_REUSABLE_3006_BOX           = "mbx";
+const HDLD_REUSABLE_762TOKAREV_BOX     = "tbx";
+const HDLD_REUSABLE_3006_BOX           = "zbx";
 const HDLD_REUSABLE_50OMG_BOX          = "obx";
 const HDLD_REUSABLE_SLUG_BOX           = "ubx";
 const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
@@ -59,6 +60,7 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 #include "zscript/HDBulletLib/10mmBox.zs"
 #include "zscript/HDBulletLib/flareBox.zs"
 #include "zscript/HDBulletLib/lessLethalBox.zs"
+#include "zscript/HDBulletLib/762TokarevBox.zs"
 #include "zscript/HDBulletLib/3006Box.zs"
 #include "zscript/HDBulletLib/50OMGBox.zs"
 #include "zscript/HDBulletLib/slugBox.zs"
