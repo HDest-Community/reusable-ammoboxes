@@ -219,6 +219,10 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_3006.push("M1Garand");
 		addAmmo("Reusable3006Box", wep_3006);
 
+		Array<string> wep_birdshotShell;
+		wep_birdshotShell.push("");
+		addAmmo("ReusableBirdshotShellBox", wep_birdshotShell);
+
 		Array<string> wep_explosiveShell;
 		wep_explosiveShell.push("ExplosiveHunter");
 		wep_explosiveShell.push("MetalFireBlooper");
@@ -272,6 +276,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		addItem("HD500SWLightBoxPickup",   "Reusable500LightBox",       "HD500SWLightAmmo",     10, "TNSWA0", "SWRNA0");
 		addItem("HD762TokarevBoxPickup",   "Reusable762TokarevBox",     "HD762TokarevAmmo",     10, "T710A0", "T762A0");
 		addItem("HD3006BoxPickup",         "Reusable3006Box",           "ThirtyAughtSixAmmo",   10, "TEN7A0", "7RNDA0");
+		addItem("BirdshotShellBoxPickup",  "ReusableBirdshotShellBox",  "HDBirdshotShellAmmo",  4,  "BSH4A0", "BSHLA0");
 		addItem("ExplosiveShellBoxPickup", "ReusableExplosiveShellBox", "HDExplosiveShellAmmo", 4,  "XLS4A0", "XLS1A0");
 		addItem("FlareShellBoxPickup",     "ReusableFlareBox",          "HDFlareAmmo",          4,  "FLA4A0", "FLARA0");
 		addItem("LLShellBoxPickup",        "ReusableLessLethalBox",     "HDLLShellAmmo",        4,  "LLS4A0", "LLS1A0");

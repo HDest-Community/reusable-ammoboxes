@@ -39,6 +39,7 @@ TAG_300SAVAGE_BOX          = "Reusable .300 Savage ammo box";
 TAG_420_BOX                = "Reusable .420 frei ammo box";
 TAG_FLARE_BOX              = "Reusable flare shell box";
 TAG_LESSLETHAL_BOX         = "Reusable less-lethal shell box";
+TAG_BIRDSHOT_BOX           = "Reusable birdshot shell box
 TAG_SLUG_BOX               = "Reusable 12ga slug box";
 TAG_EXPLOSIVE_SHELL_BOX    = "Reusable 12ga explosive slug box";
 
@@ -62,5 +63,6 @@ PICKUP_3006_BOX            = "Picked up a box of .30-06 rounds.";
 PICKUP_069_BOX             = "Picked up a box of .069 bore shells.";
 PICKUP_300SAVAGE_BOX       = "Picked up a box of .300 Savage rounds.";
 PICKUP_420_BOX             = "Picked up a box of .420 frei rounds.";
+PICKUP_BIRDSHOT_BOX        = "Picked up a box of birdshot shells.";
 PICKUP_FLARE_BOX           = "Picked up a box of flare shells.";
 PICKUP_LESSLETHAL_BOX      = "Picked up a box of less-lethal shells.";
