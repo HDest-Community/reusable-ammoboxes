@@ -39,7 +39,7 @@ TAG_300SAVAGE_BOX          = "Reusable .300 Savage ammo box";
 TAG_420_BOX                = "Reusable .420 frei ammo box";
 TAG_FLARE_BOX              = "Reusable flare shell box";
 TAG_LESSLETHAL_BOX         = "Reusable less-lethal shell box";
-TAG_BIRDSHOT_BOX           = "Reusable birdshot shell box
+TAG_BIRDSHOT_BOX           = "Reusable birdshot shell box";
 TAG_SLUG_BOX               = "Reusable 12ga slug box";
 TAG_EXPLOSIVE_SHELL_BOX    = "Reusable 12ga explosive slug box";
 
