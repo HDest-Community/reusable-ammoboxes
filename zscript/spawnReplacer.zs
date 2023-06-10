@@ -118,6 +118,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_shell.push("RIReaperZM");
 		wep_shell.push("ScopedSlayer");
 		wep_shell.push("Slayer");
+		wep_shell.push("Wan_WSTEM5");
 		addAmmo("ReusableShellBox", wep_shell);
 
 		Array<string> wep_7mm;
@@ -133,6 +134,8 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_7mm.push("LiberatorRifle");
 		wep_7mm.push("NoScopeBoss");
 		wep_7mm.push("ObrozzPistol");
+		wep_7mm.push("WAN_MA75B");
+		wep_7mm.push("WAN_MA76C");
 		addAmmo("Reusable7mmBox", wep_7mm);
 
 		Array<string> wep_rocket;
