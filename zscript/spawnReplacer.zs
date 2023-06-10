@@ -85,6 +85,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_9mm.push("HDStenMk2");
 		wep_9mm.push("HushPuppyPistol");
 		wep_9mm.push("MinervaChaingun");
+		wep_9mm.push("RIThompson");
 		wep_9mm.push("TenMilAutoReloadingThingy");
 		addAmmo("Reusable9mmBox", wep_9mm);
 
@@ -112,6 +113,9 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_shell.push("Hunter");
 		wep_shell.push("MetalFireBlooper");
 		wep_shell.push("SawedSlayer");
+		wep_shell.push("RIReaper");
+		wep_shell.push("RIReaperGL");
+		wep_shell.push("RIReaperZM");
 		wep_shell.push("ScopedSlayer");
 		wep_shell.push("Slayer");
 		addAmmo("ReusableShellBox", wep_shell);
@@ -135,12 +139,13 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		wep_rocket.push("Blooper");
 		wep_rocket.push("HackedZM66AssaultRifle");
 		wep_rocket.push("HDBitch");
+		wep_rocket.push("HDChinaLake");
 		wep_rocket.push("HDHLAR");
 		wep_rocket.push("HDIEDKit");
 		wep_rocket.push("HDRL");
 		wep_rocket.push("HDTROGRifle");
 		wep_rocket.push("IronsLiberatorRifle");
-		wep_rocket.push("HDChinaLake");
+		wep_rocket.push("RIReaperGL");
 		addAmmo("ReusableRocketBox", wep_rocket);
 
 		Array<string> wep_4GaShell;
