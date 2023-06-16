@@ -16,7 +16,7 @@ class Reusable4gaShellBox : ReusableAmmobox {
 		ReusableAmmobox.extractMax 4;
 		ReusableAmmobox.fullSprite "4GBXA0";
 		ReusableAmmobox.emptySprite "4GBXW0";
-		ReusableAmmobox.roundSprite "4GS1A0";
+		ReusableAmmobox.roundSprite "4GSIA0";
 		
         ReusableAmmobox.extractSound "boxes/extract/4gaShells";
         ReusableAmmobox.insertSound "boxes/insert/4gaShells";
