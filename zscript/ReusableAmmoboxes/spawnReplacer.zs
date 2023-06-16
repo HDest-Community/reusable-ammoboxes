@@ -330,7 +330,8 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		for(let i = 0; i < blacklist.size(); i++) if (e.thing is blacklist[i]) return;
 
 		// Grab the name of the thing spawned
-		string candidateName = (e.thing.getClassName().."").makeLower();
+		string candidateName = e.thing.getClassName();
+		candidateName = candidateName.makeLower();
 		
 		// If the thing spawned is an ammobox, add any and all items that can use this.
 		let ammobox = ReusableAmmobox(e.thing);
