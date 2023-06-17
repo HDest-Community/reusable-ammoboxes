@@ -20,10 +20,10 @@ class Reusable762TokarevBox : ReusableAmmobox {
 
 	States {
 		Spawn:
-			M1A1 Y -1;
+			T7BX A -1;
 			stop;
 		spawnempty:
-			M1A1 W -1 { brollsprite = true; brollcenter = true; roll = 180; }
+			T7BX W -1 { brollsprite = true; brollcenter = true; roll = 180; }
 			stop;
 	}
 }
