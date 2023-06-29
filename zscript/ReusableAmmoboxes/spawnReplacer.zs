@@ -19,17 +19,7 @@ class AmmoboxSpawnItem play {
 	string roundSprite;
 
 	string toString() {
-
-		let replacements = "[";
-		if (spawnReplaces.size()) {
-			replacements = replacements..spawnReplaces[0].toString();
-			
-			foreach (spawnReplace : spawnReplaces) replacements = replacements..", "..spawnReplace.toString();
-		}
-		replacements = replacements.."]";
-
-
-		return String.format("{ spawnName=%s, spawnReplaces=%s, isPersistent=%b, replaceItem=%b }", spawnName, replacements, isPersistent, replaceItem);
+		return String.format("{ spawnName=%s, replaceName=%s, ammoName=%s, bundleSize=%i, bundleSprite=%s, roundSprite=%s }", spawnName, replaceName, ammoName, bundleSize, bundleSprite, roundSprite);
 	}
 }
 
@@ -92,13 +82,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 	// appends an entry to itemSpawnList;
 	void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
 
-		if (hd_debug) {
-			let msg = "Adding "..(persists ? "Persistent" : "Non-Persistent").." Replacement Entry for "..name..": ["..replacees[0].toString();
-			
-			if (replacees.size() > 1) foreach (replacee : replacees) msg = msg..", "..replacee.toString();
-
-			console.printf(msg.."]");
-		}
+		if (hd_debug) console.printf("Adding Replacement Entry for "..name..": "..boxName);
 		
 		// Creates a new struct;
 		AmmoboxSpawnItem spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
