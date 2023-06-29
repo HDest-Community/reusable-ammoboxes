@@ -17,23 +17,52 @@ class AmmoboxSpawnItem play {
 
 	// Name of sprite used for individual rounds
 	string roundSprite;
+
+	string toString() {
+
+		let replacements = "[";
+		if (spawnReplaces.size()) {
+			replacements = replacements..spawnReplaces[0].toString();
+			
+			foreach (spawnReplace : spawnReplaces) replacements = replacements..", "..spawnReplace.toString();
+		}
+		replacements = replacements.."]";
+
+
+		return String.format("{ spawnName=%s, spawnReplaces=%s, isPersistent=%b, replaceItem=%b }", spawnName, replacements, isPersistent, replaceItem);
+	}
 }
 
 // Struct for passing useinformation to ammunition.
-class AmmoboxSpawnAmmo play
-{
+class AmmoboxSpawnAmmo play {
 	// Name of ammo.
 	string ammoName;
 	
 	// List of weapons using that ammo.
 	Array<string> weaponNames;
+
+	string toString() {
+
+		let weapons = "[";
+		if (weaponNames.size()) {
+			weapons = weapons..weaponNames[0];
+
+			foreach (weaponName : weaponNames) weapons = weapons..", "..weaponName;
+		}
+		weapons = weapons.."]";
+
+		return String.format("{ ammoName=%s, weaponNames=%s }", ammoName, weapons);
+	}
 }
 
+
+
+// One handler to rule them all.
 class ReusableAmmoboxesSpawner : EventHandler {
 
 	// List of persistent classes to completely ignore.
 	// This -should- mean this mod has no performance impact.
-	static const class<actor> blacklist[] = {
+	static const string blacklist[] = {
 		"HDSmoke",
 		"BloodTrail",
 		"CheckPuff",
@@ -58,12 +87,52 @@ class ReusableAmmoboxesSpawner : EventHandler {
 	// used for item-replacement on mapload.
 	array<AmmoboxSpawnItem> itemSpawnList;
 	
-	override void OnRegister() {
-		// Initialize Replacement information.
-		init();
+	bool cvarsAvailable;
+
+	// appends an entry to itemSpawnList;
+	void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
+
+		if (hd_debug) {
+			let msg = "Adding "..(persists ? "Persistent" : "Non-Persistent").." Replacement Entry for "..name..": ["..replacees[0].toString();
+			
+			if (replacees.size() > 1) foreach (replacee : replacees) msg = msg..", "..replacee.toString();
+
+			console.printf(msg.."]");
+		}
+		
+		// Creates a new struct;
+		AmmoboxSpawnItem spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
+
+		// Populates the struct with relevant information,
+		spawnee.spawnName = name.makeLower();
+		spawnee.replaceName = boxName.makeLower();
+		spawnee.ammoName = ammoName.makeLower();
+		spawnee.bundleSize = bundleSize;
+		spawnee.bundleSprite = bundleSprite;
+		spawnee.roundSprite = roundSprite;
+
+		// Pushes the finished struct to the array.
+		itemSpawnList.push(spawnee);
 	}
 
+	void addAmmo(string name, Array<string> weapons) {
+
+		// Creates a new struct;
+		AmmoboxSpawnAmmo spawnee = AmmoboxSpawnAmmo(new('AmmoboxSpawnAmmo'));
+		spawnee.ammoName = name.makeLower();
+
+		// Populates the struct with relevant information,
+		foreach (weapon : weapons) spawnee.weaponNames.push(weapon.makeLower());
+
+		// Pushes the finished struct to the array.
+		ammoSpawnList.push(spawnee);
+	}
+
+
+	// Populates the replacement and association arrays.
 	void init() {
+
+		cvarsAvailable = true;
 
 		// --------------------
 		// Ammunition
@@ -291,47 +360,19 @@ class ReusableAmmoboxesSpawner : EventHandler {
 		addItem("SlugBoxPickup",           "ReusableSlugBox",           "HDSlugAmmo",           4,  "SLUGA0", "SLG1A0");
 	}
 
-	void addAmmo(string name, Array<string> weapons) {
-		// Creates a new struct;
-		AmmoboxSpawnAmmo spawnee = AmmoboxSpawnAmmo(new('AmmoboxSpawnAmmo'));
-		spawnee.ammoName = name.makelower();
+	override void worldThingSpawned(WorldEvent e) {
+		// Populates the main arrays if they haven't been already.
+		if (!cvarsAvailable) init();
 
-		// Populates the struct with relevant information,
-		for(let i = 0; i < weapons.size(); i++) {
-			spawnee.weaponNames.push(weapons[i].makelower());
-		}
-
-		// Pushes the finished struct to the array.
-		ammoSpawnList.push(spawnee);
-	}
-
-	void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
-		// Creates a new struct;
-		AmmoboxSpawnItem spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
-
-		// Populates the struct with relevant information,
-		spawnee.spawnName = name.makeLower();
-		spawnee.replaceName = boxName.makeLower();
-		spawnee.ammoName = ammoName.makeLower();
-		spawnee.bundleSize = bundleSize;
-		spawnee.bundleSprite = bundleSprite;
-		spawnee.roundSprite = roundSprite;
-
-		// Pushes the finished struct to the array.
-		itemSpawnList.push(spawnee);
-	}
-
-	override void WorldThingSpawned(WorldEvent e) {
-
-		// If thing doesn't exist, quit
-		if(!e.thing) return;
+		// If thing spawned doesn't exist, quit
+		if (!e.thing) return;
 
 		// If thing spawned is blacklisted, quit
-		for(let i = 0; i < blacklist.size(); i++) if (e.thing is blacklist[i]) return;
-
-		// Grab the name of the thing spawned
+		foreach (bl : blacklist) if (e.thing is bl) return;
+		
 		string candidateName = e.thing.getClassName();
 		candidateName = candidateName.makeLower();
+
 		
 		// If the thing spawned is an ammobox, add any and all items that can use this.
 		let ammobox = ReusableAmmobox(e.thing);
@@ -351,23 +392,17 @@ class ReusableAmmoboxesSpawner : EventHandler {
 	}
 
 	private void handleAmmoUses(ReusableAmmobox ammobox, string candidateName) {
-		// Goes through the entire ammospawn array.
-		for (let i = 0; i < ammoSpawnList.size(); i++) {
-			if (ammoSpawnList[i].ammoName == candidateName) {
-				ammobox.itemsThatUseThis.copy(ammoSpawnList[i].weaponNames);
-			}
-		}
+		foreach (ammoSpawn : ammoSpawnList) if (candidateName == ammoSpawn.ammoName) ammobox.itemsThatUseThis.copy(ammoSpawn.weaponNames);
 	}
 
 	private void handleMapSpawns(HDUPK item, string candidateName) {
 		// Iterate through the list of ammo candidates for spawned item.
-		for (let i = 0; i < itemSpawnList.size(); i++) {
-			if (itemSpawnList[i].spawnName == candidateName) {
+		foreach (itemSpawn : itemSpawnList) {
+			if (itemSpawn.spawnName == candidateName) {
 
-				let newItem = Actor.spawn(itemSpawnList[i].replaceName, item.pos);
-				if(newItem) {
+				if (Actor.spawn(itemSpawn.replaceName, item.pos)) {
 				
-					if (hd_debug) console.printf(item.getClassName().." -> "..itemSpawnList[i].replaceName);
+					if (hd_debug) console.printf(item.getClassName().." -> "..itemSpawn.replaceName);
 
 					item.destroy();
 
@@ -380,14 +415,14 @@ class ReusableAmmoboxesSpawner : EventHandler {
 	private void handleDroppedAmmoboxes(HDUPK item, string candidateName) {
 
 		// Iterate through the list of ammo candidates for spawned item.
-		for (let i = 0; i < itemSpawnList.size(); i++) {
-			if (itemSpawnList[i].spawnName == candidateName) {
-				let p = HDRoundAmmo(Actor.spawn(itemSpawnList[i].ammoName, item.pos));
+		foreach (itemSpawn : itemSpawnList) {
+			if (itemSpawn.spawnName == candidateName) {
+				let p = HDRoundAmmo(Actor.spawn(itemSpawn.ammoName, item.pos));
 
 				p.amount = item.amount;
 				p.vel = item.vel;
 
-				p.splitPickupBoxableRound(itemSpawnList[i].bundleSize, -1, candidateName, itemSpawnList[i].bundleSprite, itemSpawnList[i].roundSprite);
+				p.splitPickupBoxableRound(itemSpawn.bundleSize, -1, candidateName, itemSpawn.bundleSprite, itemSpawn.roundSprite);
 
 				item.destroy();
 
