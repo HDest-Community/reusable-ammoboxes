@@ -403,9 +403,8 @@ class ReusableAmmoboxesSpawner : EventHandler {
             if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
                 foreach (itemSpawn : itemSpawnList) {
                     string ammoName = handler.removedClasses[i].getClassName();
-                    ammoName = ammoName.makeLower();
 
-                    if (itemSpawn.ammoName == ammoName) {
+                    if (itemSpawn.ammoName ~== ammoName) {
                         if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Backpack Spawn Pool");
                         
                         BPSpawnPool.removeItem(itemSpawn.replaceName);
