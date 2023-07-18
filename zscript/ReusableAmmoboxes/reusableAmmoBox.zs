@@ -94,4 +94,26 @@ class ReusableAmmobox : HDMagAmmo {
 		mags[mindex]++;
 		return true;
 	}
+
+    override void loadoutConfigure(string input) {
+        let numEmpty = getLoadoutVar(input, 'empty', 3);
+		if(numEmpty) {
+            SyncAmount();
+            for (let i=0; i < min(mags.size(), numEmpty); i++) mags[i] = 0;
+        }
+    }
+
+    // Taken from HDWeapon, to account for how many boxes should be empty
+	int getLoadoutVar(string input,string varname,int maxdigits=int.MAX){
+		int varstart=input.indexof(varname);
+		if(varstart<0)return -1;
+		int digitstart=varstart+varname.length();
+		string inp=input.mid(digitstart,maxdigits);
+		if(inp=="0")return 0;
+		if(inp.indexof("e")>=0)inp=inp.left(inp.indexof("e")); //"123e45"
+		if(inp.indexof("x")>=0)inp=inp.left(inp.indexof("x")); //"0xffffff..."
+		int inpint=inp.toint();
+		if(!inpint)return 1; //var merely mentioned with no number
+		return inpint;
+	}
 }
