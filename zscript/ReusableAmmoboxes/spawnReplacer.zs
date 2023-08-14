@@ -130,6 +130,13 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
         cvarsAvailable = true;
 
+        // Init enabled ammo CVARs
+        for (let i = 0; i < 1 + HDBulletLibHandler.removedClasses.Size() / 32; ++i) {    
+            if (!ammoSpawns[i]) {
+                ammoSpawns[i] = CVar.GetCVar("hdblib_enableammo_"..(i + 1));
+            }
+        }
+
         //------------
         // Ammunition
         //------------
@@ -391,18 +398,10 @@ class ReusableAmmoboxesSpawner : EventHandler {
         // Populates the main arrays if they haven't been already.
         if (!cvarsAvailable) init();
 
-        let handler = HDBulletLibHandler(EventHandler.find('HDBulletLibHandler'));
-
-        for (let i = 0; i < 1 + handler.removedClasses.Size() / 32; ++i) {    
-            if (!ammoSpawns[i]) {
-                ammoSpawns[i] = CVar.GetCVar("hdblib_enableammo_"..(i + 1));
-            }
-        }
-
-        for (let i = 0; i < handler.removedClasses.size(); i++) {
+        for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
             if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
                 foreach (itemSpawn : itemSpawnList) {
-                    string ammoName = handler.removedClasses[i].getClassName();
+                    string ammoName = HDBulletLibHandler.removedClasses[i].getClassName();
 
                     if (itemSpawn.ammoName ~== ammoName) {
                         if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Backpack Spawn Pool");
@@ -415,6 +414,9 @@ class ReusableAmmoboxesSpawner : EventHandler {
     }
 
     override void worldThingSpawned(WorldEvent e) {
+
+        // Populates the main arrays if they haven't been already.
+        if (!cvarsAvailable) init();
 
         // If thing spawned doesn't exist, quit
         if (!e.thing) return;
