@@ -169,7 +169,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_355.push('HDNyx');
         wep_355.push('HDRevolver');
         wep_355.push('HDScopedRevolver');
-        wep_355.push('HDSnubNoseReolver');
+        wep_355.push('HDSnubNoseRevolver');
         addAmmo('Reusable355Box', wep_355);
 
         // 12 gauge Buckshot Ammo.
