@@ -83,8 +83,6 @@ class ReusableAmmoboxesSpawner : EventHandler {
     // used for item-replacement on mapload.
     array<AmmoboxSpawnItem> itemSpawnList;
     
-    bool cvarsAvailable;
-
     // appends an entry to itemSpawnList;
     void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
 
@@ -124,18 +122,19 @@ class ReusableAmmoboxesSpawner : EventHandler {
         ammoSpawnList.push(spawnee);
     }
 
-
-    // Populates the replacement and association arrays.
-    void init() {
-
-        cvarsAvailable = true;
-
-        // Init enabled ammo CVARs
+    void initCVars() {
         for (let i = 0; i < 1 + HDBulletLibHandler.removedClasses.Size() / 32; ++i) {    
             if (!ammoSpawns[i]) {
                 ammoSpawns[i] = CVar.GetCVar("hdblib_enableammo_"..(i + 1));
             }
         }
+    }
+
+    // Populates the replacement and association arrays.
+    void init() {
+
+        // Init enabled ammo CVARs
+        initCVars();
 
         //------------
         // Ammunition
@@ -396,7 +395,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
     override void worldLoaded(WorldEvent e) {
         
         // Populates the main arrays if they haven't been already.
-        if (!cvarsAvailable) init();
+        if (!ammoSpawns[0]) initCVars();
 
         for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
             if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
@@ -416,7 +415,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
     override void worldThingSpawned(WorldEvent e) {
 
         // Populates the main arrays if they haven't been already.
-        if (!cvarsAvailable) init();
+        if (!ammoSpawns[0]) initCVars();
 
         // If thing spawned doesn't exist, quit
         if (!e.thing) return;
