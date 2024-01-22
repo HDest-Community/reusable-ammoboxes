@@ -394,8 +394,9 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
     override void worldLoaded(WorldEvent e) {
         
-        // Populates the main arrays if they haven't been already.
-        if (!ammoSpawns[0]) initCVars();
+        // Populates the main arrays.
+        if (!e.IsReOpen) init();
+        else initCVars(); // WorldLoaded could be called again when revisiting a map?
 
         for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
             if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
