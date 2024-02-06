@@ -1,5 +1,7 @@
 # Reusable Ammoboxes
 
+[![Nightly Build](https://github.com/HDest-Community/reusable-ammoboxes/actions/workflows/nightly.yml/badge.svg)](https://github.com/HDest-Community/reusable-ammoboxes/actions/workflows/nightly.yml)
+
 A continuation of Testament Holmes' [Legacy Ammoboxes](https://dastrukar.gitlab.io/hddons-list/#utilities:legacyammoboxes-testamentholmes), now with HDBulletLib boxes!
 
 _"The old UaS ammoboxes, re-implemented as an standalone mod. Now with empty sprites! This version replaces the normal HD pickups."  
