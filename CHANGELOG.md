@@ -7,13 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.4.0] - 2024-03-03
+
 ### Added
 
 -   Added Freedoom Shellbox sprites (#25).
 
 ### Changed
 
--   Update Build Scripts.
+-   Update Build Scripts (#27, #28, #29, #30).
+-   Fix spawn replacer CVAR initialization checks (#26).
+-   Fix `ReusableRocketBox` Spawn slots for latest HDest Main (#33).
+-   Update `handleDroppedAmmobox` logic to fallback to simply replacing the box if the item being replaced isn't able to be bundled/boxed (#33).
 
 ## [v1.3.2] - 2023-10-25
 
@@ -132,7 +137,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Initial Release.  Originally made by Testament-Holmes, now maintained by the community.
 -   Added all boxable rounds provided by HDBulletLib
 
-[Unreleased]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.3.2...HEAD
+[Unreleased]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.4.0...HEAD
+
+[v1.4.0]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.3.2...v1.4.0
 
 [v1.3.2]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.3.1..v1.3.2
 
