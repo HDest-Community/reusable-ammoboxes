@@ -15,7 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Update Build Scripts.
+-   Update Build Scripts (#27, #28, #29, #30).
+-   Fix spawn replacer CVAR initialization checks (#26).
+-   Fix `ReusableRocketBox` Spawn slots for latest HDest Main (#33).
+-   Update `handleDroppedAmmobox` logic to fallback to simply replacing the box if the item being replaced isn't able to be bundled/boxed (#33).
 
 ## [v1.3.2] - 2023-10-25
 
