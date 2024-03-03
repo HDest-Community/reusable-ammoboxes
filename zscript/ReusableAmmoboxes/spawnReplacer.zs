@@ -355,11 +355,12 @@ class ReusableAmmoboxesSpawner : EventHandler {
         // Vanilla Ammoboxes
         // --------------------
 
-        addItem('HD9mBoxPickup',   'Reusable9mmBox',    'HDPistolAmmo',   10, 'TEN9A0', 'PRNDA0');
-        addItem('ShellBoxPickup',  'ReusableShellBox',  'HDShellAmmo',    4,  'SHELA0', 'SHL1A0');
-        addItem('HD7mBoxPickup',   'Reusable7mmBox',    'SevenMilAmmo',   10, 'TEN7A0', '7RNDA0');
-        addItem('HD355BoxPickup',  'Reusable355Box',    'HDRevolverAmmo', 10, 'TEN9A0', 'PRNDA0');
-        addItem('RocketBigPickup', 'ReusableRocketBox', 'HDRocketAmmo',   1,  'ROQPA0', 'ROQPA0');
+        addItem('HD9mBoxPickup',   'Reusable9mmBox',       'HDPistolAmmo',   10, 'TEN9A0', 'PRNDA0');
+        addItem('ShellBoxPickup',  'ReusableShellBox',     'HDShellAmmo',    4,  'SHELA0', 'SHL1A0');
+        addItem('HD7mBoxPickup',   'Reusable7mmBox',       'SevenMilAmmo',   10, 'TEN7A0', '7RNDA0');
+        addItem('HD355BoxPickup',  'Reusable355Box',       'HDRevolverAmmo', 10, 'TEN9A0', 'PRNDA0');
+        addItem('RocketBigPickup', 'ReusableBigRocketBox', 'HDRocketAmmo',   1,  'ROQPA0', 'ROQPA0');
+        addItem('RocketBoxPickup', 'ReusableRocketBox',    'HDRocketAmmo',   1,  'ROQPA0', 'ROQPA0');
 
         // --------------------
         // HDBulletLib Ammoboxes
