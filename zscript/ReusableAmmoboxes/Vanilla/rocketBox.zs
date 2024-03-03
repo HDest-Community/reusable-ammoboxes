@@ -52,14 +52,3 @@ class ReusableRocketBox : ReusableAmmobox {
 			stop;
 	}
 }
-
-class ReusableBigRocketBox : IdleDummy {
-	override void PostBeginPlay() {
-		super.PostBeginPlay();
-
-		let ofs = AngleToVector(angle);
-
-		Spawn('ReusableRocketBox', pos, ALLOW_REPLACE);
-		Spawn('HEATAmmo', (pos.xy + ofs * 10, pos.z), ALLOW_REPLACE);
-	}
-}
