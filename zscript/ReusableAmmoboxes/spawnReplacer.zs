@@ -360,6 +360,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('HD7mBoxPickup',   'Reusable7mmBox',    'SevenMilAmmo',   10, 'TEN7A0', '7RNDA0');
         addItem('HD355BoxPickup',  'Reusable355Box',    'HDRevolverAmmo', 10, 'TEN9A0', 'PRNDA0');
         addItem('RocketBigPickup', 'ReusableRocketBox', 'HDRocketAmmo',   1,  'ROQPA0', 'ROQPA0');
+        addItem('RocketBoxPickup', 'ReusableRocketBox', 'HDRocketAmmo',   1,  'ROQPA0', 'ROQPA0');
 
         // --------------------
         // HDBulletLib Ammoboxes
@@ -520,14 +521,23 @@ class ReusableAmmoboxesSpawner : EventHandler {
         // Iterate through the list of ammo candidates for spawned item.
         foreach (itemSpawn : itemSpawnList) {
             if (itemSpawn.spawnName ~== candidateName) {
-                let p = HDRoundAmmo(Actor.spawn(itemSpawn.ammoName, item.pos));
+                let r = Actor.spawn(itemSpawn.ammoName, item.pos);
+                let p = HDRoundAmmo(r);
 
-                p.amount = item.amount;
-                p.vel = item.vel;
+                if (p) {
+                    // If we can split the rounds, do so
+                    p.amount = item.amount;
+                    p.vel = item.vel;
 
-                p.splitPickupBoxableRound(itemSpawn.bundleSize, -1, candidateName, itemSpawn.bundleSprite, itemSpawn.roundSprite);
+                    p.splitPickupBoxableRound(itemSpawn.bundleSize, -1, candidateName, itemSpawn.bundleSprite, itemSpawn.roundSprite);
 
-                item.destroy();
+                    item.destroy();
+                } else {
+                    // Otherwise, just replace the box
+                    handleMapSpawns(item, candidateName);
+
+                    r.destroy();
+                }
 
                 return;
             }
