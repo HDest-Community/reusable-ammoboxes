@@ -10,6 +10,8 @@ class ReusableAmmobox : HDMagAmmo {
     sound insertSound;property insertSound:insertSound;
     sound extractSound;property extractSound:extractSound;
 
+    bool extractAll;
+
 	default {
 		HDMagAmmo.insertTime 4;
 		HDMagAmmo.extractTime 8;
@@ -26,11 +28,17 @@ class ReusableAmmobox : HDMagAmmo {
         ReusableAmmobox.extractSound "boxes/extract";
 	}
 
+	override void DoEffect() {
+		super.DoEffect();
+
+        extractAll = owner && owner.player && owner.player.cmd.buttons&BT_USE;
+	}
+
 	// Don't auto-consolidate these like mags
 	override void Consolidate() { SyncAmount(); return; }
 
     // Return the configured box sprite, individual round sprite, and the scale at which to render them
-	override string,string,name,double getmagsprite(int thismagamt) {
+	override string,string,name,double GetMagSprite(int thismagamt) {
 		return thismagamt > 0
                 ? fullSprite
                 : emptySprite,
@@ -58,7 +66,7 @@ class ReusableAmmobox : HDMagAmmo {
         if(mags.size() < 1 || mags[mindex] < 1 || owner.A_JumpIfInventory(roundType, 0, "null")) return false;
 
         // Calculate the number of rounds to extract
-        int totake = min(random(extractMin, extractMax), mags[mindex]);
+        int totake = extractAll ? mags[mindex] : min(random(extractMin, extractMax), mags[mindex]);
 
         // Give or drop the extracted rounds
         if(totake < HDPickup.MaxGive(owner, roundType, roundbulk)) {
