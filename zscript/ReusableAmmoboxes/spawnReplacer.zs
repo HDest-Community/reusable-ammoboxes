@@ -210,7 +210,6 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_7mm.push('NoScopeBoss');
         wep_7mm.push('ObrozzPistol');
         wep_7mm.push('WAN_MA75B');
-        wep_7mm.push('WAN_MA76C');
         addAmmo('Reusable7mmBox', wep_7mm);
 
         // Rocquettes
@@ -225,6 +224,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_rocket.push('HDTROGRifle');
         wep_rocket.push('IronsLiberatorRifle');
         wep_rocket.push('RIReaperGL');
+        wep_rocket.push('WAN_MA75B');
         addAmmo('ReusableRocketBox', wep_rocket);
 
         // 4ga 00 Buckshot
@@ -250,6 +250,11 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_10mm.push('HDSigCow');
         wep_10mm.push('TenMilAutoReloadingThingy');
         addAmmo('Reusable10mmBox', wep_10mm);
+
+        // 20mm Grenades
+        Array<string> wep_20mm;
+        wep_7mm.push('WAN_MA76C');
+        addAmmo('Reusable20mmGrenadeBox', wep_20mm);
 
         // .45 ACP
         Array<string> wep_45ACP;
@@ -370,6 +375,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('PB_5mmBoxPickup',         'Reusable5mmBox',            'HD5mm_Ammo',           16, '5MMYA0', '5MMZA0');
         addItem('HD6mmFlechetteBoxPickup', 'Reusable6mmBox',            'HD6mmFlechetteAmmo',   12, 'ACR9I0', 'ACRPI0');
         addItem('HD10mBoxPickup',          'Reusable10mmBox',           'HD10mAmmo',            10, 'T10MA0', 'PR10A0');
+        addItem('WAN_20mmGrenadeBox',      'Reusable20mmGrenadeBox',    'WAN_20mmGrenadeAmmo',  1,  'MAG7B0', 'MAG7B0');
         addItem('HD45ACPBoxPickup',        'Reusable45ACPBox',          'HD45ACPAmmo',          10, '45TNA0', '45RNA0');
         addItem('HD45LCBoxPickup',         'Reusable45LCBox',           'HD45LCAmmo',           10, 'TN45A0', 'RN45A0');
         addItem('HD50AEBoxPickup',         'Reusable50AEBox',           'HD50AEAmmo',           10, 'TEN9A0', 'PRNDA0');

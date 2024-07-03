@@ -35,6 +35,7 @@ $alias boxes/extract/7mm boxes/extract/rifleAmmo
 $alias boxes/extract/9mm boxes/extract/pistolAmmo
 $alias boxes/extract/355 boxes/extract/pistolAmmo
 $alias boxes/extract/rockets boxes/extract/rockAmmo
+$alias boxes/extract/20mm boxes/extract/rockAmmo
 $alias boxes/extract/12gShells boxes/extract/shellAmmo
 
 // Generic Insert Sounds
@@ -70,4 +71,5 @@ $alias boxes/insert/7mm boxes/insert/rifleAmmo
 $alias boxes/insert/9mm boxes/insert/pistolAmmo
 $alias boxes/insert/355 boxes/insert/pistolAmmo
 $alias boxes/insert/rockets boxes/insert/rockAmmo
+$alias boxes/insert/20mm boxes/insert/rockAmmo
 $alias boxes/insert/12gShells boxes/insert/shellAmmo

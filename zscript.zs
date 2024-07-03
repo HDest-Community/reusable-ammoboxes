@@ -59,6 +59,7 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 #include "zscript/reusableammoboxes/HDBulletLib/50AMBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/6mmBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/10mmBox.zs"
+#include "zscript/reusableammoboxes/HDBulletLib/20mmGrenadeBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/flareBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/lessLethalBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/762TokarevBox.zs"
