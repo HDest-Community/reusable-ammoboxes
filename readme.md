@@ -29,3 +29,4 @@ _such clutter, many immersions, wow!_
 - Khan for the 4g saboted slug boxes
 - Potetobloke for the 5mm, 6mm, and .50 AM boxes
 - HexaDoken for the .30-06 boxes
+- Underqualified_Gunman for the empty FreeDoom 12ga Shell boxes
