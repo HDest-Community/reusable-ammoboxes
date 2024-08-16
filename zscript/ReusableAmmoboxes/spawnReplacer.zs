@@ -244,6 +244,12 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_6mm.push('HD_SteyrACR');
         addAmmo('Reusable6mmBox', wep_6mm);
 
+        // 9mm NDM
+        Array<string> wep_9mmNDM;
+		wep_9mmNDM.push('HDGuillotine');
+		wep_9mmNDM.push('HDBreakerP90');
+        addAmmo('ReusableNDMBox', wep_9mmNDM);
+
         // 10mm
         Array<string> wep_10mm;
         wep_10mm.push('HD10mmPistol');
@@ -393,6 +399,12 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('FlareShellBoxPickup',     'ReusableFlareBox',          'HDFlareAmmo',          4,  'FLA4A0', 'FLARA0');
         addItem('LLShellBoxPickup',        'ReusableLessLethalBox',     'HDLLShellAmmo',        4,  'LLS4A0', 'LLS1A0');
         addItem('SlugBoxPickup',           'ReusableSlugBox',           'HDSlugAmmo',           4,  'SLUGA0', 'SLG1A0');
+
+        // --------------------
+        // Peppergrinder Ammoboxes
+        // --------------------
+
+        addItem('HDNDMBoxPickup', 'ReusableNDMBox', 'HDNDMLoose', 10, 'TNNDA0', 'NRNDA0');
     }
 
     override void OnRegister() {

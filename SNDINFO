@@ -13,6 +13,7 @@ $alias boxes/extract/4gaShells boxes/extract/shellAmmo
 $alias boxes/extract/4gaSlugs boxes/extract/shellAmmo
 $alias boxes/extract/5mm boxes/extract/pistolAmmo
 $alias boxes/extract/6mm boxes/extract/pistolAmmo
+$alias boxes/extract/9mmNDM boxes/extract/pistolAmmo
 $alias boxes/extract/10mm boxes/extract/pistolAmmo
 $alias boxes/extract/45ACP boxes/extract/pistolAmmo
 $alias boxes/extract/45LC boxes/extract/pistolAmmo
@@ -49,6 +50,7 @@ $alias boxes/insert/4gaShells boxes/insert/shellAmmo
 $alias boxes/insert/4gaSlugs boxes/insert/shellAmmo
 $alias boxes/insert/5mm boxes/insert/pistolAmmo
 $alias boxes/insert/6mm boxes/insert/pistolAmmo
+$alias boxes/insert/9mmNDM boxes/insert/pistolAmmo
 $alias boxes/insert/10mm boxes/insert/pistolAmmo
 $alias boxes/insert/45ACP boxes/insert/pistolAmmo
 $alias boxes/insert/45LC boxes/insert/pistolAmmo

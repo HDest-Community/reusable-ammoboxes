@@ -68,3 +68,12 @@ PICKUP_420_BOX             = "Picked up a box of .451 Frei rounds.";
 PICKUP_BIRDSHOT_BOX        = "Picked up a box of birdshot shells.";
 PICKUP_FLARE_BOX           = "Picked up a box of flare shells.";
 PICKUP_LESSLETHAL_BOX      = "Picked up a box of less-lethal shells.";
+
+
+// PEPPERGRINDER
+
+// Tags
+TAG_NDM_BOX                = "Reusable 9mm Nail Driver Maximum ammo box";
+
+// Pickup Messages
+PICKUP_9MM_BOX             = "Picked up a box of 9mm NDM rounds.";
