@@ -6,7 +6,6 @@ class ReusableSlugBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 10;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HDSlugAmmo";
 		HDMagAmmo.roundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_SLUG_BOX";
@@ -20,6 +19,8 @@ class ReusableSlugBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/12gSlugs";
         ReusableAmmobox.insertSound "boxes/insert/12gSlugs";
+
+        ReusableAmmobox.roundClass "HDSlugAmmo";
 	}
 
 	States {

@@ -3,7 +3,6 @@ class Reusable355Box : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 72;
-		HDMagAmmo.roundType "HDRevolverAmmo";
 		HDMagAmmo.roundBulk ENC_355_LOADED;
 
 		tag "$TAG_355_BOX";
@@ -16,6 +15,8 @@ class Reusable355Box : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/355";
         ReusableAmmobox.insertSound "boxes/insert/355";
+
+        ReusableAmmobox.roundClass "HDRevolverAmmo";
 	}
 
 	States {

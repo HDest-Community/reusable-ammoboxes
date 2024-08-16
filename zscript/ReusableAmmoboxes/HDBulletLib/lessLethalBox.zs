@@ -6,7 +6,6 @@ class ReusableLessLethalBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 10;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HDLLShellAmmo";
 		HDMagAmmo.roundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_LESSLETHAL_BOX";
@@ -20,6 +19,8 @@ class ReusableLessLethalBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/llShells";
         ReusableAmmobox.insertSound "boxes/insert/llShells";
+
+        ReusableAmmobox.roundClass "HDLLShellAmmo";
 	}
 
 	States {

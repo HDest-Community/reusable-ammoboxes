@@ -6,7 +6,6 @@ class Reusable6mmBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 6;
 
 		HDMagAmmo.maxPerUnit 100;
-		HDMagAmmo.roundType "HD6mmFlechetteAmmo";
 		HDMagAmmo.roundBulk ENC_6MMFLECHETTE_LOADED;
 
 		tag "$TAG_6MM_BOX";
@@ -20,6 +19,8 @@ class Reusable6mmBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/6mm";
         ReusableAmmobox.insertSound "boxes/insert/6mm";
+
+        ReusableAmmobox.roundClass "HD6mmFlechetteAmmo";
 	}
 
 	States {

@@ -3,7 +3,6 @@ class Reusable762TokarevBox : ReusableAmmobox {
 		scale 0.3;
 
 		HDMagAmmo.maxPerUnit 40;
-		HDMagAmmo.roundType "HD762TokarevAmmo";
 		HDMagAmmo.roundBulk ENC_762TOKAREV_LOADED;
 
 		tag "$TAG_762TOKAREV_BOX";
@@ -16,6 +15,8 @@ class Reusable762TokarevBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/762Tokarev";
         ReusableAmmobox.insertSound "boxes/insert/762Tokarev";
+
+        ReusableAmmobox.roundClass "HD762TokarevAmmo";
 	}
 
 	States {

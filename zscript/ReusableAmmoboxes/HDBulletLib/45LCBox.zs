@@ -3,7 +3,6 @@ class Reusable45LCBox : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 50;
-		HDMagAmmo.roundType "HD45LCAmmo";
 		HDMagAmmo.roundBulk ENC_355_LOADED * 2;
 
 		tag "$TAG_45LC_BOX";
@@ -16,6 +15,8 @@ class Reusable45LCBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/45LC";
         ReusableAmmobox.insertSound "boxes/insert/45LC";
+
+        ReusableAmmobox.roundClass "HD45LCAmmo";
 	}
 
 	States {

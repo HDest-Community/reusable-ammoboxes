@@ -6,7 +6,6 @@ class ReusableExplosiveShellBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 10;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HDExplosiveShellAmmo";
 		HDMagAmmo.roundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_EXPLOSIVE_SHELL_BOX";
@@ -20,6 +19,8 @@ class ReusableExplosiveShellBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/exShells";
         ReusableAmmobox.insertSound "boxes/insert/exShells";
+
+        ReusableAmmobox.roundClass "HDExplosiveShellAmmo";
 	}
 
 	States {

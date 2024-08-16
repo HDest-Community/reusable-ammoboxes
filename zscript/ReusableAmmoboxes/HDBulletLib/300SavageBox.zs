@@ -3,7 +3,6 @@ class Reusable300SavageBox : ReusableAmmobox {
 		scale 0.3;
 
 		HDMagAmmo.maxPerUnit 48;
-		HDMagAmmo.roundType "Savage300Ammo";
 		HDMagAmmo.roundBulk ENC_776_LOADED;
 
 		tag "$TAG_300SAVAGE_BOX";
@@ -16,6 +15,8 @@ class Reusable300SavageBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/300Savage";
         ReusableAmmobox.insertSound "boxes/insert/300Savage";
+
+        ReusableAmmobox.roundClass "Savage300Ammo";
 	}
 
 	States {

@@ -4,7 +4,6 @@ class Reusable3006Box : ReusableAmmobox {
 		yscale 0.4;
 
 		HDMagAmmo.maxPerUnit 40;
-		HDMagAmmo.roundType "ThirtyAughtSixAmmo";
 		HDMagAmmo.roundBulk ENC_776_LOADED * 1.25;
 
 		tag "$TAG_3006_BOX";
@@ -17,6 +16,8 @@ class Reusable3006Box : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/3006";
         ReusableAmmobox.insertSound "boxes/insert/3006";
+
+        ReusableAmmobox.roundClass "ThirtyAughtSixAmmo";
 	}
 
 	States {

@@ -3,7 +3,6 @@ class Reusable7mmBox : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 50;
-		HDMagAmmo.roundType "SevenMilAmmo";
 		HDMagAmmo.roundBulk ENC_776_LOADED;
 
 		tag "$TAG_7MM_BOX";
@@ -16,6 +15,8 @@ class Reusable7mmBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/7mm";
         ReusableAmmobox.insertSound "boxes/insert/7mm";
+
+        ReusableAmmobox.roundClass "SevenMilAmmo";
 	}
 
 	States {

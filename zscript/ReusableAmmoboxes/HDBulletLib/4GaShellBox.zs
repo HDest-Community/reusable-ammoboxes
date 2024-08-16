@@ -6,7 +6,6 @@ class Reusable4gaShellBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 16;
 
 		HDMagAmmo.maxPerUnit 25;
-		HDMagAmmo.roundType "HD4GBAmmo";
 		HDMagAmmo.roundBulk ENC_4GBLOADED;
 
 		tag "$TAG_4G_SHELL_BOX";
@@ -20,6 +19,8 @@ class Reusable4gaShellBox : ReusableAmmobox {
 		
         ReusableAmmobox.extractSound "boxes/extract/4gaShells";
         ReusableAmmobox.insertSound "boxes/insert/4gaShells";
+
+        ReusableAmmobox.roundClass "HD4GBAmmo";
 	}
 
 	States {
