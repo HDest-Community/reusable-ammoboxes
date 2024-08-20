@@ -16,7 +16,7 @@ class Reusable10mmBox : ReusableAmmobox {
         ReusableAmmobox.extractSound "boxes/extract/10mm";
         ReusableAmmobox.insertSound "boxes/insert/10mm";
 
-        ReusableAmmobox.roundClass "HD10mmAmmo";
+        ReusableAmmobox.roundClass "HD10mAmmo";
 	}
 
 	States {
