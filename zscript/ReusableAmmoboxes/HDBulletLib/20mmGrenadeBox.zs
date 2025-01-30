@@ -7,7 +7,6 @@ class Reusable20mmGrenadeBox : ReusableAmmobox {
 
 		HDMagAmmo.MagBulk 5;
 		HDMagAmmo.maxPerUnit 10;
-		HDMagAmmo.roundType "WAN_20mmGrenadeAmmo";
 		HDMagAmmo.roundBulk enc_20mmgrenadeloaded;
 
 		tag "$TAG_20MM_BOX";
@@ -20,6 +19,8 @@ class Reusable20mmGrenadeBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/20mm";
         ReusableAmmobox.insertSound "boxes/insert/20mm";
+
+        ReusableAmmobox.roundClass "WAN_20mmGrenadeAmmo";
 	}
 
 	States {

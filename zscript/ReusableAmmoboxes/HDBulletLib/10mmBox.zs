@@ -3,7 +3,6 @@ class Reusable10mmBox : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 100;
-		HDMagAmmo.roundType "HD10mAmmo";
 		HDMagAmmo.roundBulk enc_10_loaded;
 
 		tag "$TAG_10MM_BOX";
@@ -16,6 +15,8 @@ class Reusable10mmBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/10mm";
         ReusableAmmobox.insertSound "boxes/insert/10mm";
+
+        ReusableAmmobox.roundClass "HD10mAmmo";
 	}
 
 	States {

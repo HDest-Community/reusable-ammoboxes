@@ -3,7 +3,6 @@ class Reusable500HeavyBox : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HD500SWHeavyAmmo";
 		HDMagAmmo.roundBulk ENC_50SW_LOADED;
 
 		tag "$TAG_500_HEAVY_BOX";
@@ -16,6 +15,8 @@ class Reusable500HeavyBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/500Heavy";
         ReusableAmmobox.insertSound "boxes/insert/500Heavy";
+
+        ReusableAmmobox.roundClass "HD500SWHeavyAmmo";
 	}
 
 	States {

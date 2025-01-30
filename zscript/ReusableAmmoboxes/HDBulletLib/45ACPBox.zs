@@ -4,7 +4,6 @@ class Reusable45ACPBox : ReusableAmmobox {
 		YScale 0.40;
 
 		HDMagAmmo.maxPerUnit 50;
-		HDMagAmmo.roundType "HD45ACPAmmo";
 		HDMagAmmo.roundBulk 0.55;
 
 		tag "$TAG_45ACP_BOX";
@@ -17,6 +16,8 @@ class Reusable45ACPBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/45ACP";
         ReusableAmmobox.insertSound "boxes/insert/45ACP";
+
+        ReusableAmmobox.roundClass "HD45ACPAmmo";
 	}
 
 	States {

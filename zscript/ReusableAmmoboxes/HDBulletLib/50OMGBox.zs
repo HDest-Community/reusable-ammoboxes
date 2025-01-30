@@ -3,7 +3,6 @@ class Reusable50OMGBox : ReusableAmmobox {
 		scale 0.4;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HD50OMGAmmo";
 		HDMagAmmo.roundBulk ENC_50OMG_LOADED;
 
 		tag "$TAG_50OMG_BOX";
@@ -16,6 +15,8 @@ class Reusable50OMGBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/50OMG";
         ReusableAmmobox.insertSound "boxes/insert/50OMG";
+
+        ReusableAmmobox.roundClass "HD50OMGAmmo";
 	}
 
 	States {

@@ -7,7 +7,6 @@ class ReusableRocketBox : ReusableAmmobox {
 
 		HDMagAmmo.MagBulk 5;
 		HDMagAmmo.maxPerUnit 5;
-		HDMagAmmo.roundType "HDRocketAmmo";
 		HDMagAmmo.roundBulk ENC_ROCKETLOADED*1.25;
 
 		tag "$TAG_RPG_BOX";
@@ -21,6 +20,8 @@ class ReusableRocketBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/rockets";
         ReusableAmmobox.insertSound "boxes/insert/rockets";
+
+        ReusableAmmobox.roundClass "HDRocketAmmo";
 	}
 
 	override bool IsUsed(){

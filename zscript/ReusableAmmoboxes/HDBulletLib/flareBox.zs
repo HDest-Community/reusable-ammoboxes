@@ -6,7 +6,6 @@ class ReusableFlareBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 10;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HDFlareAmmo";
 		HDMagAmmo.roundBulk ENC_SHELLLOADED * .9;
 
 		tag "$TAG_FLARE_BOX";
@@ -20,6 +19,8 @@ class ReusableFlareBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/flareShells";
         ReusableAmmobox.insertSound "boxes/insert/flareShells";
+
+        ReusableAmmobox.roundClass "HDFlareAmmo";
 	}
 
 	States {

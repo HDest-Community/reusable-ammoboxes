@@ -6,7 +6,6 @@ class Reusable5mmBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 6;
 
 		HDMagAmmo.maxPerUnit 160;
-		HDMagAmmo.roundType "HD5mm_Ammo";
 		HDMagAmmo.roundBulk ENC_5MM_LOADED;
 
 		tag "$TAG_5MM_BOX";
@@ -20,6 +19,8 @@ class Reusable5mmBox : ReusableAmmobox {
 		
         ReusableAmmobox.extractSound "boxes/extract/5mm";
         ReusableAmmobox.insertSound "boxes/insert/5mm";
+
+        ReusableAmmobox.roundClass "HD5mm_Ammo";
 	}
 
 	States {

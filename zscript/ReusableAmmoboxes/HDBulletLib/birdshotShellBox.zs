@@ -6,7 +6,6 @@ class ReusableBirdshotShellBox : ReusableAmmobox {
 		HDMagAmmo.extractTime 10;
 
 		HDMagAmmo.maxPerUnit 20;
-		HDMagAmmo.roundType "HDBirdshotShellAmmo";
 		HDMagAmmo.roundBulk ENC_SHELLLOADED;
 
 		tag "$TAG_BIRDSHOT_BOX";
@@ -20,6 +19,8 @@ class ReusableBirdshotShellBox : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/birdshotShells";
         ReusableAmmobox.insertSound "boxes/insert/birdshotShells";
+
+        ReusableAmmobox.roundClass "HDBirdshotShellAmmo";
 	}
 
 	States {

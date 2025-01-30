@@ -3,7 +3,6 @@ class Reusable420Box : ReusableAmmobox {
 		scale 0.5;
 
 		HDMagAmmo.maxPerUnit 60;
-		HDMagAmmo.roundType "HDAurochsAmmo";
 		HDMagAmmo.roundBulk ENC_420_LOADED;
 
 		tag "$TAG_420_BOX";
@@ -16,6 +15,8 @@ class Reusable420Box : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/aurochs";
         ReusableAmmobox.insertSound "boxes/insert/aurochs";
+
+        ReusableAmmobox.roundClass "HDAurochsAmmo";
 	}
 
 	States {

@@ -3,7 +3,6 @@ class Reusable069Box : ReusableAmmobox {
 		scale 0.5;
 
 		HDMagAmmo.maxPerUnit 30;
-		HDMagAmmo.roundType "HD069BoreAmmo";
 		HDMagAmmo.roundBulk ENC_069BORE_LOADED;
 
 		tag "$TAG_069_BOX";
@@ -16,6 +15,8 @@ class Reusable069Box : ReusableAmmobox {
 
         ReusableAmmobox.extractSound "boxes/extract/069Bore";
         ReusableAmmobox.insertSound "boxes/insert/069Bore";
+
+        ReusableAmmobox.roundClass "HD069BoreAmmo";
 	}
 
 	States {

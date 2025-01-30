@@ -32,6 +32,9 @@ const HDLD_REUSABLE_50OMG_BOX          = "obx";
 const HDLD_REUSABLE_SLUG_BOX           = "ubx";
 const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 
+// Peppergrinder Loadout Codes
+const HDLD_REUSABLE_NDM_BOX            = "nbx";
+
 // Base Classes
 #include "zscript/reusableammoboxes/reusableAmmoBox.zs"
 #include "zscript/reusableammoboxes/spawnReplacer.zs"
@@ -68,3 +71,6 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 #include "zscript/reusableammoboxes/HDBulletLib/birdshotShellBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/slugBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/explosiveShellBox.zs"
+
+// Peppergrinder Ammoboxes
+#include "zscript/reusableammoboxes/Peppergrinder/ndmBox.zs"

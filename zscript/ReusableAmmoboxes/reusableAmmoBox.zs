@@ -10,6 +10,7 @@ class ReusableAmmobox : HDMagAmmo {
     sound insertSound;property insertSound:insertSound;
     sound extractSound;property extractSound:extractSound;
 
+    name roundClass;property roundClass:roundClass;
     bool extractAll;
 
 	default {
@@ -24,8 +25,26 @@ class ReusableAmmobox : HDMagAmmo {
 		ReusableAmmobox.roundSprite "";
 		ReusableAmmobox.spriteScale 0.6;
 
+        ReusableAmmobox.roundClass "";
         ReusableAmmobox.insertSound "boxes/insert";
         ReusableAmmobox.extractSound "boxes/extract";
+
+        // Because we're determining the round class once the box is spawned,
+        // The Mag Manager needs to always show them.
+        // Otherwise the boxes never show up, even if they're valid.
+        HDMagAmmo.mustShowInMagmanager true;
+	}
+
+    override void BeginPlay() {
+        let cls = (class<inventory>)(roundClass);
+        if (cls) {
+            roundType = cls;
+        } else {
+            console.PrintF("Unknown Round Type: "..roundClass);
+            Destroy();
+        }
+
+        super.BeginPlay();
 	}
 
 	override void DoEffect() {
@@ -43,7 +62,7 @@ class ReusableAmmobox : HDMagAmmo {
                 ? fullSprite
                 : emptySprite,
             roundSprite,
-            roundType.GetClassName(),
+            roundType ? roundType.GetClassName() : roundClass,
             spriteScale;
 	}
 
