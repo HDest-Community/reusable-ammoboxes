@@ -207,7 +207,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_7mm.push('HDMicrogun');
         wep_7mm.push('IronsLiberatorRifle');
         wep_7mm.push('LiberatorRifle');
-        wep_7mm.push('NoScopeBoss');
+        wep_7mm.push('HexaNoScopeBoss');
         wep_7mm.push('ObrozzPistol');
         wep_7mm.push('WAN_MA75B');
         addAmmo('Reusable7mmBox', wep_7mm);
