@@ -23,7 +23,6 @@ _such clutter, many immersions, wow!_
 
 - The Peppergrinder Team for the 12g slug, .500 S&W Light/Heavy, the .420 Frei, and the .069 Bore boxes
 - Swampyrad for the 10mm, 12g explosive slugs & less-lethal shells, .45 LC, and flare shell boxes
-- Accensus for the .50 AE box
 - Bogus for the .50 OMG boxes
 - Popguy for the .45 ACP boxes
 - Khan for the 4g saboted slug boxes

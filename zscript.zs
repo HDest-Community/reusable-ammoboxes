@@ -19,7 +19,7 @@ const HDLD_REUSABLE_300SAVAGE_BOX      = "vbx";
 const HDLD_REUSABLE_420_BOX            = "ibx";
 const HDLD_REUSABLE_45ACP_BOX          = "pbx";
 const HDLD_REUSABLE_45LC_BOX           = "cbx";
-const HDLD_REUSABLE_50AE_BOX           = "ebx";
+const HDLD_REUSABLE_NDM_BOX            = "nbx";
 const HDLD_REUSABLE_50AM_BOX           = "mbx";
 const HDLD_REUSABLE_6MMFLECHETTE_BOX   = "6bx";
 const HDLD_REUSABLE_10MM_BOX           = "0bx";
@@ -31,9 +31,6 @@ const HDLD_REUSABLE_BIRDSHOT_BOX       = "dbx";
 const HDLD_REUSABLE_50OMG_BOX          = "obx";
 const HDLD_REUSABLE_SLUG_BOX           = "ubx";
 const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
-
-// Peppergrinder Loadout Codes
-const HDLD_REUSABLE_NDM_BOX            = "nbx";
 
 // Base Classes
 #include "zscript/reusableammoboxes/reusableAmmoBox.zs"
@@ -58,7 +55,7 @@ const HDLD_REUSABLE_NDM_BOX            = "nbx";
 #include "zscript/reusableammoboxes/HDBulletLib/420Box.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/45ACPBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/45LCBox.zs"
-#include "zscript/reusableammoboxes/HDBulletLib/50AEBox.zs"
+#include "zscript/reusableammoboxes/HDBulletLib/ndmBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/50AMBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/6mmBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/10mmBox.zs"
@@ -71,6 +68,3 @@ const HDLD_REUSABLE_NDM_BOX            = "nbx";
 #include "zscript/reusableammoboxes/HDBulletLib/birdshotShellBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/slugBox.zs"
 #include "zscript/reusableammoboxes/HDBulletLib/explosiveShellBox.zs"
-
-// Peppergrinder Ammoboxes
-#include "zscript/reusableammoboxes/Peppergrinder/ndmBox.zs"
