@@ -17,7 +17,6 @@ $alias boxes/extract/9mmNDM boxes/extract/pistolAmmo
 $alias boxes/extract/10mm boxes/extract/pistolAmmo
 $alias boxes/extract/45ACP boxes/extract/pistolAmmo
 $alias boxes/extract/45LC boxes/extract/pistolAmmo
-$alias boxes/extract/50AE boxes/extract/pistolAmmo
 $alias boxes/extract/50AM boxes/extract/pistolAmmo
 $alias boxes/extract/50OMG boxes/extract/rifleAmmo
 $alias boxes/extract/069Bore boxes/extract/shellAmmo
@@ -54,7 +53,6 @@ $alias boxes/insert/9mmNDM boxes/insert/pistolAmmo
 $alias boxes/insert/10mm boxes/insert/pistolAmmo
 $alias boxes/insert/45ACP boxes/insert/pistolAmmo
 $alias boxes/insert/45LC boxes/insert/pistolAmmo
-$alias boxes/insert/50AE boxes/insert/pistolAmmo
 $alias boxes/insert/50AM boxes/insert/pistolAmmo
 $alias boxes/insert/50OMG boxes/insert/rifleAmmo
 $alias boxes/insert/069Bore boxes/insert/shellAmmo

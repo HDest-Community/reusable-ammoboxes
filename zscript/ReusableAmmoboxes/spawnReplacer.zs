@@ -276,15 +276,11 @@ class ReusableAmmoboxesSpawner : EventHandler {
         wep_45LC.push('HDSingleActionRevolver');
         addAmmo('Reusable45LCBox', wep_45LC);
 
-        // .50 AE
-        Array<string> wep_50AE;
-        wep_50AE.push('HDViper');
-        addAmmo('Reusable50AEBox', wep_50AE);
-
         // .50 AM
         Array<string> wep_50AM;
-        wep_50AM.push('HDLeverGun');
         wep_50AM.push('HD_AutoMag');
+        wep_50AM.push('HDLeverGun');
+        wep_50AM.push('HDViper');
         addAmmo('Reusable50AMBox', wep_50AM);
 
         // .50 OMG
@@ -384,7 +380,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('WAN_20mmGrenadeBox',      'Reusable20mmGrenadeBox',    'WAN_20mmGrenadeAmmo',  1,  'MAG7B0', 'MAG7B0');
         addItem('HD45ACPBoxPickup',        'Reusable45ACPBox',          'HD45ACPAmmo',          10, '45TNA0', '45RNA0');
         addItem('HD45LCBoxPickup',         'Reusable45LCBox',           'HD45LCAmmo',           10, 'TN45A0', 'RN45A0');
-        addItem('HD50AEBoxPickup',         'Reusable50AEBox',           'HD50AEAmmo',           10, 'TEN9A0', 'PRNDA0');
+        addItem('HDNDMBoxPickup',          'ReusableNDMBox',            'HDNDMLoose',           10, 'TNNDA0', 'NRNDA0');
         addItem('PB_50AMBoxPickup',        'Reusable50AMBox',           'HD50AM_Ammo',          10, 'G50YA0', 'G50ZA0');
         addItem('HD50OMGBoxPickup',        'Reusable50OMGBox',          'HD50OMGAmmo',          10, 'OG10A0', 'OGBLA0');
         addItem('HD069BoreBox',            'Reusable069Box',            'HD069BoreAmmo',        10, '42BTA0', '42BRA0');
@@ -399,12 +395,6 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('FlareShellBoxPickup',     'ReusableFlareBox',          'HDFlareAmmo',          4,  'FLA4A0', 'FLARA0');
         addItem('LLShellBoxPickup',        'ReusableLessLethalBox',     'HDLLShellAmmo',        4,  'LLS4A0', 'LLS1A0');
         addItem('SlugBoxPickup',           'ReusableSlugBox',           'HDSlugAmmo',           4,  'SLUGA0', 'SLG1A0');
-
-        // --------------------
-        // Peppergrinder Ammoboxes
-        // --------------------
-
-        addItem('HDNDMBoxPickup', 'ReusableNDMBox', 'HDNDMLoose', 10, 'TNNDA0', 'NRNDA0');
     }
 
     override void OnRegister() {
