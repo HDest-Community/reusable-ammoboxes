@@ -1,0 +1,200 @@
+// Ammo Box Filters
+// TODO: Re-implement once HDBL flag-CVARs are refactored into commands
+// addAmmoBoxFilter => { "ammoName": "Reusable9mmBox" }
+
+
+// Reusable 9mm Boxes
+newAmmo => { "ammoName": "Reusable9mmBox" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "BossRifleButIts9mm" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "DERPDEAD" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "DERPUsable" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBoxCannon" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBPX" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBreakerP90" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDHLAR" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDHorseshoePistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDPistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDRevolver" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDSMG" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDSnubNoseRevolver" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDStenMk2" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HushPuppyPistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "MinervaChaingun" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "RIThompson" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "TenMilAutoReloadingThingy" }
+
+// Reusable .355 Boxes
+newAmmo => { "ammoName": "Reusable355Box" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDColt355" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDHelzing" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDNyx" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDRevolver" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDScopedRevolver" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDSnubNoseRevolver" }
+
+// Reusable 12ga 00 Buckshot Boxes
+newAmmo => { "ammoName": "ReusableShellBox" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Bossmerg" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "DoomHunter" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "FireBlooper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDAltis" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDBarracuda" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDCombatShotgun" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDGreely" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDSix12" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDStreetSweeper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDTerminatorSG" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDUragan5" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Hunter" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "MetalFireBlooper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "SawedSlayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaperGL" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaperZM" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "ScopedSlayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Slayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Wan_WSTEM5" }
+
+// Reusable 7.76mm Boxes
+newAmmo => { "ammoName": "Reusable7mmBox" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "AutoReloader" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifleButItsTheWorst" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDFrontier" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDLotus" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HD_FNFAL" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HD_PSG1" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDMicrogun" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "LiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HexaNoScopeBoss" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "ObrozzPistol" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "WAN_MA75B" }
+
+// Reusable Rocquette Boxes
+newAmmo => { "ammoName": "ReusableRocketBox" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "Blooper" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HackedZM66AssaultRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDBitch" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDChinaLake" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDHLAR" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDIEDKit" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDRL" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDTROGRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "RIReaperGL" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "WAN_MA75B" }
+
+// Reusable 4ga 00 Buckshot Boxes
+newAmmo => { "ammoName": "Reusable4GaShellBox" }
+addAmmoUser => { "ammoName": "Reusable4GaShellBox", "name": "HD4GBBlaster" }
+
+// Reusable 5mm Boxes
+newAmmo => { "ammoName": "Reusable5mmBox" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "BossRifleButItsFuckingPink" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "HD_M5165" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "HD_Ruger1022" }
+
+// Reusable 6mm Flechette Boxes
+newAmmo => { "ammoName": "Reusable6mmBox" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HD_SteyrACR" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HD_SteyrAICW" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HDColtCommando_CS" }
+
+// Reusable 9mm NDM Boxes
+newAmmo => { "ammoName": "ReusableNDMBox" }
+addAmmoUser => { "ammoName": "ReusableNDMBox", "name": "HDGuillotine" }
+addAmmoUser => { "ammoName": "ReusableNDMBox", "name": "HDBreakerP90" }
+
+// Reusable 10mm Auto Boxes
+newAmmo => { "ammoName": "Reusable10mmBox" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "HD10mmPistol" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "HDSigCow" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "TenMilAutoReloadingThingy" }
+
+// Reusable 20mm Grenade Boxes
+newAmmo => { "ammoName": "Reusable20mmGrenadeBox" }
+addAmmoUser => { "ammoName": "Reusable20mmGrenadeBox", "name": "WAN_MA76C" }
+
+// Reusable .45 ACP Boxes
+newAmmo => { "ammoName": "Reusable45ACPBox" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDColt1911" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDMAC10" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDMK23SOCOM" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDUMP" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDUSP" }
+
+// Reusable .45 LC Boxes
+newAmmo => { "ammoName": "Reusable45LCBox" }
+addAmmoUser => { "ammoName": "Reusable45LCBox", "name": "HDSingleActionRevolver" }
+
+// Reusable .50 AM Boxes
+newAmmo => { "ammoName": "Reusable50AMBox" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HD_AutoMag" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HDLeverGun" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HDViper" }
+
+// Reusable .50 OMG Boxes
+newAmmo => { "ammoName": "Reusable50OMGBox" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "BogRifle" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "HDM2HB" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "HDWyvern" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "ZM94Rifle" }
+
+// Reusable .069 Bore Shell Boxes
+newAmmo => { "ammoName": "Reusable069Box" }
+addAmmoUser => { "ammoName": "Reusable069Box", "name": "HDAurochs" }
+
+// Reusable .420 Frei Boxes
+newAmmo => { "ammoName": "Reusable420Box" }
+addAmmoUser => { "ammoName": "Reusable420Box", "name": "HDAurochs" }
+
+// Reusable .300 Savage Boxes
+newAmmo => { "ammoName": "Reusable300SavageBox" }
+addAmmoUser => { "ammoName": "Reusable300SavageBox", "name": "Savage99SniperRifle" }
+
+// Reusable .500 S&W Heavy Boxes
+newAmmo => { "ammoName": "Reusable500HeavyBox" }
+addAmmoUser => { "ammoName": "Reusable500HeavyBox", "name": "HDOtisGun" }
+
+// Reusable .500 S&W Light Boxes
+newAmmo => { "ammoName": "Reusable500LightBox" }
+addAmmoUser => { "ammoName": "Reusable500LightBox", "name": "HDOtisGun" }
+
+// Reusable 7.62mm Tokarev Boxes
+newAmmo => { "ammoName": "Reusable762TokarevBox" }
+addAmmoUser => { "ammoName": "Reusable762TokarevBox", "name": "HDPPSh41" }
+addAmmoUser => { "ammoName": "Reusable762TokarevBox", "name": "HDTT33Pistol" }
+
+// Reusable .30-06 Boxes
+newAmmo => { "ammoName": "Reusable3006Box" }
+addAmmoUser => { "ammoName": "Reusable3006Box", "name": "M1Garand" }
+
+// Reusable Birdshot Boxes
+newAmmo => { "ammoName": "ReusableBirdshotShellBox" }
+addAmmoUser => { "ammoName": "ReusableBirdshotShellBox", "name": "DuckHunter" }
+
+// Reusable Explosive 12ga Slug Boxes
+newAmmo => { "ammoName": "ReusableExplosiveShellBox" }
+addAmmoUser => { "ammoName": "ReusableExplosiveShellBox", "name": "ExplosiveHunter" }
+addAmmoUser => { "ammoName": "ReusableExplosiveShellBox", "name": "MetalFireBlooper" }
+
+// Reusable 12ga Flare Shell Boxes
+newAmmo => { "ammoName": "ReusableFlareBox" }
+addAmmoUser => { "ammoName": "ReusableFlareBox", "name": "FireBlooper" }
+addAmmoUser => { "ammoName": "ReusableFlareBox", "name": "MetalFireBlooper" }
+
+// Reusable Less-Lethal Slug Boxes
+newAmmo => { "ammoName": "ReusableLessLethalBox" }
+addAmmoUser => { "ammoName": "ReusableLessLethalBox", "name": "LLHunter" }
+
+// Reusable 12ga Slug Boxes
+newAmmo => { "ammoName": "ReusableSlugBox" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDAltis" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDAuto5" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDBarracuda" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDGreely" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDPDFour" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDSix12" }
+
+// TODO: Add Custom Commands for Reusable Box Definitions
