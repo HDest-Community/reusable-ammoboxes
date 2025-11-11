@@ -49,8 +49,6 @@ addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Hunter" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "MetalFireBlooper" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "SawedSlayer" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaper" }
-addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaperGL" }
-addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaperZM" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "ScopedSlayer" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Slayer" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Wan_WSTEM5" }
@@ -73,7 +71,6 @@ addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "SpeenRunLoader" }
 
 // Reusable 7.76mm Boxes
 newAmmo => { "ammoName": "Reusable7mmBox" }
-addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "AutoReloader" }
 addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifle" }
 addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifleButItsTheWorst" }
 addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDFrontier" }
@@ -98,7 +95,6 @@ addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDIEDKit" }
 addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDRL" }
 addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDTROGRifle" }
 addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "IronsLiberatorRifle" }
-addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "RIReaperGL" }
 addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "WAN_MA75B" }
 
 // Reusable 4ga 00 Buckshot Boxes
