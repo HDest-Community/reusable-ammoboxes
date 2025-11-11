@@ -35,3 +35,9 @@ class Reusable4mmBox : ReusableAmmobox {
             stop;
     }
 }
+
+class Reusable4mmBoxEmpty : ReusableAmmoboxEmpty {
+    default {
+        ReusableAmmoboxEmpty.boxClass "Reusable4mmBox";
+    }
+}

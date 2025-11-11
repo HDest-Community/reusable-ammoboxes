@@ -144,3 +144,23 @@ class ReusableAmmobox : HDMagAmmo {
 		return inpint;
 	}
 }
+
+class ReusableAmmoboxEmpty : IdleDummy abstract {
+
+    name boxClass;property boxClass:boxClass;
+
+    default {
+        ReusableAmmoboxEmpty.boxClass "";
+    }
+
+    override void BeginPlay() {
+        let cls = (class<ReusableAmmobox>)(boxClass);
+        if (cls) {
+            HDMagAmmo.spawnMag(self, cls, 0);
+        } else {
+            console.PrintF("Unknown Box Type: "..boxClass);
+        }
+
+        Destroy();
+	}
+}
