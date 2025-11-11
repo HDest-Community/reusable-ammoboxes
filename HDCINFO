@@ -55,6 +55,22 @@ addAmmoUser => { "ammoName": "ReusableShellBox", "name": "ScopedSlayer" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Slayer" }
 addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Wan_WSTEM5" }
 
+// Reusable 4.26mm Boxes
+newAmmo => { "ammoName": "Reusable4mmBox" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "AutoReloader" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "BossRifleButIts4mm" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDBastardRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDBitch" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDG11Rifle_Scoped" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDG11Rifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDPDfour" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDTROGRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "JuncoPistol" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "LiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "SavageAutoReloader" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "SpeenRunLoader" }
+
 // Reusable 7.76mm Boxes
 newAmmo => { "ammoName": "Reusable7mmBox" }
 addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "AutoReloader" }
@@ -203,7 +219,7 @@ addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDSix12" }
 // Merchant Store Entries
 
 // Remove Existing Ammobox Store Entries
-// removeMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "item": "FourMilAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "item": "FourMilAmmo" }
 removeMerchantStoreItem => { "enabled": "#hdm_enable_9mm", "item": "HDPistolAmmo" }
 removeMerchantStoreItem => { "enabled": "#hdm_enable_12gshell", "item": "HDShellAmmo" }
 removeMerchantStoreItem => { "enabled": "#hdm_enable_355", "item": "HDRevolverAmmo" }
@@ -239,7 +255,7 @@ removeMerchantStoreItem => { "enabled": "#hdm_enable_ndm", "item": "HDNDMLoose" 
 removeMerchantStoreItem => { "enabled": "#hdm_enable_xshell", "item": "HDExplosiveShellAmmo" }
 
 // Add Reusable Ammobox Store Entries
-// newMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "type": "ammo", "category": "$MERCH_CAT_4MM", "item": "FourMilAmmo", "amount": "50", "icon": "RCLSA3A7", "displayName": "$MERCH_TAG_4MM", "basePrice": "8", "flavorText": "$MERCH_FLAVOR_4MM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "type": "ammo", "category": "$MERCH_CAT_4MM", "item": "Reusable4mmBox", "amount": "1", "icon": "4BOXA0", "displayName": "$MERCH_TAG_4MM", "basePrice": "32", "flavorText": "$MERCH_FLAVOR_4MM" }
 newMerchantStoreItem => { "enabled": "#hdm_enable_9mm", "type": "ammo", "category": "$MERCH_CAT_9MM", "item": "Reusable9mmBox", "amount": "1", "icon": "9BOXA0", "displayName": "$MERCH_TAG_9MM", "basePrice": "30", "flavorText": "$MERCH_FLAVOR_9MM" }
 newMerchantStoreItem => { "enabled": "#hdm_enable_12gshell", "type": "ammo", "category": "$MERCH_CAT_12GSHELL", "item": "ReusableShellBox", "amount": "1", "icon": "SBOXA0", "displayName": "$MERCH_TAG_12GSHELL", "basePrice": "15", "flavorText": "$MERCH_FLAVOR_12GSHELL" }
 newMerchantStoreItem => { "enabled": "#hdm_enable_355", "type": "ammo", "category": "$MERCH_CAT_355", "item": "Reusable355Box", "amount": "1", "icon": "3BOXA0", "displayName": "$MERCH_TAG_355", "basePrice": "30", "flavorText": "$MERCH_FLAVOR_355" }
