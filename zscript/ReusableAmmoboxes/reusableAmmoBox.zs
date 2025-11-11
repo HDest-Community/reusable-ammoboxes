@@ -1,4 +1,4 @@
-class ReusableAmmobox : HDMagAmmo {
+class ReusableAmmobox : HDMagAmmo abstract {
 	int extractMin;property extractMin:extractMin;
 	int extractMax;property extractMax:extractMax;
 
