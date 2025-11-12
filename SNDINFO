@@ -31,6 +31,7 @@ $alias boxes/extract/flareShells boxes/extract/shellAmmo
 $alias boxes/extract/llShells boxes/extract/shellAmmo
 $alias boxes/extract/12gSlugs boxes/extract/shellAmmo
 $alias boxes/extract/birdshotShells boxes/extract/shellAmmo
+$alias boxes/extract/4mm boxes/extract/rifleAmmo
 $alias boxes/extract/7mm boxes/extract/rifleAmmo
 $alias boxes/extract/9mm boxes/extract/pistolAmmo
 $alias boxes/extract/355 boxes/extract/pistolAmmo
@@ -67,6 +68,7 @@ $alias boxes/insert/flareShells boxes/insert/shellAmmo
 $alias boxes/insert/llShells boxes/insert/shellAmmo
 $alias boxes/insert/12gSlugs boxes/insert/shellAmmo
 $alias boxes/insert/birdshotShells boxes/insert/shellAmmo
+$alias boxes/insert/4mm boxes/insert/rifleAmmo
 $alias boxes/insert/7mm boxes/insert/rifleAmmo
 $alias boxes/insert/9mm boxes/insert/pistolAmmo
 $alias boxes/insert/355 boxes/insert/pistolAmmo

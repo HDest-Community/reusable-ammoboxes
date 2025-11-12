@@ -38,10 +38,11 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 
 // Vanilla Ammoboxes
 #include "zscript/reusableammoboxes/Vanilla/9mmBox.zs"
-#include "zscript/reusableammoboxes/Vanilla/shellBox.zs"
-#include "zscript/reusableammoboxes/Vanilla/7mmBox.zs"
 #include "zscript/reusableammoboxes/Vanilla/355Box.zs"
+#include "zscript/reusableammoboxes/Vanilla/shellBox.zs"
+#include "zscript/reusableammoboxes/Vanilla/4mmBox.zs"
 #include "zscript/reusableammoboxes/Vanilla/rocketBox.zs"
+#include "zscript/reusableammoboxes/Vanilla/7mmBox.zs"
 
 // HDBulletLib Ammoboxes
 #include "zscript/reusableammoboxes/HDBulletLib/4GaShellBox.zs"

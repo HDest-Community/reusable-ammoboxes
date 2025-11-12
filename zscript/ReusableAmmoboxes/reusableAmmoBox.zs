@@ -1,4 +1,4 @@
-class ReusableAmmobox : HDMagAmmo {
+class ReusableAmmobox : HDMagAmmo abstract {
 	int extractMin;property extractMin:extractMin;
 	int extractMax;property extractMax:extractMax;
 
@@ -142,5 +142,25 @@ class ReusableAmmobox : HDMagAmmo {
 		int inpint=inp.toint();
 		if(!inpint)return 1; //var merely mentioned with no number
 		return inpint;
+	}
+}
+
+class ReusableAmmoboxEmpty : IdleDummy abstract {
+
+    name boxClass;property boxClass:boxClass;
+
+    default {
+        ReusableAmmoboxEmpty.boxClass "";
+    }
+
+    override void BeginPlay() {
+        let cls = (class<ReusableAmmobox>)(boxClass);
+        if (cls) {
+            HDMagAmmo.spawnMag(self, cls, 0);
+        } else {
+            console.PrintF("Unknown Box Type: "..boxClass);
+        }
+
+        Destroy();
 	}
 }

@@ -22,10 +22,11 @@ _such clutter, many immersions, wow!_
 
 
 - The Peppergrinder Team for the 12g slug, .500 S&W Light/Heavy, the .420 Frei, and the .069 Bore boxes
-- Swampyrad for the 10mm, 12g explosive slugs & less-lethal shells, .45 LC, and flare shell boxes
 - Bogus for the .50 OMG boxes
-- Popguy for the .45 ACP boxes
-- Khan for the 4g saboted slug boxes
-- Potetobloke for the 5mm, 6mm, and .50 AM boxes
 - HexaDoken for the .30-06 boxes
+- Khan for the 4g saboted slug boxes
+- Popguy for the .45 ACP boxes
+- Potetobloke for the 5mm, 6mm, and .50 AM boxes
+- Swampyrad for the 10mm, 12g explosive slugs & less-lethal shells, .45 LC, and flare shell boxes
 - Underqualified_Gunman for the empty FreeDoom 12ga Shell boxes
+- Valerie for the 4mm Bulk Box (original credits unknown, looks to consist of mostly id Software's work)
