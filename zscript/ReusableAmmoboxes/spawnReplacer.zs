@@ -229,7 +229,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
             // If the map just initialized, replace with reusable boxes.
             // Otherwise handle dropping split pickups.
-            if (level.mapTime <= 1) {
+            if (HDCore.isPreSpawn()) {
                 handleMapSpawns(item, candidateName);
             } else {
                 handleDroppedAmmoboxes(item, candidateName);
