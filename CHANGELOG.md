@@ -7,13 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.5.0] - 2026-05-19
+
 ### Added
 
--   Added Peppergrinder 9mm NDM Ammobox.
+-   Added Peppergrinder 9mm NDM Ammobox (#38).
+-   Added ability to extract all rounds within a box by holding `[Use]` + tapping `[UNLOAD]` (#36).
+-   Added Reusable 20mm Grenade Ammobox (#37).
+-   Add Reusable 4mm Ammobox (#41).
 
 ### Changed
 
--   Refactored Box RoundType class to change addon round types from hard dependencies into soft dependencies.
+-   Refactored Box RoundType class to change addon round types from hard dependencies into soft dependencies (#38).
+-   Updated Ammobox Sprites to be more consistent (#40).
+-   Fixed clash between 10mm & 20mm Loadout/RefID values (#43).
+
+### Removed
+
+-   Removed .50 AE Boxes (#39).
 
 ## [v1.4.0] - 2024-03-03
 
@@ -145,7 +156,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Initial Release.  Originally made by Testament-Holmes, now maintained by the community.
 -   Added all boxable rounds provided by HDBulletLib
 
-[Unreleased]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.5.0...HEAD
+
+[v1.5.0]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.4.0...v1.5.0
 
 [v1.4.0]: https://github.com/HDest-Community/reusable-ammoboxes/compare/v1.3.2...v1.4.0
 
