@@ -397,9 +397,9 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('SlugBoxPickup',           'ReusableSlugBox',           'HDSlugAmmo',           4,  'SLUGA0', 'SLG1A0');
     }
 
-    override void OnRegister() {
-        SetOrder(HDCONST_HDBLEVENT + 1);
-    }
+    // override void OnRegister() {
+    //     SetOrder(HDCONST_HDBLEVENT + 1);
+    // }
 
     override void worldLoaded(WorldEvent e) {
         
@@ -407,19 +407,19 @@ class ReusableAmmoboxesSpawner : EventHandler {
         if (!e.IsReOpen) init();
         else initCVars(); // WorldLoaded could be called again when revisiting a map?
 
-        for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
-            if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
-                foreach (itemSpawn : itemSpawnList) {
-                    string ammoName = HDBulletLibHandler.removedClasses[i].getClassName();
+        // for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
+        //     if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
+        //         foreach (itemSpawn : itemSpawnList) {
+        //             string ammoName = HDBulletLibHandler.removedClasses[i].getClassName();
 
-                    if (itemSpawn.ammoName ~== ammoName) {
-                        if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Backpack Spawn Pool");
+        //             if (itemSpawn.ammoName ~== ammoName) {
+        //                 if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Backpack Spawn Pool");
                         
-                        BPSpawnPool.removeItem(itemSpawn.replaceName);
-                    }
-                }
-            }
-        }
+        //                 BPSpawnPool.removeItem(itemSpawn.replaceName);
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     override void worldThingSpawned(WorldEvent e) {
