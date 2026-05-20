@@ -40,7 +40,8 @@ class ReusableAmmobox : HDMagAmmo abstract {
         if (cls) {
             roundType = cls;
         } else {
-            console.PrintF("Unknown Round Type: "..roundClass);
+            HDCore.log('ReusableAmmoboxes', LOGGING_WARN, "Unknown Round Type: "..roundClass);
+
             Destroy();
         }
 
@@ -158,7 +159,7 @@ class ReusableAmmoboxEmpty : IdleDummy abstract {
         if (cls) {
             HDMagAmmo.spawnMag(self, cls, 0);
         } else {
-            console.PrintF("Unknown Box Type: "..boxClass);
+            HDCore.log('ReusableAmmoboxes', LOGGING_WARN, "Unknown Box Type: "..boxClass);
         }
 
         Destroy();

@@ -86,7 +86,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
     // appends an entry to itemSpawnList;
     void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
 
-        if (hd_debug) console.printf("Adding Replacement Entry for "..name..": "..boxName);
+        HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, "Adding Replacement Entry for "..name..": "..boxName);
         
         // Creates a new struct;
         AmmoboxSpawnItem spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
@@ -105,12 +105,12 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
     void addAmmo(string name, Array<string> weapons) {
 
-        if (hd_debug) {
+        if (HDCore.shouldLog('ReusableAmmoboxes', LOGGING_DEBUG)) {
             let msg = "Adding Ammo Association Entry for "..name..": [";
 
             foreach (weapon : weapons) msg = msg..", "..weapon;
 
-            console.printf(msg.."]");
+            HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, msg.."]");
         }
 
         // Creates a new struct;
@@ -263,7 +263,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
                             }
 
                             if (index != ammoBoxList.invClasses.Size()) {
-                                if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Ammo Box Loot Table");
+                                HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, "Removing "..itemSpawn.replaceName.." from Ammo Box Loot Table");
 
                                 ammoBoxList.invClasses.Delete(index);
                             }
@@ -276,9 +276,12 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
     private void handleAmmoUses(ReusableAmmobox ammobox, string candidateName) {
         foreach (ammoSpawn : ammoSpawnList) if (candidateName ~== ammoSpawn.ammoName) {
-            if (hd_debug) {
-                console.printf("Adding the following to the list of items that use "..ammobox.getClassName().."");
-                foreach (weapon : ammoSpawn.weaponNames) console.printf("* "..weapon);
+            if (HDCore.shouldLog('ReusableAmmoboxes', LOGGING_DEBUG)) {
+                let msg = "Adding the following to the list of items that use "..ammobox.getClassName().."\n";
+
+                foreach (weapon : ammoSpawn.weaponNames) msg = msg.." * "..weapon;
+
+                HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, msg);
             }
 
             ammobox.itemsThatUseThis.append(ammoSpawn.weaponNames);
@@ -292,7 +295,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
                 if (Actor.spawn(itemSpawn.replaceName, item.pos)) {
                 
-                    if (hd_debug) console.printf(item.getClassName().." -> "..itemSpawn.replaceName);
+                    HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, item.getClassName().." -> "..itemSpawn.replaceName);
 
                     item.destroy();
 
