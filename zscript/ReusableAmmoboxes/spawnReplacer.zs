@@ -82,7 +82,10 @@ class ReusableAmmoboxesSpawner : EventHandler {
     // List of item-spawn associations.
     // used for item-replacement on mapload.
     array<AmmoboxSpawnItem> itemSpawnList;
-    
+
+    // Reference to StorageItemList Filter Event Handler
+    private HDCoreStorageItemListHandler storageItemListHandler;
+
     // appends an entry to itemSpawnList;
     void addItem(string name, string boxName, string ammoName, int bundleSize, string bundleSprite, string roundSprite) {
 
@@ -175,9 +178,6 @@ class ReusableAmmoboxesSpawner : EventHandler {
         addItem('SlugBoxPickup',           'ReusableSlugBox',           'HDSlugAmmo',           4,  'SLUGA0', 'SLG1A0');
     }
 
-    // override void OnRegister() {
-    //     SetOrder(HDCONST_HDBLEVENT + 1);
-    // }
 
     override void worldLoaded(WorldEvent e) {
         
@@ -185,19 +185,21 @@ class ReusableAmmoboxesSpawner : EventHandler {
         if (!e.IsReOpen) init();
         else initCVars(); // WorldLoaded could be called again when revisiting a map?
 
-        // for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
-        //     if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
-        //         foreach (itemSpawn : itemSpawnList) {
-        //             string ammoName = HDBulletLibHandler.removedClasses[i].getClassName();
+        if (!storageItemListHandler) storageItemListHandler = HDCoreStorageItemListHandler(EventHandler.find('HDCoreStorageItemListHandler'));
 
-        //             if (itemSpawn.ammoName ~== ammoName) {
-        //                 if (hd_debug) console.printf("Removing "..itemSpawn.replaceName.." from Backpack Spawn Pool");
-                        
-        //                 BPSpawnPool.removeItem(itemSpawn.replaceName);
-        //             }
-        //         }
-        //     }
-        // }
+        for (let i = 0; i < HDBulletLibHandler.removedClasses.size(); i++) {
+            if (!(ammoSpawns[i / 32].GetInt() & (1 << (i % 32)))) {
+                foreach (itemSpawn : itemSpawnList) {
+                    string ammoName = HDBulletLibHandler.removedClasses[i].getClassName();
+
+                    if (itemSpawn.ammoName ~== ammoName) {
+                        HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, "Removing "..itemSpawn.replaceName.." from HDCoreStorageItemList");
+
+                        storageItemListHandler.blacklist.push(itemSpawn.replaceName);
+                    }
+                }
+            }
+        }
     }
 
     override void worldThingSpawned(WorldEvent e) {
