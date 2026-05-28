@@ -1,0 +1,287 @@
+// Ammo Box Filters
+// TODO: Re-implement once HDBL flag-CVARs are refactored into commands
+// addAmmoBoxFilter => { "ammoName": "Reusable9mmBox" }
+
+
+// Reusable 9mm Boxes
+newAmmo => { "ammoName": "Reusable9mmBox" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "BossRifleButIts9mm" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "DERPDEAD" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "DERPUsable" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBoxCannon" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBPX" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDBreakerP90" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDHLAR" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDHorseshoePistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDPistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDRevolver" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDSMG" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDSnubNoseRevolver" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HDStenMk2" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "HushPuppyPistol" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "MinervaChaingun" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "RIThompson" }
+addAmmoUser => { "ammoName": "Reusable9mmBox", "name": "TenMilAutoReloadingThingy" }
+
+// Reusable .355 Boxes
+newAmmo => { "ammoName": "Reusable355Box" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDColt355" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDHelzing" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDNyx" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDRevolver" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDScopedRevolver" }
+addAmmoUser => { "ammoName": "Reusable355Box", "name": "HDSnubNoseRevolver" }
+
+// Reusable 12ga 00 Buckshot Boxes
+newAmmo => { "ammoName": "ReusableShellBox" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Bossmerg" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "DoomHunter" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "FireBlooper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDAltis" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDBarracuda" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDCombatShotgun" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDGreely" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDSix12" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDStreetSweeper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDTerminatorSG" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "HDUragan5" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Hunter" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "MetalFireBlooper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "SawedSlayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "RIReaper" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "ScopedSlayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Slayer" }
+addAmmoUser => { "ammoName": "ReusableShellBox", "name": "Wan_WSTEM5" }
+
+// Reusable 4.26mm Boxes
+newAmmo => { "ammoName": "Reusable4mmBox" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "AutoReloader" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "BossRifleButIts4mm" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDBastardRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDBitch" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDG11Rifle_Scoped" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDG11Rifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDPDfour" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "HDTROGRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "JuncoPistol" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "LiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "SavageAutoReloader" }
+addAmmoUser => { "ammoName": "Reusable4mmBox", "name": "SpeenRunLoader" }
+
+// Reusable 7.76mm Boxes
+newAmmo => { "ammoName": "Reusable7mmBox" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "BossRifleButItsTheWorst" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDFrontier" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDLotus" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HD_FNFAL" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HD_PSG1" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HDMicrogun" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "LiberatorRifle" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "HexaNoScopeBoss" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "ObrozzPistol" }
+addAmmoUser => { "ammoName": "Reusable7mmBox", "name": "WAN_MA75B" }
+
+// Reusable Rocquette Boxes
+newAmmo => { "ammoName": "ReusableRocketBox" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "Blooper" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HackedZM66AssaultRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDBitch" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDChinaLake" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDHLAR" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDIEDKit" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDRL" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "HDTROGRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "IronsLiberatorRifle" }
+addAmmoUser => { "ammoName": "ReusableRocketBox", "name": "WAN_MA75B" }
+
+// Reusable 4ga 00 Buckshot Boxes
+newAmmo => { "ammoName": "Reusable4GaShellBox" }
+addAmmoUser => { "ammoName": "Reusable4GaShellBox", "name": "HD4GBBlaster" }
+
+// Reusable 5mm Boxes
+newAmmo => { "ammoName": "Reusable5mmBox" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "BossRifleButItsFuckingPink" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "HD_M5165" }
+addAmmoUser => { "ammoName": "Reusable5mmBox", "name": "HD_Ruger1022" }
+
+// Reusable 6mm Flechette Boxes
+newAmmo => { "ammoName": "Reusable6mmBox" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HD_SteyrACR" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HD_SteyrAICW" }
+addAmmoUser => { "ammoName": "Reusable6mmBox", "name": "HDColtCommando_CS" }
+
+// Reusable 9mm NDM Boxes
+newAmmo => { "ammoName": "ReusableNDMBox" }
+addAmmoUser => { "ammoName": "ReusableNDMBox", "name": "HDGuillotine" }
+addAmmoUser => { "ammoName": "ReusableNDMBox", "name": "HDBreakerP90" }
+
+// Reusable 10mm Auto Boxes
+newAmmo => { "ammoName": "Reusable10mmBox" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "HD10mmPistol" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "HDSigCow" }
+addAmmoUser => { "ammoName": "Reusable10mmBox", "name": "TenMilAutoReloadingThingy" }
+
+// Reusable 20mm Grenade Boxes
+newAmmo => { "ammoName": "Reusable20mmGrenadeBox" }
+addAmmoUser => { "ammoName": "Reusable20mmGrenadeBox", "name": "WAN_MA76C" }
+
+// Reusable .45 ACP Boxes
+newAmmo => { "ammoName": "Reusable45ACPBox" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDColt1911" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDMAC10" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDMK23SOCOM" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDUMP" }
+addAmmoUser => { "ammoName": "Reusable45ACPBox", "name": "HDUSP" }
+
+// Reusable .45 LC Boxes
+newAmmo => { "ammoName": "Reusable45LCBox" }
+addAmmoUser => { "ammoName": "Reusable45LCBox", "name": "HDSingleActionRevolver" }
+
+// Reusable .50 AM Boxes
+newAmmo => { "ammoName": "Reusable50AMBox" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HD_AutoMag" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HDLeverGun" }
+addAmmoUser => { "ammoName": "Reusable50AMBox", "name": "HDViper" }
+
+// Reusable .50 OMG Boxes
+newAmmo => { "ammoName": "Reusable50OMGBox" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "BogRifle" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "HDM2HB" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "HDWyvern" }
+addAmmoUser => { "ammoName": "Reusable50OMGBox", "name": "ZM94Rifle" }
+
+// Reusable .069 Bore Shell Boxes
+newAmmo => { "ammoName": "Reusable069Box" }
+addAmmoUser => { "ammoName": "Reusable069Box", "name": "HDAurochs" }
+
+// Reusable .420 Frei Boxes
+newAmmo => { "ammoName": "Reusable420Box" }
+addAmmoUser => { "ammoName": "Reusable420Box", "name": "HDAurochs" }
+
+// Reusable .300 Savage Boxes
+newAmmo => { "ammoName": "Reusable300SavageBox" }
+addAmmoUser => { "ammoName": "Reusable300SavageBox", "name": "Savage99SniperRifle" }
+
+// Reusable .500 S&W Heavy Boxes
+newAmmo => { "ammoName": "Reusable500HeavyBox" }
+addAmmoUser => { "ammoName": "Reusable500HeavyBox", "name": "HDOtisGun" }
+
+// Reusable .500 S&W Light Boxes
+newAmmo => { "ammoName": "Reusable500LightBox" }
+addAmmoUser => { "ammoName": "Reusable500LightBox", "name": "HDOtisGun" }
+
+// Reusable 7.62mm Tokarev Boxes
+newAmmo => { "ammoName": "Reusable762TokarevBox" }
+addAmmoUser => { "ammoName": "Reusable762TokarevBox", "name": "HDPPSh41" }
+addAmmoUser => { "ammoName": "Reusable762TokarevBox", "name": "HDTT33Pistol" }
+
+// Reusable .30-06 Boxes
+newAmmo => { "ammoName": "Reusable3006Box" }
+addAmmoUser => { "ammoName": "Reusable3006Box", "name": "M1Garand" }
+
+// Reusable Birdshot Boxes
+newAmmo => { "ammoName": "ReusableBirdshotShellBox" }
+addAmmoUser => { "ammoName": "ReusableBirdshotShellBox", "name": "DuckHunter" }
+
+// Reusable Explosive 12ga Slug Boxes
+newAmmo => { "ammoName": "ReusableExplosiveShellBox" }
+addAmmoUser => { "ammoName": "ReusableExplosiveShellBox", "name": "ExplosiveHunter" }
+addAmmoUser => { "ammoName": "ReusableExplosiveShellBox", "name": "MetalFireBlooper" }
+
+// Reusable 12ga Flare Shell Boxes
+newAmmo => { "ammoName": "ReusableFlareBox" }
+addAmmoUser => { "ammoName": "ReusableFlareBox", "name": "FireBlooper" }
+addAmmoUser => { "ammoName": "ReusableFlareBox", "name": "MetalFireBlooper" }
+
+// Reusable Less-Lethal Slug Boxes
+newAmmo => { "ammoName": "ReusableLessLethalBox" }
+addAmmoUser => { "ammoName": "ReusableLessLethalBox", "name": "LLHunter" }
+
+// Reusable 12ga Slug Boxes
+newAmmo => { "ammoName": "ReusableSlugBox" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDAltis" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDAuto5" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDBarracuda" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDGreely" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDPDFour" }
+addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDSix12" }
+
+// TODO: Add Custom Commands for Reusable Box Definitions
+
+
+// Merchant Store Entries
+
+// Remove Existing Ammobox Store Entries
+removeMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "item": "FourMilAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_9mm", "item": "HDPistolAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_12gshell", "item": "HDShellAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_355", "item": "HDRevolverAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_rocketgrenade", "item": "HDRocketAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_7mm", "item": "SevenMilAmmo" }
+
+removeMerchantStoreItem => { "enabled": "#hdm_enable_069bore", "item": "HD069BoreAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_10mm", "item": "HD10mAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_12gflare", "item": "HDFlareAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_12gslug", "item": "HDSlugAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_20mmgrenade", "item": "WAN_20mmGrenadeAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_3006", "item": "ThirtyAughtSixAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_300savage", "item": "Savage300Ammo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_420frei", "item": "HDAurochAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_45acp", "item": "HD45ACPAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_45lc", "item": "HD45LCAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_4gshell", "item": "HD4GBAmmo" }
+// removeMerchantStoreItem => { "enabled": "#hdm_enable_4gslug", "item": "HD4GSAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_500swh", "item": "HD500SWHeavyAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_500swl", "item": "HD500SWLightAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_50am", "item": "HD50AM_Ammo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_50omg", "item": "HD50OMG50OMGAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_5mmbr", "item": "HD5mm_Ammo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_6mmflechette", "item": "HD6mmFlechetteAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_762tokarev", "item": "HD762TokarevAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_birdshot", "item": "HDBirdshotShellAmmo" }
+// removeMerchantStoreItem => { "enabled": "#hdm_enable_g45lc", "item": "HDGold45LCAmmo" }
+// removeMerchantStoreItem => { "enabled": "#hdm_enable_leadball", "item": "HDBallAmmo" }0
+removeMerchantStoreItem => { "enabled": "#hdm_enable_llshell", "item": "HDLLShellAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_ndm", "item": "HDNDMLoose" }
+// removeMerchantStoreItem => { "enabled": "#hdm_enable_thunderrocket", "item": "WAN_ThuRKTAmmo" }
+// removeMerchantStoreItem => { "enabled": "#hdm_enable_tortoiserocket", "item": "WAN_TortRKTAmmo" }
+removeMerchantStoreItem => { "enabled": "#hdm_enable_xshell", "item": "HDExplosiveShellAmmo" }
+
+// Add Reusable Ammobox Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_4mm", "type": "ammo", "category": "$MERCH_CAT_4MM", "item": "Reusable4mmBox", "amount": "1", "icon": "4BOXA0", "displayName": "$MERCH_TAG_4MM", "basePrice": "32", "flavorText": "$MERCH_FLAVOR_4MM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_9mm", "type": "ammo", "category": "$MERCH_CAT_9MM", "item": "Reusable9mmBox", "amount": "1", "icon": "9BOXA0", "displayName": "$MERCH_TAG_9MM", "basePrice": "30", "flavorText": "$MERCH_FLAVOR_9MM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_12gshell", "type": "ammo", "category": "$MERCH_CAT_12GSHELL", "item": "ReusableShellBox", "amount": "1", "icon": "SBOXA0", "displayName": "$MERCH_TAG_12GSHELL", "basePrice": "15", "flavorText": "$MERCH_FLAVOR_12GSHELL" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_355", "type": "ammo", "category": "$MERCH_CAT_355", "item": "Reusable355Box", "amount": "1", "icon": "3BOXA0", "displayName": "$MERCH_TAG_355", "basePrice": "30", "flavorText": "$MERCH_FLAVOR_355" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_rocketgrenade", "type": "ammo", "category": "$MERCH_CAT_ROCKETGRENADE", "item": "ReusableRocketBox", "amount": "1", "icon": "RBOXA0", "displayName": "$MERCH_TAG_ROCKETGRENADE", "basePrice": "45", "flavorText": "$MERCH_FLAVOR_ROCKETGRENADE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_7mm", "type": "ammo", "category": "$MERCH_CAT_7MM", "item": "Reusable7mmBox", "amount": "1", "icon": "7BOXA0", "displayName": "$MERCH_TAG_7MM", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_7MM" }
+
+newMerchantStoreItem => { "enabled": "#hdm_enable_069bore", "type": "ammo", "category": "$MERCH_CAT_069BORE", "item": "Reusable069Box", "amount": "1", "icon": "42BXA0", "displayName": "$MERCH_TAG_069BORE", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_069BORE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_10mm", "type": "ammo", "category": "$MERCH_CAT_10MM", "item": "Reusable10mmBox", "amount": "1", "icon": "BX10A0", "displayName": "$MERCH_TAG_10MM", "basePrice": "60", "flavorText": "$MERCH_FLAVOR_10MM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_12gflare", "type": "ammo", "category": "$MERCH_CAT_12GFLARE", "item": "ReusableFlareBox", "amount": "1", "icon": "FLBXA0", "displayName": "$MERCH_TAG_12GFLARE", "basePrice": "25", "flavorText": "$MERCH_FLAVOR_12GFLARE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_12gslug", "type": "ammo", "category": "$MERCH_CAT_12GSLUG", "item": "ReusableSlugBox", "amount": "1", "icon": "SLBXA0", "displayName": "$MERCH_TAG_12GSLUG", "basePrice": "40", "flavorText": "$MERCH_FLAVOR_12GSLUG" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_20mmgrenade", "type": "ammo", "category": "$MERCH_CAT_20MMGRENADE", "item": "Reusable20mmGrenadeBox", "amount": "1", "icon": "BX20A0", "displayName": "$MERCH_TAG_20MMGRENADE", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_20MMGRENADE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_3006", "type": "ammo", "category": "$MERCH_CAT_3006", "item": "Reusable3006Box", "amount": "1", "icon": "M1A1Y0", "displayName": "$MERCH_TAG_3006", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_3006" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_300savage", "type": "ammo", "category": "$MERCH_CAT_300SAVAGE", "item": "Reusable300SavageBox", "amount": "1", "icon": "S3BXA0", "displayName": "$MERCH_TAG_300SAVAGE", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_300SAVAGE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_420frei", "type": "ammo", "category": "$MERCH_CAT_420FREI", "item": "Reusable420Box", "amount": "1", "icon": "420AA0", "displayName": "$MERCH_TAG_420FREI", "basePrice": "40", "flavorText": "$MERCH_FLAVOR_420FREI" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_45acp", "type": "ammo", "category": "$MERCH_CAT_45ACP", "item": "Reusable45ACPBox", "amount": "1", "icon": "45BXA0", "displayName": "$MERCH_TAG_45ACP", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_45ACP" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_45lc", "type": "ammo", "category": "$MERCH_CAT_45LC", "item": "Reusable45LCBox", "amount": "1", "icon": "45LBA0", "displayName": "$MERCH_TAG_45LC", "basePrice": "45", "flavorText": "$MERCH_FLAVOR_45LC" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_4gshell", "type": "ammo", "category": "$MERCH_CAT_4GSHELL", "item": "Reusable4gaShellBox", "amount": "1", "icon": "4GBXA0", "displayName": "$MERCH_TAG_4GSHELL", "basePrice": "500", "flavorText": "$MERCH_FLAVOR_4GSHELL" }
+// newMerchantStoreItem => { "enabled": "#hdm_enable_4gslug", "type": "ammo", "category": "$MERCH_CAT_4GSLUG", "item": "Reusable4gaSlugBox", "amount": "1", "icon": "4GS1A0", "displayName": "$MERCH_TAG_4GSLUG", "basePrice": "20", "flavorText": "$MERCH_FLAVOR_4GSLUG" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_500swh", "type": "ammo", "category": "$MERCH_CAT_500SWH", "item": "Reusable500HeavyBox", "amount": "1", "icon": "5HBXA0", "displayName": "$MERCH_TAG_500SWH", "basePrice": "40", "flavorText": "$MERCH_FLAVOR_500SWH" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_500swl", "type": "ammo", "category": "$MERCH_CAT_500SWL", "item": "Reusable500LightBox", "amount": "1", "icon": "5LBXA0", "displayName": "$MERCH_TAG_500SWL", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_500SWL" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_50am", "type": "ammo", "category": "$MERCH_CAT_50AM", "item": "Reusable50AMBox", "amount": "1", "icon": "50AMX0", "displayName": "$MERCH_TAG_50AM", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_50AM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_50omg", "type": "ammo", "category": "$MERCH_CAT_50OMG", "item": "Reusable50OMGBox", "amount": "1", "icon": "OGBXA0", "displayName": "$MERCH_TAG_50OMG", "basePrice": "70", "flavorText": "$MERCH_FLAVOR_50OMG" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_5mmbr", "type": "ammo", "category": "$MERCH_CAT_5MMBR", "item": "Reusable5mmBox", "amount": "1", "icon": "5MBXA0", "displayName": "$MERCH_TAG_5MMBR", "basePrice": "45", "flavorText": "$MERCH_FLAVOR_5MMBR" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_6mmflechette", "type": "ammo", "category": "$MERCH_CAT_6MMFLECHETTE", "item": "Reusable6mmBox", "amount": "1", "icon": "ACRPK0", "displayName": "$MERCH_TAG_6MMFLECHETTE", "basePrice": "60", "flavorText": "$MERCH_FLAVOR_6MMFLECHETTE" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_762tokarev", "type": "ammo", "category": "$MERCH_CAT_762TOKAREV", "item": "Reusable762TokarevBox", "amount": "1", "icon": "T7BXA0", "displayName": "$MERCH_TAG_762TOKAREV", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_762TOKAREV" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_birdshot", "type": "ammo", "category": "$MERCH_CAT_BIRDSHOT", "item": "ReusableBirdshotShellBox", "amount": "1", "icon": "BBOXA0", "displayName": "$MERCH_TAG_BIRDSHOT", "basePrice": "15", "flavorText": "$MERCH_FLAVOR_BIRDSHOT" }
+// newMerchantStoreItem => { "enabled": "#hdm_enable_g45lc", "type": "ammo", "category": "$MERCH_CAT_G45LC", "item": "ReusableG45LCBox", "amount": "1", "icon": "GLBXA0", "displayName": "$MERCH_TAG_G45LC", "basePrice": "15", "flavorText": "$MERCH_FLAVOR_G45LC" }
+// newMerchantStoreItem => { "enabled": "#hdm_enable_leadball", "type": "ammo", "category": "$MERCH_CAT_LEADBALL", "item": "ReusableLeadBallBox", "amount": "1", "icon": "BALLA0", "displayName": "$MERCH_TAG_LEADBALL", "basePrice": "15", "flavorText": "$MERCH_FLAVOR_LEADBALL" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_llshell", "type": "ammo", "category": "$MERCH_CAT_LLSHELL", "item": "ReusableLessLethalBox", "amount": "1", "icon": "LLBXA0", "displayName": "$MERCH_TAG_LLSHELL", "basePrice": "35", "flavorText": "$MERCH_FLAVOR_LLSHELL" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_ndm", "type": "ammo", "category": "$MERCH_CAT_NDM", "item": "ReusableNDMBox", "amount": "1", "icon": "NDMBA0", "displayName": "$MERCH_TAG_NDM", "basePrice": "45", "flavorText": "$MERCH_FLAVOR_NDM" }
+// newMerchantStoreItem => { "enabled": "#hdm_enable_thunderrocket", "type": "ammo", "category": "$MERCH_CAT_THUNDERROCKET", "item": "ReusableThunderRocketBox", "amount": "1", "icon": "THRKB0", "displayName": "$MERCH_TAG_THUNDERROCKET", "basePrice": "10", "flavorText": "$MERCH_FLAVOR_THUNDERROCKET" }
+// newMerchantStoreItem => { "enabled": "#hdm_enable_tortoiserocket", "type": "ammo", "category": "$MERCH_CAT_TORTOISEROCKET", "item": "ReusableTortoiseRocketBox", "amount": "1", "icon": "TRTRB0", "displayName": "$MERCH_TAG_TORTOISEROCKET", "basePrice": "10", "flavorText": "$MERCH_FLAVOR_TORTOISEROCKET" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_xshell", "type": "ammo", "category": "$MERCH_CAT_XSHELL", "item": "ReusableExplosiveShellBox", "amount": "1", "icon": "XLBXA0", "displayName": "$MERCH_TAG_XSHELL", "basePrice": "45", "flavorText": "$MERCH_FLAVOR_XSHELL" }
