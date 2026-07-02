@@ -209,6 +209,56 @@ addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDGreely" }
 addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDPDFour" }
 addAmmoUser => { "ammoName": "ReusableSlugBox", "name": "HDSix12" }
 
+// Wild Storage Item Filters
+addStorageItemListFilter => { "name": "ReusableNDMBox", "allowed": "hdb_ndm_allowBackpacks" }
+addStorageItemListFilter => { "name": "ReusableSlugBox", "allowed": "hdb_slug_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable500LightBox", "allowed": "hdb_5swl_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable500HeavyBox", "allowed": "hdb_5swh_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable50OMGBox", "allowed": "hdb_50omg_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable45ACPBox", "allowed": "hdb_45acp_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable10mmBox", "allowed": "hdb_10mm_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable45LCBox", "allowed": "hdb_45lc_allowBackpacks" }
+addStorageItemListFilter => { "name": "ReusableLessLethalBox", "allowed": "hdb_llsh_allowBackpacks" }
+addStorageItemListFilter => { "name": "ReusableExplosiveShellBox", "allowed": "hdb_eshl_allowBackpacks" }
+addStorageItemListFilter => { "name": "ReusableFlareBox", "allowed": "hdb_flare_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable4gaSlugBox", "allowed": "hdb_4gs_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable5mmBox", "allowed": "hdb_5mm_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable6mmBox", "allowed": "hdb_6mm_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable50AMBox", "allowed": "hdb_50am_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable420Box", "allowed": "hdb_461_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable069Box", "allowed": "hdb_066_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable20mmGrenadeBox", "allowed": "hdb_20mm_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable3006Box", "allowed": "hdb_3006_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable4gaShellBox", "allowed": "hdb_4gb_allowBackpacks" }
+addStorageItemListFilter => { "name": "ReusableBirdshotShellBox", "allowed": "hdb_bsht_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable300SavageBox", "allowed": "hdb_300_allowBackpacks" }
+addStorageItemListFilter => { "name": "Reusable762TokarevBox", "allowed": "hdb_762t_allowBackpacks" }
+
+// HDBL Ammobox-Listing
+addAmmoBoxFilter => { "ammoName": "ReusableNDMBox", "allowed": "hdb_ndm_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "ReusableSlugBox", "allowed": "hdb_slug_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable500LightBox", "allowed": "hdb_5swl_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable500HeavyBox", "allowed": "hdb_5swh_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable50OMGBox", "allowed": "hdb_50omg_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable45ACPBox", "allowed": "hdb_45acp_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable10mmBox", "allowed": "hdb_10mm_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable45LCBox", "allowed": "hdb_45lc_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "ReusableLessLethalBox", "allowed": "hdb_llsh_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "ReusableExplosiveShellBox", "allowed": "hdb_eshl_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "ReusableFlareBox", "allowed": "hdb_flare_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable4gaSlugBox", "allowed": "hdb_4gs_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable5mmBox", "allowed": "hdb_5mm_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable6mmBox", "allowed": "hdb_6mm_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable50AMBox", "allowed": "hdb_50am_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable420Box", "allowed": "hdb_461_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable069Box", "allowed": "hdb_066_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable20mmGrenadeBox", "allowed": "hdb_20mm_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable3006Box", "allowed": "hdb_3006_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable4gaShellBox", "allowed": "hdb_4gb_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "ReusableBirdshotShellBox", "allowed": "hdb_bsht_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable300SavageBox", "allowed": "hdb_300_allowBackpacks" }
+addAmmoBoxFilter => { "ammoName": "Reusable762TokarevBox", "allowed": "hdb_762t_allowBackpacks" }
+
 // TODO: Add Custom Commands for Reusable Box Definitions
 
 
