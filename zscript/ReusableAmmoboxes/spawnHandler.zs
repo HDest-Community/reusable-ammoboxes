@@ -19,6 +19,23 @@ class AmmoboxSpawnItem play {
     // Name of sprite used for individual rounds
     string roundSprite;
 
+    static AmmoboxSpawnItem create(name name, name boxName, name ammoName, int bundleSize, string bundleSprite, string roundSprite) {
+
+        let spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
+
+        // Populates the struct with relevant information,
+        if (spawnee) {
+            spawnee.spawnName    = name;
+            spawnee.replaceName  = boxName;
+            spawnee.ammoName     = ammoName;
+            spawnee.bundleSize   = bundleSize;
+            spawnee.bundleSprite = bundleSprite;
+            spawnee.roundSprite  = roundSprite;
+        }
+
+        return spawnee;
+    }
+
     string toString() {
         return String.format("{ spawnName=%s, replaceName=%s, ammoName=%s, bundleSize=%i, bundleSprite=%s, roundSprite=%s }",
                                 spawnName,    replaceName,    ammoName,    bundleSize,    bundleSprite,    roundSprite);
@@ -26,7 +43,7 @@ class AmmoboxSpawnItem play {
 }
 
 // One handler to rule them all.
-class ReusableAmmoboxesSpawner : EventHandler {
+class ReusableAmmoboxesSpawnHandler : EventHandler {
 
     // List of persistent classes to completely ignore.
     Array<name> thingBlacklist;
@@ -37,22 +54,16 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
     // appends an entry to itemSpawnList;
     void addItem(name name, name boxName, name ammoName, int bundleSize, string bundleSprite, string roundSprite) {
-
-        HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, "Adding Replacement Entry for "..name..": "..boxName);
         
         // Creates a new struct;
-        let spawnee = AmmoboxSpawnItem(new('AmmoboxSpawnItem'));
-
-        // Populates the struct with relevant information,
-        spawnee.spawnName    = name;
-        spawnee.replaceName  = boxName;
-        spawnee.ammoName     = ammoName;
-        spawnee.bundleSize   = bundleSize;
-        spawnee.bundleSprite = bundleSprite;
-        spawnee.roundSprite  = roundSprite;
+        let spawnee = AmmoboxSpawnItem.create(name, boxName, ammoName, bundleSize, bundleSprite, roundSprite);
 
         // Pushes the finished struct to the array.
-        itemSpawnList.push(spawnee);
+        if (spawnee) {
+            HDCore.log('ReusableAmmoboxes.SpawnHandler', LOGGING_DEBUG, "Adding Replacement Entry for "..name..": "..spawnee.toString());
+
+            itemSpawnList.push(spawnee);
+        }
     }
 
     // Populates the replacement and association arrays.
@@ -137,7 +148,7 @@ class ReusableAmmoboxesSpawner : EventHandler {
 
                 if (Actor.spawn(itemSpawn.replaceName, item.pos)) {
                 
-                    HDCore.log('ReusableAmmoboxes', LOGGING_DEBUG, item.getClassName().." -> "..itemSpawn.replaceName);
+                    HDCore.log('ReusableAmmoboxes.SpawnHandler', LOGGING_DEBUG, item.getClassName().." -> "..itemSpawn.replaceName);
 
                     item.destroy();
 
