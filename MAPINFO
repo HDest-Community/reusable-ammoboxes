@@ -1,4 +1,3 @@
-gameinfo
-{
-	AddEventHandlers = "ReusableAmmoboxesSpawner"
+gameinfo {
+	AddEventHandlers = "ReusableAmmoboxesSpawnHandler"
 }
