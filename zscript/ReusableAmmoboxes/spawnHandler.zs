@@ -45,6 +45,8 @@ class AmmoboxSpawnItem play {
 // One handler to rule them all.
 class ReusableAmmoboxesSpawnHandler : EventHandler {
 
+    protected bool initialized;
+
     // List of persistent classes to completely ignore.
     Array<name> thingBlacklist;
 
@@ -68,6 +70,8 @@ class ReusableAmmoboxesSpawnHandler : EventHandler {
 
     // Populates the replacement and association arrays.
     void init() {
+
+        if (initialized) return;
 
         // Pull in the HDCoreLib Spawn Handler Thing Blacklist
         thingBlacklist.copy(HDCoreSpawnHandler(StaticEventHandler.find('HDCoreSpawnHandler')).thingBlacklist);
@@ -109,16 +113,32 @@ class ReusableAmmoboxesSpawnHandler : EventHandler {
         addItem('FlareShellBoxPickup',     'ReusableFlareBox',          'HDFlareAmmo',           4, "FLA4A0", "FLARA0");
         addItem('LLShellBoxPickup',        'ReusableLessLethalBox',     'HDLLShellAmmo',         4, "LLS4A0", "LLS1A0");
         addItem('SlugBoxPickup',           'ReusableSlugBox',           'HDSlugAmmo',            4, "SLUGA0", "SLG1A0");
+
+        initialized = true;
     }
 
+    override void checkReplacement(ReplaceEvent e) {
 
-    override void worldLoaded(WorldEvent e) {
+        // Populates the main arrays if they haven't been already.
+        if (!initialized) init();
 
-        // Populates the main arrays.
-        if (!e.IsReOpen) init();
+        // If there's nothing to replace or if the replacement is final, quit.
+        if (!e.replacee || e.isFinal) return;
+
+        // If thing being replaced is blacklisted, quit.
+        forEach (bl : thingBlacklist) if (e.replacee is bl) return;
+
+        // If the map just initialized, replace with reusable boxes.
+        // Otherwise handle dropping split pickups.
+        if (HDCore.isPreSpawn()) {
+            handleBoxReplacement(e);
+        }
     }
 
     override void worldThingSpawned(WorldEvent e) {
+
+        // Populates the main arrays if they haven't been already.
+        if (!initialized) init();
 
         // If thing spawned doesn't exist, quit
         if (!e.thing) return;
@@ -135,13 +155,25 @@ class ReusableAmmoboxesSpawnHandler : EventHandler {
         // If the map just initialized, replace with reusable boxes.
         // Otherwise handle dropping split pickups.
         if (HDCore.isPreSpawn()) {
-            handleMapSpawns(item, candidateName);
+            handleBoxSpawns(item, candidateName);
         } else {
             handleDroppedAmmoboxes(item, candidateName);
         }
     }
 
-    private void handleMapSpawns(HDUPK item, name candidateName) {
+    private void handleBoxReplacement(ReplaceEvent e) {
+        // Iterate through the list of ammo candidates for spawned item.
+        foreach (itemSpawn : itemSpawnList) {
+            if (itemSpawn.spawnName == e.replacee) {
+
+                e.replacement = itemSpawn.replaceName;
+
+                return;
+            }
+        }
+    }
+
+    private void handleBoxSpawns(HDUPK item, name candidateName) {
         // Iterate through the list of ammo candidates for spawned item.
         foreach (itemSpawn : itemSpawnList) {
             if (itemSpawn.spawnName == candidateName) {
@@ -176,7 +208,7 @@ class ReusableAmmoboxesSpawnHandler : EventHandler {
                     item.destroy();
                 } else {
                     // Otherwise, just replace the box
-                    handleMapSpawns(item, candidateName);
+                    handleBoxSpawns(item, candidateName);
 
                     r.destroy();
                 }
