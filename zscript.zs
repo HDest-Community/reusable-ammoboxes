@@ -35,7 +35,7 @@ const HDLD_REUSABLE_EXPLOSIVESHELL_BOX = "xbx";
 
 // Base Classes
 #include "zscript/reusableammoboxes/reusableAmmoBox.zs"
-#include "zscript/reusableammoboxes/spawnReplacer.zs"
+#include "zscript/reusableammoboxes/spawnHandler.zs"
 
 // Vanilla Ammoboxes
 #include "zscript/reusableammoboxes/Vanilla/9mmBox.zs"
